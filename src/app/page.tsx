@@ -4,17 +4,28 @@ import Image, { StaticImageData } from 'next/image';
 import styles from './page.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
+
 import exportSnow from '../assets/images/exportSnow.png';
 import sandSupply from '../assets/images/sandSupply.png';
 import exportGround from '../assets/images/exportGround.png';
-import principles from '../assets/images/principles.png';
-import mouseSquare from '../assets/icons/mouseSquare.svg';
+
+import rusal from '../assets/images/rusalLogo.png';
+import itmo from '../assets/images/itmoLogo.png';
+import mvd from '../assets/images/mvdLogo.png';
+import almas from '../assets/images/almasLogo.png';
+import fosagro from '../assets/images/fosagroLogo.png';
+import lsr from '../assets/images/lsrLogo.png';
+import rr from '../assets/images/rrLogo.png';
 
 import './swipper-bullet.scss';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
+import { AboutCompany } from './_components/aboutCompany';
+import { Footer } from './_components/footer';
+import { Contacts } from './_components/contacts';
+import { useState } from 'react';
 
 interface SliderItemsType {
   imgSrc: StaticImageData;
@@ -22,7 +33,14 @@ interface SliderItemsType {
   text: string;
 }
 
+interface clientItemsType {
+  imgSrc: StaticImageData;
+  text: string;
+}
+
 const Home = () => {
+  const [currentIndexBanner, setCurrentIndexBanner] = useState(0);
+
   const bannerItems: SliderItemsType[] = [
     {
       imgSrc: exportSnow,
@@ -41,27 +59,39 @@ const Home = () => {
     },
   ];
 
-  const statisticItem = [
+  const clientItems: clientItemsType[] = [
     {
-      number: '750',
-      text: 'Грунта вывезено и утилизировано',
+      imgSrc: rusal,
+      text: 'АО «РУСАЛ»',
     },
     {
-      number: '600',
-      text: 'Поставлено песка по СПБ и ЛО',
+      imgSrc: itmo,
+      text: 'АО «ИТМО ХАЙПАРК»',
     },
     {
-      number: '550',
-      text: 'Поставлено щебня',
+      imgSrc: mvd,
+      text: 'Главное управление МВД России по СПб и Лен. области',
     },
     {
-      number: '50',
-      text: 'Крупных строительных объектов реализовано',
+      imgSrc: almas,
+      text: 'КОНЦЕРН ВКО «АЛМАЗ-АНТЕЙ»',
+    },
+    {
+      imgSrc: fosagro,
+      text: 'АО «АПАТИТ» ФОСАРГО',
+    },
+    {
+      imgSrc: lsr,
+      text: 'ЛСР',
+    },
+    {
+      imgSrc: rr,
+      text: 'АО «МегаМейд»',
     },
   ];
 
   const createSlideBanner = () => {
-    return bannerItems.map((item) => {
+    return bannerItems.map((item, i) => {
       return (
         <SwiperSlide key={item.title}>
           <section className={styles.slider}>
@@ -70,22 +100,24 @@ const Home = () => {
               <span className={styles.text}>{item.text}</span>
               <button className={styles.btn}>Заказать сейчас</button>
             </div>
-            <Image src={item.imgSrc} alt='Export' className={styles.img} />
+            <Image src={item.imgSrc} alt='Banner' className={`${styles.img} ${ i > 0 ? styles.banner : '' }`}/>
           </section>
         </SwiperSlide>
       );
     });
   };
 
-  const createStatisticItem = () => {
-    return statisticItem.map((item) => {
+  const createSlideClient = () => {
+    return clientItems.map((item, i) => {
       return (
-        <div className={styles.item} key={item.number}>
-          <span className={styles.number}>
-            {item.number} <span className={styles.num}>тыс. м</span>
-          </span>
-          <span className={styles.text}>{item.text}</span>
-        </div>
+        <SwiperSlide key={item.text}>
+          <div className={styles.partner}>
+            <Image src={item.imgSrc} alt='Logo' className={styles.img} />
+            <span className={`${styles.name} ${ i === 2 ? styles.mvd : '' }`}>
+              {item.text}
+            </span>
+          </div>
+        </SwiperSlide>
       );
     });
   };
@@ -95,22 +127,16 @@ const Home = () => {
       <Swiper
         slidesPerView={1}
         autoplay={{ delay: 3500 }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
         modules={[Autoplay, Pagination]}
         loop={true}
+        onSlideChange={(swiper) => setCurrentIndexBanner(swiper.realIndex)}
         pagination={{
           el: '.swiper-pagination',
           type: 'bullets',
           clickable: true,
           renderBullet: (index, className) => {
             return (
-              '<span class="' +
-              className +
-              '">' +
-              '<i></i>' +
-              '<b></b>' +
-              '</span>'
+              `<span class="${className}"><i></i><b></b></span>`
             );
           },
         }}
@@ -118,41 +144,27 @@ const Home = () => {
         {createSlideBanner()}
         <div className='swiper-pagination'></div>
       </Swiper>
-      <section className={styles.about}>
-        <div className={styles.wrapper}>
-          <div className={styles.description}>
-            <h2 className={styles.title}>О компании</h2>
-            <span className={styles.text}>
-              ASK GROUP — ваш надежный партнер по доставке нерудных материалов,
-              аренды современной спецтехники и выполнении строительных работ!
-              Наш автопарк состоит более, чем из 50 новейших машин, которые
-              обеспечивают эффективность и надежность в каждом проекте.
-              Благодаря применению современной техники и профессионализму наших
-              работников мы гарантируем высокое качество услуг и оперативность в
-              выполнении каждого этапа работы.
-            </span>
-            <div className={styles.principles}>
-              <h3 className={styles.title}>Наши принципы</h3>
-              <div className={styles.principle}>
-                <span className={styles.item}>Четкие сроки поставки</span>
-                <Image priority src={mouseSquare} alt='Icon' />
-              </div>
-              <div>
-                <span className={styles.item}>Квалифицированный персонал</span>
-              </div>
-              <div>
-                <span className={styles.item}>
-                  Полная документальная отчётность
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className={styles.imgWrap}>
-            <Image src={principles} alt='principles' />
-          </div>
+      <AboutCompany />
+      <section className={`${styles.partners} container`}>
+        <h2 className={styles.title}>Наши партнеры</h2>
+        <div className='swiperPartner'>
+          <Swiper
+            spaceBetween={40}
+            speed={5000}
+            loop={true}
+            autoplay={{
+              delay: 1,
+              disableOnInteraction: false,
+            }}
+            slidesPerView={'auto'}
+            modules={[Autoplay]}
+          >
+            {createSlideClient()}
+          </Swiper>
         </div>
-        <div className={styles.statistics}>{createStatisticItem()}</div>
       </section>
+      <Contacts />
+      <Footer />
     </main>
   );
 };
