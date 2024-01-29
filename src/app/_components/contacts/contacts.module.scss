@@ -1,0 +1,69 @@
+@import 'src/theme/helpers';
+
+.contacts {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .title {
+    @include text(48px, normal, 500, normal, #fff);
+  }
+
+  .wrapper {
+    display: flex;
+    gap: 30px;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+
+      .link {
+        @include text(36px, normal, 400, normal, #fff);
+        text-decoration: none;
+      }
+
+      .social {
+        display: flex;
+        gap: 35px;
+
+        .link {
+            transition: all .3s ease-in-out;
+            &:hover {
+                scale: 1.1;
+            }
+        }
+      }
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 40px;
+      background: #ff7a00;
+      padding: 53px 48px;
+      gap: 60px;
+
+      .text {
+        @include text(36px, normal, 500, normal, #1e1e1e);
+        text-align: center;
+      }
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        cursor: pointer;
+        background-color: #1e1e1e;
+        border-radius: 20px;
+        text-decoration: none;
+
+        .text {
+            @include text(24px, normal, 400, 120%, #fff);
+        }
+      }
+    }
+  }
+}

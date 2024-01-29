@@ -1,4 +1,78 @@
 @import 'src/theme/helpers';
 
+.slider {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 120px;
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 67px;
+    .title {
+      @include text(96px, normal, 700, normal, #fff);
+    }
+    .text {
+      @include text(48px, normal, 400, normal, #fff);
 
+      &::after {
+        content: '3';
+        @include text(32px, normal, 400, normal, #fff);
+        position: absolute;
+      }
+    }
+    .btn {
+      background-color: #ff7a00;
+      @include text(24px, normal, 700, normal, #fff);
+      border: none;
+      padding: 30px 40px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 60px;
+      max-width: fit-content;
+      box-sizing: border-box;
+    }
+  }
+  .img {
+    max-width: 930px;
+    clip-path: polygon(100% 100%, 100% 0%, 10% 0%, 4% 100%);
+    max-height: 502px;
+  }
 
+  .banner {
+    clip-path: polygon(100% 100%, 100% 0%, 10% 0%, 0% 100%);
+  }
+}
+
+.partners {
+  margin-bottom: 60px;
+
+  .title {
+    @include text(48px, normal, 500, normal, #fff);
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .partner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #2a2a2a;
+    border-radius: 40px;
+    padding: 60px 100px;
+    height: 388px;
+
+    .name {
+      @include text(36px, normal, 700, normal, #fff);
+      max-width: 606px;
+      text-align: center;
+      margin-top: 74px;
+    }
+
+    .mvd {
+      margin-top: 30px;
+    }
+  }
+}
