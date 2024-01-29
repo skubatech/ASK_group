@@ -1,0 +1,64 @@
+@import 'src/theme/helpers';
+
+.guarantees {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px;
+
+  .title {
+    @include text(48px, normal, 500, normal, #fff);
+    max-width: 67%;
+
+    .accent {
+      @include text(48px, normal, 500, normal, #ff7a00);
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 62px;
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .item {
+        display: flex;
+        gap: 45px;
+        cursor: pointer;
+
+        .description {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          max-width: 430px;
+
+          .title {
+            @include text(20px, normal, 500, normal, #fff);
+            text-transform: uppercase;
+          }
+
+          .text {
+            @include text(20px, normal, 500, normal, #fff);
+          }
+        }
+        &:hover {
+          filter: invert(48%) sepia(96%) saturate(2234%) hue-rotate(2deg)
+            brightness(105%) contrast(106%);
+        }
+      }
+    }
+
+    .img {
+      width: 485px;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #fff 40%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+}

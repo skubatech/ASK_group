@@ -1,21 +1,9 @@
 'use client';
 
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import styles from './page.module.scss';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
-
-import exportSnow from '../assets/images/exportSnow.png';
-import sandSupply from '../assets/images/sandSupply.png';
-import exportGround from '../assets/images/exportGround.png';
-
-import rusal from '../assets/images/rusalLogo.png';
-import itmo from '../assets/images/itmoLogo.png';
-import mvd from '../assets/images/mvdLogo.png';
-import almas from '../assets/images/almasLogo.png';
-import fosagro from '../assets/images/fosagroLogo.png';
-import lsr from '../assets/images/lsrLogo.png';
-import rr from '../assets/images/rrLogo.png';
 
 import './swipper-bullet.scss';
 
@@ -26,69 +14,14 @@ import { AboutCompany } from './_components/aboutCompany';
 import { Footer } from './_components/footer';
 import { Contacts } from './_components/contacts';
 import { useState } from 'react';
-
-interface SliderItemsType {
-  imgSrc: StaticImageData;
-  title: string;
-  text: string;
-}
-
-interface clientItemsType {
-  imgSrc: StaticImageData;
-  text: string;
-}
+import { Connection } from './_components/connection';
+import { Guarantees } from './_components/guarantees';
+import { bannerItems, clientItems } from './home.constants';
 
 const Home = () => {
   const [currentIndexBanner, setCurrentIndexBanner] = useState(0);
 
-  const bannerItems: SliderItemsType[] = [
-    {
-      imgSrc: exportSnow,
-      title: 'Вывоз снега',
-      text: 'от 300 руб/м',
-    },
-    {
-      imgSrc: sandSupply,
-      title: 'Поставка песка',
-      text: 'от 600 руб/м',
-    },
-    {
-      imgSrc: exportGround,
-      title: 'Вывоз и утилизация грунта',
-      text: 'от 300 руб/м',
-    },
-  ];
-
-  const clientItems: clientItemsType[] = [
-    {
-      imgSrc: rusal,
-      text: 'АО «РУСАЛ»',
-    },
-    {
-      imgSrc: itmo,
-      text: 'АО «ИТМО ХАЙПАРК»',
-    },
-    {
-      imgSrc: mvd,
-      text: 'Главное управление МВД России по СПб и Лен. области',
-    },
-    {
-      imgSrc: almas,
-      text: 'КОНЦЕРН ВКО «АЛМАЗ-АНТЕЙ»',
-    },
-    {
-      imgSrc: fosagro,
-      text: 'АО «АПАТИТ» ФОСАРГО',
-    },
-    {
-      imgSrc: lsr,
-      text: 'ЛСР',
-    },
-    {
-      imgSrc: rr,
-      text: 'АО «МегаМейд»',
-    },
-  ];
+  
 
   const createSlideBanner = () => {
     return bannerItems.map((item, i) => {
@@ -106,6 +39,10 @@ const Home = () => {
       );
     });
   };
+
+  const bannerSetCurrentIndex = (swiper: SwiperClass) => {
+    setCurrentIndexBanner(swiper.realIndex);
+  }
 
   const createSlideClient = () => {
     return clientItems.map((item, i) => {
@@ -129,7 +66,7 @@ const Home = () => {
         autoplay={{ delay: 3500 }}
         modules={[Autoplay, Pagination]}
         loop={true}
-        onSlideChange={(swiper) => setCurrentIndexBanner(swiper.realIndex)}
+        onSlideChange={bannerSetCurrentIndex}
         pagination={{
           el: '.swiper-pagination',
           type: 'bullets',
@@ -164,6 +101,8 @@ const Home = () => {
         </div>
       </section>
       <Contacts />
+      <Guarantees />
+      <Connection />
       <Footer />
     </main>
   );
