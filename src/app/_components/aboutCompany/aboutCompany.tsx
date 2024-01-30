@@ -1,12 +1,12 @@
 import styles from './aboutCompany.module.scss';
 import Image from 'next/image';
 
-import principles from '../../../assets/images/principles.png';
-import MouseSquare from '../../../assets/icons/mouseSquare.svg';
-import Number750 from '../../../assets/icons/750.svg';
-import Number600 from '../../../assets/icons/600.svg';
-import Number550 from '../../../assets/icons/550.svg';
-import Number50 from '../../../assets/icons/50.svg';
+import principles from '@/assets/images/principles.png';
+import MouseSquare from '@/assets/icons/mouseSquare.svg';
+import Number750 from '@/assets/icons/750.svg';
+import Number600 from '@/assets/icons/600.svg';
+import Number550 from '@/assets/icons/550.svg';
+import Number50 from '@/assets/icons/50.svg';
 
 export const AboutCompany = () => {
   return (
@@ -27,7 +27,7 @@ export const AboutCompany = () => {
             <h3 className={styles.title}>Наши принципы</h3>
             <div className={styles.principle}>
               <span className={styles.item}>Четкие сроки поставки</span>
-              <MouseSquare className={styles.img}/>
+              <MouseSquare className={styles.img} />
             </div>
             <div className={styles.principle}>
               <span className={styles.item}>Квалифицированный персонал</span>
@@ -41,9 +41,7 @@ export const AboutCompany = () => {
             </div>
           </div>
         </div>
-        <div className={styles.imgWrap}>
-          <Image src={principles} alt='principles' />
-        </div>
+        <Image src={principles} alt='principles' className={styles.imgWrap} />
       </div>
       <div className={styles.statistics}>
         <div className={styles.item}>
@@ -60,7 +58,9 @@ export const AboutCompany = () => {
         </div>
         <div className={styles.item}>
           <Number50 />
-          <span className={styles.text}>Крупных строительных объектов реализовано</span>
+          <span className={styles.text}>
+            Крупных строительных объектов реализовано
+          </span>
         </div>
       </div>
     </section>

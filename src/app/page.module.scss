@@ -49,6 +49,9 @@
 
   .title {
     @include text(48px, normal, 500, normal, #fff);
+    @include arrayProps((
+      font-size: 36px null null 48px,
+    ));
     margin-bottom: 30px;
     margin-top: 30px;
   }
@@ -61,14 +64,20 @@
     box-sizing: border-box;
     background-color: #2a2a2a;
     border-radius: 40px;
-    padding: 60px 100px;
-    height: 388px;
+    @include arrayProps((
+      padding: '30px 50px' null '32px 53px' '60px 100px',
+      height: 233px null null 212px 388px,
+    ));
 
     .name {
       @include text(36px, normal, 700, normal, #fff);
       max-width: 606px;
       text-align: center;
       margin-top: 74px;
+      @include arrayProps((
+      font-size: 24px null null 36px,
+      margin-top: 54px null 40px 74px
+    ));
     }
 
     .mvd {

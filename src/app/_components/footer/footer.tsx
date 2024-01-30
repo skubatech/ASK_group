@@ -1,22 +1,22 @@
 import styles from './footer.module.scss';
 
-import Vk from '../../../assets/icons/vk.svg';
-import Telegram from '../../../assets/icons/telegram.svg';
-import Instagram from '../../../assets/icons/instagram.svg';
+import Vk from '@/assets/icons/vk.svg';
+import Telegram from '@/assets/icons/telegram.svg';
+import Instagram from '@/assets/icons/instagram.svg';
 
 export const Footer = () => {
   return (
     <footer className={`${styles.footer} container`}>
       <div className={styles.content}>
         <div className={styles.leftContent}>
-          <a href='tel:+79003213232' className={styles.link}>
-            +7 (900)-321-32-32
+          <a href='tel:+79817272909' className={styles.link}>
+            +7 (981) 727-29-09
           </a>
           <span className={styles.link}>
             Санкт-Петербург, Пулковское шоссе 30/4, офис 101Д
           </span>
-          <a href='mailto:email@mail.ru' className={styles.link}>
-            email@mail.ru
+          <a href='mailto:zakaz@askspb.ru' className={styles.link}>
+            zakaz@askspb.ru
           </a>
           <div className={styles.social}>
             <a

@@ -1,10 +1,10 @@
 import styles from './contacts.module.scss';
 
-import Vk from '../../../assets/icons/vk.svg';
-import Telegram from '../../../assets/icons/telegram.svg';
-import Instagram from '../../../assets/icons/instagram.svg';
-import Phone from '../../../assets/icons/whitePhone.svg';
-import Messenger from '../../../assets/icons/messenger.svg';
+import Vk from '@/assets/icons/vk.svg';
+import Telegram from '@/assets/icons/telegram.svg';
+import Instagram from '@/assets/icons/instagram.svg';
+import Phone from '@/assets/icons/whitePhone.svg';
+import Messenger from '@/assets/icons/messenger.svg';
 
 export const Contacts = () => {
   return (
@@ -15,11 +15,11 @@ export const Contacts = () => {
           <span className={styles.link}>
             Санкт-Петербург, Пулковское шоссе 30/4, офис 101Д
           </span>
-          <a href='tel:+79003213232' className={styles.link}>
-            +7 (900)-321-32-32
+          <a href='tel:+79817272909' className={styles.link}>
+            +7 (981) 727-29-09
           </a>
-          <a href='mailto:email@mail.ru' className={styles.link}>
-            email@mail.ru
+          <a href='mailto:zakaz@askspb.ru' className={styles.link}>
+            zakaz@askspb.ru
           </a>
           <div className={styles.social}>
             <a
@@ -50,11 +50,16 @@ export const Contacts = () => {
         </div>
         <div className={styles.card}>
           <span className={styles.text}>Закажите удобным для Вас способом</span>
-          <a className={styles.item} href='tel:+79003213232'>
+          <a className={styles.item} href='tel:+79817272909'>
             <span className={styles.text}>Рассчитать заказ в звонке</span>
             <Phone />
           </a>
-          <a className={styles.item} href='https://api.whatsapp.com/'>
+          <a
+            className={styles.item}
+            href='https://api.whatsapp.com/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <span className={styles.text}>Рассчитать заказ в мессенджере</span>
             <Messenger />
           </a>

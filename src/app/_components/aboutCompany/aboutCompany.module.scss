@@ -6,24 +6,36 @@
   
     .wrapper {
       display: flex;
-      margin-top: 60px;
-      gap: 60px;
+      @include arrayProps((
+        flex-direction: 'column' 'row',
+        margin-top: 30px null null 60px,
+        gap: '' 60px,
+      ));
       .description {
         display: flex;
         flex-direction: column;
         .title {
           @include text(48px, normal, 500, normal, #fff);
+          @include arrayProps((
+            font-size: 36px null null 48px
+          ))
         }
         .text {
-          @include text(24px, normal, 400, 120%, #fff);
           margin-top: 15px;
+          @include text(24px, normal, 400, 120%, #fff);
+          @include arrayProps((
+            font-size: 16px null 14px 24px
+          ));
         }
   
         .principles {
           display: flex;
           flex-direction: column;
           gap: 40px;
-          margin-top: 65px;
+          @include arrayProps((
+            margin-top: 20px null 48px null 65px,
+            gap: 30px null 16px 40px,
+          ));
   
           .principle {
             display: flex;
@@ -35,6 +47,9 @@
 
             .item {
                 @include text(36px, normal, 700, 120%, #fff);
+                @include arrayProps((
+                  font-size: 20px null null 36px,
+                ));
               }
           }
         }
@@ -45,20 +60,29 @@
         justify-content: center;
         align-items: center;
         border-radius: 40px;
-        padding: 70px 135px;
         background: radial-gradient(
             50% 50% at 50% 50%,
             rgba(255, 255, 255, 0.2) 0%,
             rgba(255, 255, 255, 0) 100%
           ),
           #2a2a2a;
+        @include arrayProps((
+          padding: '38px 98px' null '71px' '70px 135px',
+          width: 186px null 297px 557px,
+          height: 186px null 297px 557px,
+          margin-top: 30px null 0
+        ));
       }
     }
   
     .statistics {
       display: flex;
       justify-content: space-between;
-      margin-top: 40px;
+      margin-top: 30px;
+      @include arrayProps((
+        display: 'grid' null 'flex',
+        grid-template-columns: 'repeat(2, 2fr)'
+      ));
   
       .item {
         display: flex;
@@ -69,8 +93,9 @@
   
         .text {
           text-align: center;
-          @include text(24px, normal, 700, normal, #fff);
           max-width: 317px;
+          @include text(24px, normal, 700, normal, #fff);
+          font-size: 14px null 16px 24px,
         }
       }
     }
