@@ -9,7 +9,7 @@
   background: #ff7a00;
   @include arrayProps((
     gap: 26px null 30px 60px,
-    padding: '30px 24px' '60px 115px' 120px,
+    padding: '30px 24px' '60px 115px' '60px 120px',
     margin-right: 24px null 48px 120px,
     margin-left: 24px null 48px 120px,
   ));
@@ -26,7 +26,7 @@
   .itemsWrap {
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: 24px;
     @include arrayProps((
       width: 334px null 732px,
     ));
@@ -43,6 +43,15 @@
         font-size: 16px null 20px 24px,
         padding: '30px 15px' null 30px,
       ))
+    }
+
+    .rowWrap {
+      display: flex;
+      gap: 24px;
+
+      .itemRow {
+        width: 100%;
+      }
     }
   }
 }
