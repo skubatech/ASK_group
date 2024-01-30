@@ -1,9 +1,10 @@
 import styles from './connection.module.scss';
+import Image from 'next/image';
 
-import Phone from '@/assets/icons/whitePhone.svg';
-import Messenger from '@/assets/icons/messenger.svg';
-import WhatsAppWhite from '@/assets/icons/waWhite.svg';
-import TelegramWhite from '@/assets/icons/telegramWhite.svg';
+import Phone from '@/assets/icons/whitePhone.svg?url';
+import Messenger from '@/assets/icons/messenger.svg?url';
+import WhatsAppWhite from '@/assets/icons/waWhite.svg?url';
+import TelegramWhite from '@/assets/icons/telegramWhite.svg?url';
 
 export const Connection = () => {
   return (
@@ -14,7 +15,7 @@ export const Connection = () => {
       <div className={styles.itemsWrap}>
         <a href='tel:+79817272909' className={styles.item}>
           Позвонить
-          <Phone />
+          <Image src={Phone} alt='Icon' className={styles.icon} />
         </a>
         <div className={styles.rowWrap}>
           <a
@@ -24,7 +25,7 @@ export const Connection = () => {
             rel='noopener noreferrer'
           >
             WhatsApp
-            <WhatsAppWhite />
+            <Image src={WhatsAppWhite} alt='Icon' className={styles.icon}/>
           </a>
           <a
             className={`${styles.item} ${styles.itemRow}`}
@@ -33,7 +34,7 @@ export const Connection = () => {
             rel='noopener noreferrer'
           >
             Telegram
-            <TelegramWhite />
+            <Image src={TelegramWhite} alt='Icon' className={styles.icon} />
           </a>
         </div>
         <a
@@ -43,7 +44,7 @@ export const Connection = () => {
           className={styles.item}
         >
           Оставить заяку на сайте
-          <Messenger />
+          <Image src={Messenger} alt='Icon' className={styles.icon} />
         </a>
       </div>
     </section>

@@ -5,52 +5,70 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 40px 40px 0px 0px;
   background: #ff7a00;
   @include arrayProps((
     gap: 26px null 30px 60px,
-    padding: '30px 24px' '60px 115px' '60px 120px',
+    padding: '30px 24px' '45px 100px' '60px 115px' '60px 120px',
     margin-right: 24px null 48px 120px,
     margin-left: 24px null 48px 120px,
+    border-radius: '20px 20px 0px 0px' null '40px 40px 0px 0px',
   ));
 
   .text {
     @include text(48px, normal, 500, normal, #1e1e1e);
     text-align: center;
-    max-width: 941px;
     @include arrayProps((
-      font-size: 24px null 36px 48px,
+      max-width: '' null null 900px 941px,
+      font-size: 21px 24px 36px 42px 48px,
     ))
   }
 
   .itemsWrap {
     display: flex;
     flex-direction: column;
-    gap: 24px;
     @include arrayProps((
-      width: 334px null 732px,
+      width: 280px 415px 728px null 732px,
+      gap: 13px 16px 24px,
     ));
 
     .item {
       display: flex;
       justify-content: space-between;
       max-width: 100%;
-      border-radius: 20px;
       background: #1e1e1e;
       text-decoration: none;
       @include text(24px, normal, 400, 120%, #fff);
       @include arrayProps((
-        font-size: 16px null 20px 24px,
-        padding: '30px 15px' null 30px,
-      ))
+        font-size: 14px null 20px 24px,
+        padding: '15px' null 30px,
+        border-radius: 10px null 20px,
+      ));
+
+      .icon {
+        @include arrayProps((
+          width: 13px null 24px,
+          height: 13px null 24px,
+        ))
+      }
     }
 
     .rowWrap {
       display: flex;
       gap: 24px;
 
+      @include arrayProps((
+        gap: 13px 24px,
+      ));
+
       .itemRow {
         width: 100%;
+
+        .icon {
+          @include arrayProps((
+            width: 13px null 24px,
+            height: 13px null 24px,
+          ))
+        }
       }
     }
   }
