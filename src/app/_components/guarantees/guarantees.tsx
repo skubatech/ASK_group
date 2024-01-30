@@ -21,22 +21,22 @@ export const Guarantees = () => {
   const [mainImage, setMainImage] = useState(technique);
   const contentItems: ContentItem[] = [
     {
-      imgSrc: <Image src={Technique} className={styles.icon}/>,
+      imgSrc: <Image src={Technique} className={styles.icon} alt='Icon'/>,
       title: 'спецтехника',
       text: 'В нашем автопарке более 50 единиц спецтехники, что позволяет нам полноценно решить задачу любой сложности и объема!',
     },
     {
-      imgSrc: <Image src={Materials} className={styles.icon} />,
+      imgSrc: <Image src={Materials} className={styles.icon} alt='Icon' />,
       title: 'материалы',
       text: 'ASK GROUP - ваш надежный поставщик нерудных материалов. Мы предоставляем лучшие материалы по самым низким ценам!',
     },
     {
-      imgSrc: <Image src={Staff} className={styles.icon} id={styles.staff}/>,
+      imgSrc: <Image src={Staff} className={styles.icon} id={styles.staff} alt='Icon'/>,
       title: 'квалифицированный персонал',
       text: 'В нашей команде работают только профессионалы своего дела. Сотрудники ASK GROUP любят свою работу и делают ее по высшему разряду!',
     },
     {
-      imgSrc: <Image src={Docs} className={styles.icon} id={styles.docs}/>,
+      imgSrc: <Image src={Docs} className={styles.icon} id={styles.docs} alt='Icon'/>,
       title: 'работаем быстро и качественно',
       text: 'Мы придерживаемся принципа пунктуальности и обеспечиваем качественное выполнение наших задач в установленные сроки и объемы. Мы работаем на результат!',
     },
