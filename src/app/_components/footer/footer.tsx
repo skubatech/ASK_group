@@ -1,9 +1,10 @@
 import styles from './footer.module.scss';
+import Image from 'next/image';
 
-import Vk from '@/assets/icons/vk.svg';
-import Telegram from '@/assets/icons/telegram.svg';
-import Instagram from '@/assets/icons/instagram.svg';
-import Whatsapp from '@/assets/icons/wa.svg';
+import Vk from '@/assets/icons/vk.svg?url';
+import Telegram from '@/assets/icons/telegram.svg?url';
+import Instagram from '@/assets/icons/instagram.svg?url';
+import Whatsapp from '@/assets/icons/wa.svg?url';
 
 export const Footer = () => {
   return (
@@ -26,7 +27,7 @@ export const Footer = () => {
               rel='noopener noreferrer'
               className={styles.link}
             >
-              <Telegram />
+              <Image src={Telegram} alt='Icon' className={styles.icon} />
             </a>
             <a
               href='https://web.whatsapp.com/'
@@ -34,7 +35,7 @@ export const Footer = () => {
               rel='noopener noreferrer'
               className={styles.link}
             >
-              <Whatsapp />
+              <Image src={Whatsapp} alt='Icon' className={styles.icon} />
             </a>
             <a
               href='https://vk.com/'
@@ -42,7 +43,7 @@ export const Footer = () => {
               rel='noopener noreferrer'
               className={styles.link}
             >
-              <Vk />
+              <Image src={Vk} alt='Icon' className={styles.icon} />
             </a>
             <a
               href='https://instagram.com/'
@@ -50,10 +51,11 @@ export const Footer = () => {
               rel='noopener noreferrer'
               className={styles.link}
             >
-              <Instagram />
+              <Image src={Instagram} alt='Icon' className={styles.icon} />
             </a>
           </div>
         </div>
+
         <div className={styles.rightContent}>
           <span className={styles.link}>О компании</span>
           <span className={styles.link}>Наши услуги</span>
@@ -61,6 +63,40 @@ export const Footer = () => {
           <span className={styles.link}>О компании</span>
           <span className={styles.link}>Контакты</span>
         </div>
+      </div>
+      <div className={styles.social}>
+        <a
+          href='https://telegram.org/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className={styles.link}
+        >
+          <Image src={Telegram} alt='Icon' className={styles.icon} />
+        </a>
+        <a
+          href='https://web.whatsapp.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className={styles.link}
+        >
+          <Image src={Whatsapp} alt='Icon' className={styles.icon} />
+        </a>
+        <a
+          href='https://vk.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className={styles.link}
+        >
+          <Image src={Vk} alt='Icon' className={styles.icon} />
+        </a>
+        <a
+          href='https://instagram.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className={styles.link}
+        >
+          <Image src={Instagram} alt='Icon' className={styles.icon} />
+        </a>
       </div>
       <span className={styles.text}>Все права защищены. ASK Group 2023</span>
     </footer>
