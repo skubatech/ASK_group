@@ -87,13 +87,14 @@ const Home = () => {
         <div className='swiperPartner'>
           <Swiper
             spaceBetween={40}
-            speed={5000}
+            speed={4000}
             loop={true}
             autoplay={{
               delay: 1,
               disableOnInteraction: false,
             }}
             slidesPerView={'auto'}
+            centeredSlides={true}
             modules={[Autoplay]}
           >
             {createSlideClient()}

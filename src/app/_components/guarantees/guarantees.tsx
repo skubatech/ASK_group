@@ -2,10 +2,10 @@ import Image from 'next/image';
 import styles from './guarantees.module.scss';
 import { ReactNode, useState } from 'react';
 
-import Technique from '@/assets/icons/technique.svg';
-import Materials from '@/assets/icons/materials.svg';
-import Staff from '@/assets/icons/staff.svg';
-import Docs from '@/assets/icons/docs.svg';
+import Technique from '@/assets/icons/technique.svg?url';
+import Materials from '@/assets/icons/materials.svg?url';
+import Staff from '@/assets/icons/staff.svg?url';
+import Docs from '@/assets/icons/docs.svg?url';
 import technique from '@/assets/images/technique.png';
 import materials from '@/assets/images/materials.png';
 import staff from '@/assets/images/staff.png';
@@ -21,24 +21,24 @@ export const Guarantees = () => {
   const [mainImage, setMainImage] = useState(technique);
   const contentItems: ContentItem[] = [
     {
-      imgSrc: <Technique />,
+      imgSrc: <Image src={Technique} className={styles.icon} alt='Icon'/>,
       title: 'спецтехника',
       text: 'В нашем автопарке более 50 единиц спецтехники, что позволяет нам полноценно решить задачу любой сложности и объема!',
     },
     {
-      imgSrc: <Materials />,
+      imgSrc: <Image src={Materials} className={styles.icon} alt='Icon' />,
       title: 'материалы',
-      text: 'ASK GROUP - ваш надежный поставщик нерудных материалов. Мы предоставляем лучшие материалы по самым низким ценам!',
+      text: 'ASK GROUP - ваш надежный поставщик нерудных материалов, предоставляемых по самым лучшим и низким ценам',
     },
     {
-      imgSrc: <Staff />,
+      imgSrc: <Image src={Staff} className={styles.icon} id={styles.staff} alt='Icon'/>,
       title: 'квалифицированный персонал',
-      text: 'В нашей команде работают только профессионалы своего дела. Сотрудники ASK GROUP любят свою работу и делают ее по высшему разряду!',
+      text: 'ASK GROUP - это команда экспертов своего дела, которые помогают клиентам быстро и качественно растить бизнес',
     },
     {
-      imgSrc: <Docs />,
+      imgSrc: <Image src={Docs} className={styles.icon} id={styles.docs} alt='Icon'/>,
       title: 'работаем быстро и качественно',
-      text: 'Мы придерживаемся принципа пунктуальности и обеспечиваем качественное выполнение наших задач в установленные сроки и объемы. Мы работаем на результат!',
+      text: 'Наше профессиональное кредо - это пунктуальность и швейцарская точность, мы всегда работаем только на результат',
     },
   ];
 

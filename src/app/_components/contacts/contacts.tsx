@@ -2,9 +2,12 @@ import styles from './contacts.module.scss';
 
 import Vk from '@/assets/icons/vk.svg';
 import Telegram from '@/assets/icons/telegram.svg';
+import Whatsapp from '@/assets/icons/wa.svg';
 import Instagram from '@/assets/icons/instagram.svg';
 import Phone from '@/assets/icons/whitePhone.svg';
 import Messenger from '@/assets/icons/messenger.svg';
+import WhatsAppWhite from '@/assets/icons/waWhite.svg';
+import TelegramWhite from '@/assets/icons/telegramWhite.svg';
 
 export const Contacts = () => {
   return (
@@ -31,12 +34,12 @@ export const Contacts = () => {
               <Telegram />
             </a>
             <a
-              href='https://instagram.com/'
+              href='https://web.whatsapp.com/'
               target='_blank'
               rel='noopener noreferrer'
               className={styles.link}
             >
-              <Instagram />
+              <Whatsapp />
             </a>
             <a
               href='https://vk.com/'
@@ -46,23 +49,53 @@ export const Contacts = () => {
             >
               <Vk />
             </a>
+            <a
+              href='https://instagram.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles.link}
+            >
+              <Instagram />
+            </a>
           </div>
         </div>
         <div className={styles.card}>
-          <span className={styles.text}>Закажите удобным для Вас способом</span>
-          <a className={styles.item} href='tel:+79817272909'>
-            <span className={styles.text}>Рассчитать заказ в звонке</span>
-            <Phone />
-          </a>
-          <a
-            className={styles.item}
-            href='https://api.whatsapp.com/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <span className={styles.text}>Рассчитать заказ в мессенджере</span>
-            <Messenger />
-          </a>
+          <span className={styles.title}>Закажите удобным для Вас способом</span>
+          <div className={styles.links}>
+            <a className={styles.item} href='tel:+79817272909'>
+              <span className={styles.text}>Позвонить</span>
+              <Phone />
+            </a>
+            <div className={styles.itemWrap}>
+              <a
+                className={`${styles.item} ${styles.itemRow}`}
+                href='https://web.whatsapp.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <span className={styles.text}>WhatsApp</span>
+                <WhatsAppWhite />
+              </a>
+              <a
+                className={`${styles.item} ${styles.itemRow}`}
+                href='https://telegram.org/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <span className={styles.text}>Telegram</span>
+                <TelegramWhite />
+              </a>
+            </div>
+            <a
+              className={styles.item}
+              href='https://api.whatsapp.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <span className={styles.text}>Оставить заяку на сайте</span>
+              <Messenger />
+            </a>
+          </div>
         </div>
       </div>
     </section>

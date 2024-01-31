@@ -3,6 +3,7 @@ import styles from './footer.module.scss';
 import Vk from '@/assets/icons/vk.svg';
 import Telegram from '@/assets/icons/telegram.svg';
 import Instagram from '@/assets/icons/instagram.svg';
+import Whatsapp from '@/assets/icons/wa.svg';
 
 export const Footer = () => {
   return (
@@ -20,20 +21,28 @@ export const Footer = () => {
           </a>
           <div className={styles.social}>
             <a
-              href='https://vk.com/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className={styles.link}
-            >
-              <Vk />
-            </a>
-            <a
               href='https://telegram.org/'
               target='_blank'
               rel='noopener noreferrer'
               className={styles.link}
             >
               <Telegram />
+            </a>
+            <a
+              href='https://web.whatsapp.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles.link}
+            >
+              <Whatsapp />
+            </a>
+            <a
+              href='https://vk.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles.link}
+            >
+              <Vk />
             </a>
             <a
               href='https://instagram.com/'
