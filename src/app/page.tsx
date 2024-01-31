@@ -21,19 +21,17 @@ import { bannerItems, clientItems } from './home.constants';
 const Home = () => {
   const [currentIndexBanner, setCurrentIndexBanner] = useState(0);
 
-  
-
   const createSlideBanner = () => {
     return bannerItems.map((item, i) => {
       return (
         <SwiperSlide key={item.title}>
           <section className={styles.slider}>
             <div className={styles.description}>
-              <h2 className={styles.title}>{item.title}</h2>
+              <h2 className={styles.title} id={ i=== 2 && styles.bannerTitle}>{item.title}</h2>
               <span className={styles.text}>{item.text}</span>
               <button className={styles.btn}>Заказать сейчас</button>
             </div>
-            <Image src={item.imgSrc} alt='Banner' className={`${styles.img} ${ i > 0 ? styles.banner : '' }`}/>
+            <Image src={item.imgSrc} alt='Banner' className={`${styles.img} ${ i === 0 && styles.banner1 } ${ i === 1 && styles.banner2} ${ i === 2 && styles.banner3}`}/>
           </section>
         </SwiperSlide>
       );

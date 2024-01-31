@@ -1,6 +1,4 @@
-.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 80px !important;
-}
+@import 'src/theme/helpers';
 
 .swiperPartner {
   .swiper-wrapper {
@@ -15,8 +13,10 @@
 
 .swiper-pagination-bullet {
   position: relative;
-  width: 100px !important;
-  height: 10px;
+  @include arrayProps((
+    width: '80px !important' null '100px !important',
+    height: 6px null 10px,
+  ));
   text-align: left;
   border-radius: 10px;
   opacity: 1;
