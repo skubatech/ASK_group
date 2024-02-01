@@ -19,6 +19,7 @@ interface ContentItem {
 
 export const Guarantees = () => {
   const [mainImage, setMainImage] = useState(technique);
+  const [imgStyles, setImgStyles] = useState(styles.img);
   const contentItems: ContentItem[] = [
     {
       imgSrc: <Image src={Technique} className={styles.icon} alt='Icon'/>,
@@ -43,6 +44,7 @@ export const Guarantees = () => {
   ];
 
   const onMouseEnterHandler = (event: React.MouseEvent<HTMLDivElement>) => {
+    setImgStyles(styles.animImg);
     const id = event.currentTarget.id;
     switch (id) {
       case 'спецтехника':
@@ -62,6 +64,10 @@ export const Guarantees = () => {
     }
   };
 
+  const onMouseLeave = () => {
+    setImgStyles(styles.img);
+  }
+
   return (
     <section className={`${styles.guarantees} container`}>
       <h2 className={styles.title}>
@@ -76,6 +82,7 @@ export const Guarantees = () => {
                 key={item.title}
                 id={item.title}
                 onMouseEnter={(id) => onMouseEnterHandler(id)}
+                onMouseLeave={onMouseLeave}
               >
                 {item.imgSrc}
                 <div className={styles.description}>
@@ -86,7 +93,7 @@ export const Guarantees = () => {
             );
           })}
         </div>
-        <Image src={mainImage} alt='Guarantees' className={styles.img} />
+        <Image src={mainImage} alt='Guarantees' className={imgStyles} />
         <div className={styles.items}>
           {contentItems.slice(2, 4).map((item) => {
             return (
@@ -95,6 +102,7 @@ export const Guarantees = () => {
                 key={item.title}
                 id={item.title}
                 onMouseEnter={(id) => onMouseEnterHandler(id)}
+                onMouseLeave={onMouseLeave}
               >
                 {item.imgSrc}
                 <div className={styles.description}>

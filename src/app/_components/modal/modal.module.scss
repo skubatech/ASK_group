@@ -1,0 +1,33 @@
+@import 'src/theme/helpers';
+
+.modalWrapper {
+  position: absolute;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  background-color: #2f2f2f;
+  border-radius: 20px;
+  // min-width: 200px;
+  // min-height: 200px;
+  padding: 48px;
+  z-index: 10;
+  // @include arrayProps(( width: 382px null 928px 970px 1680px,));
+}

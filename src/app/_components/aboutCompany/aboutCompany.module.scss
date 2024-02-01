@@ -49,9 +49,11 @@
           .principle {
             display: flex;
             justify-content: space-between;
+            cursor: pointer;
 
             &:hover {
                 filter: invert(48%) sepia(96%) saturate(2234%) hue-rotate(2deg) brightness(105%) contrast(106%);
+                transition: all .2s ease-in-out;
             }
 
             .item {

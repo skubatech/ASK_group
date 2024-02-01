@@ -20,6 +20,9 @@ export const Footer = () => {
           <a href='mailto:zakaz@askspb.ru' className={styles.link}>
             zakaz@askspb.ru
           </a>
+          <a href='mailto:inform@askspb.ru' className={styles.link}>
+            inform@askspb.ru
+          </a>
           <div className={styles.social}>
             <a
               href='https://telegram.org/'
@@ -98,7 +101,7 @@ export const Footer = () => {
           <Image src={Instagram} alt='Icon' className={styles.icon} />
         </a>
       </div>
-      <span className={styles.text}>Все права защищены. ASK Group 2023</span>
+      <span className={styles.text}>Все права защищены. ASK Group 2024</span>
     </footer>
   );
 };
