@@ -3,21 +3,40 @@
 .slider {
   display: flex;
   justify-content: space-between;
-  padding-left: 120px;
+
+  @include arrayProps((
+    flex-direction: 'column' 'row',
+    padding-bottom: 0 40px 60px,    
+  ));
+
   .description {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 67px;
+    @include arrayProps((
+      margin-top: 30px null 46px 67px,
+      padding-left: 24px null 48px 120px,
+    ));
+
     .title {
-      @include text(96px, normal, 700, normal, #fff);
+      @include text(72px, normal, 700, normal, #fff);
+      @include arrayProps((
+        font-size: 36px null null 61px 96px,
+      ));
     }
     .text {
       @include text(48px, normal, 400, normal, #fff);
+      @include arrayProps((
+        font-size: 24px null null 36px 48px,
+      ));
 
       &::after {
         content: '3';
         @include text(32px, normal, 400, normal, #fff);
+        @include arrayProps((
+          font-size: 16px null null 22px 32px,
+        ));
         position: absolute;
       }
     }
@@ -25,22 +44,51 @@
       background-color: #ff7a00;
       @include text(24px, normal, 700, normal, #fff);
       border: none;
-      padding: 30px 40px;
       border-radius: 20px;
       cursor: pointer;
       margin-top: 60px;
       max-width: fit-content;
       box-sizing: border-box;
+      @include arrayProps((
+        margin-top: 15px null 30px 40px 60px,
+        margin-bottom: 15px 0,
+        font-size: 20px 18px 16px 24px,
+        padding: '30px 40px' '20px 30px' '16px 21px' '30px 40px',
+        border-radius: 20px null 10px 20px,
+      ))
     }
   }
   .img {
-    max-width: 930px;
-    clip-path: polygon(100% 100%, 100% 0%, 10% 0%, 4% 100%);
-    max-height: 502px;
+    height: 100%;
+    @include arrayProps((
+      max-width: '100%' 454px 483px 650px 930px,
+      min-height: 240px 298px 315px 420px 520px,
+      object-fit: 'contain' 'cover',
+    ));
   }
 
-  .banner {
+  .banner1 {
     clip-path: polygon(100% 100%, 100% 0%, 10% 0%, 0% 100%);
+    @include arrayProps((
+      clip-path: 'polygon(100% 100%, 100% 5%, 0% 12%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 7% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 7% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 10% 0%, 0% 100%)',
+    ));
+  }
+
+  .banner2 {
+    clip-path: polygon(100% 100%, 100% 0%, 7% 0%, 1% 100%);
+    width: 789px;
+    @include arrayProps((
+      clip-path: 'polygon(100% 100%, 100% 8%, 0% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 9% 0%, 1% 100%)' 'polygon(100% 100%, 100% 0%, 9% 0%, 1% 100%)' 'polygon(100% 100%, 100% 0%, 7% 0%, 1% 100%)',
+    ));
+  }
+
+  .banner3 {
+    clip-path: polygon(100% 100%, 100% 0%, 8% 0%, 0% 100%);
+    width: 767px;
+    @include arrayProps((
+      clip-path: 'polygon(100% 100%, 100% 4%, 0% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 6% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 4% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 4% 0%, 0% 100%)',
+      margin-bottom: 40px 0,
+    ));
   }
 }
 
@@ -89,4 +137,10 @@
       margin-top: 30px;
     }
   }
+}
+
+#bannerTitle {
+  @include arrayProps((
+    font-size: 26px null 30px 61px 72px, 
+  ));
 }

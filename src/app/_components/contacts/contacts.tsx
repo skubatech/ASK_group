@@ -1,13 +1,14 @@
 import styles from './contacts.module.scss';
+import Image from 'next/image';
 
-import Vk from '@/assets/icons/vk.svg';
-import Telegram from '@/assets/icons/telegram.svg';
-import Whatsapp from '@/assets/icons/wa.svg';
-import Instagram from '@/assets/icons/instagram.svg';
-import Phone from '@/assets/icons/whitePhone.svg';
-import Messenger from '@/assets/icons/messenger.svg';
-import WhatsAppWhite from '@/assets/icons/waWhite.svg';
-import TelegramWhite from '@/assets/icons/telegramWhite.svg';
+import Vk from '@/assets/icons/vk.svg?url';
+import Telegram from '@/assets/icons/telegram.svg?url';
+import Whatsapp from '@/assets/icons/wa.svg?url';
+import Instagram from '@/assets/icons/instagram.svg?url';
+import Phone from '@/assets/icons/whitePhone.svg?url';
+import Messenger from '@/assets/icons/messenger.svg?url';
+import WhatsAppWhite from '@/assets/icons/waWhite.svg?url';
+import TelegramWhite from '@/assets/icons/telegramWhite.svg?url';
 
 export const Contacts = () => {
   return (
@@ -31,7 +32,7 @@ export const Contacts = () => {
               rel='noopener noreferrer'
               className={styles.link}
             >
-              <Telegram />
+              < Image src={Telegram} alt='Icon' className={styles.icon} />
             </a>
             <a
               href='https://web.whatsapp.com/'
@@ -39,7 +40,7 @@ export const Contacts = () => {
               rel='noopener noreferrer'
               className={styles.link}
             >
-              <Whatsapp />
+              <Image src={Whatsapp} alt='Icon' className={styles.icon} />
             </a>
             <a
               href='https://vk.com/'
@@ -47,7 +48,7 @@ export const Contacts = () => {
               rel='noopener noreferrer'
               className={styles.link}
             >
-              <Vk />
+              <Image src={Vk} alt='Icon' className={styles.icon} />
             </a>
             <a
               href='https://instagram.com/'
@@ -55,7 +56,7 @@ export const Contacts = () => {
               rel='noopener noreferrer'
               className={styles.link}
             >
-              <Instagram />
+              <Image src={Instagram} alt='Icon' className={styles.icon}/>
             </a>
           </div>
         </div>
@@ -64,7 +65,7 @@ export const Contacts = () => {
           <div className={styles.links}>
             <a className={styles.item} href='tel:+79817272909'>
               <span className={styles.text}>Позвонить</span>
-              <Phone />
+              <Image src={Phone} alt='Icon' className={styles.icon} />
             </a>
             <div className={styles.itemWrap}>
               <a
@@ -74,7 +75,7 @@ export const Contacts = () => {
                 rel='noopener noreferrer'
               >
                 <span className={styles.text}>WhatsApp</span>
-                <WhatsAppWhite />
+                <Image src={WhatsAppWhite} alt='Icon' className={styles.icon} />
               </a>
               <a
                 className={`${styles.item} ${styles.itemRow}`}
@@ -83,7 +84,7 @@ export const Contacts = () => {
                 rel='noopener noreferrer'
               >
                 <span className={styles.text}>Telegram</span>
-                <TelegramWhite />
+                <Image src={TelegramWhite} alt='Icon' className={styles.icon} />
               </a>
             </div>
             <a
@@ -93,7 +94,7 @@ export const Contacts = () => {
               rel='noopener noreferrer'
             >
               <span className={styles.text}>Оставить заяку на сайте</span>
-              <Messenger />
+              <Image src={Messenger} alt='Icon' className={styles.icon} />
             </a>
           </div>
         </div>
