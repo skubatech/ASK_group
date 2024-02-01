@@ -110,3 +110,25 @@
     }
   }
 }
+
+.animImg {
+  background: radial-gradient(
+        50% 50% at 50% 50%,
+        #fff 40%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      @include arrayProps((
+        width: 247px 274px 340px null 485px,
+        height: 247px 274px 340px null 485px,
+      ));
+  animation: img 3s;
+  // -webkit-animation: img 5s;
+  // -moz-animation: img 5s;
+  // -o-animation: img 5s;
+  // -ms-animation: img 5s;
+}
+
+@keyframes img {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
