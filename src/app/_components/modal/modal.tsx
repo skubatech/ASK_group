@@ -20,9 +20,13 @@ export const Modal = ({ setOpen, children }: ModalProps) => {
     };
   }, []);
 
+  const handleSetOpen = () => {
+    setOpen(false);
+  }
+
   return (
     <div className={styles.modalWrapper}>
-      <div className={styles.background} onClick={() => setOpen(false)} />
+      <div className={styles.background} onClick={handleSetOpen} />
       <div className={styles.centered}>
         <div className={styles.modal}>{children}</div>
       </div>

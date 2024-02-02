@@ -19,7 +19,7 @@
         .title {
           @include text(48px, normal, 500, normal, #fff);
           @include arrayProps((
-            font-size: 36px 28px null 36px 48px
+            font-size: 36px null null 36px 48px
           ))
         }
 
@@ -35,14 +35,14 @@
           display: flex;
           flex-direction: column;
           @include arrayProps((
-            margin-top: 20px null 48px null 65px,
+            margin-top: 20px null 86px null 65px,
             gap: 30px 20px 16px 20px 40px,
           ));
 
           .title {
             @include text(48px, normal, 500, normal, #fff);
             @include arrayProps((
-              font-size: 36px 28px null 36px 48px
+              font-size: 36px 24px null 36px 48px
             ));
           }
   

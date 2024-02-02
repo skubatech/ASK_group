@@ -39,6 +39,7 @@
     
         .btn {
             background-color: #FF7A00;
+            cursor: pointer;
             border: none;
             @include text(24px, normal, 700, normal, #fff);
             width: 100%;
