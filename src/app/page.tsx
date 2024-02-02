@@ -17,6 +17,7 @@ import { useState } from 'react';
 import { Connection } from './_components/connection';
 import { Guarantees } from './_components/guarantees';
 import { bannerItems, clientItems } from './home.constants';
+import { ExportCard, ExportCards } from './_components/exportCards';
 
 const Home = () => {
   const [currentIndexBanner, setCurrentIndexBanner] = useState(0);
@@ -102,6 +103,7 @@ const Home = () => {
       <Contacts />
       <Guarantees />
       <Connection />
+      <ExportCards />
       <Footer />
     </main>
   );
