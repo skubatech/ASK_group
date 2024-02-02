@@ -102,11 +102,11 @@ export const Contacts = () => {
               <span className={styles.text}>Оставить заяку на сайте</span>
               <Image src={Messenger} alt='Icon' className={styles.icon} />
             </a>
-            <button onClick={() => setOpen(true)}>open Modal</button>
+            {/* <button onClick={() => setOpen(true)}>open Modal</button> */}
           </div>
         </div>
       </div>
-      {open && <Modal setOpen={setOpen}>Modal open </Modal>}
+      {/* {open && <Modal setOpen={setOpen}>Modal open </Modal>} */}
     </section>
   );
 };

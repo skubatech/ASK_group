@@ -73,7 +73,7 @@ const Home = () => {
       <Swiper
         slidesPerView={1}
         spaceBetween={20}
-        // autoplay={{ delay: 3500 }}
+        autoplay={{ delay: 3500 }}
         modules={[Autoplay, Pagination]}
         loop={true}
         onSlideChange={bannerSetCurrentIndex}
