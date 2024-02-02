@@ -17,7 +17,7 @@ import { useState } from 'react';
 import { Connection } from './_components/connection';
 import { Guarantees } from './_components/guarantees';
 import { bannerItems, clientItems } from './home.constants';
-import { ExportCard, ExportCards } from './_components/exportCards';
+import { ExportCards } from './_components/exportCards';
 
 const Home = () => {
   const [currentIndexBanner, setCurrentIndexBanner] = useState(0);
@@ -28,11 +28,21 @@ const Home = () => {
         <SwiperSlide key={item.title}>
           <section className={styles.slider}>
             <div className={styles.description}>
-              <h2 className={styles.title} id={ i=== 2 && styles.bannerTitle}>{item.title}</h2>
+              <h2 className={styles.title} id={i === 2 && styles.bannerTitle}>
+                {item.title}
+              </h2>
               <span className={styles.text}>{item.text}</span>
               <button className={styles.btn}>Заказать сейчас</button>
             </div>
-            <Image src={item.imgSrc} alt='Banner' className={`${styles.img} ${ i === 0 && styles.banner1 } ${ i === 1 && styles.banner2} ${ i === 2 && styles.banner3}`}/>
+            <div className={styles.imgWrap}>
+              <Image
+                src={item.imgSrc}
+                alt='Banner'
+                className={`${styles.img} ${i === 0 && styles.banner1} ${
+                  i === 1 && styles.banner2
+                } ${i === 2 && styles.banner3}`}
+              />
+            </div>
           </section>
         </SwiperSlide>
       );
@@ -41,7 +51,7 @@ const Home = () => {
 
   const bannerSetCurrentIndex = (swiper: SwiperClass) => {
     setCurrentIndexBanner(swiper.realIndex);
-  }
+  };
 
   const createSlideClient = () => {
     return clientItems.map((item, i) => {
@@ -49,7 +59,7 @@ const Home = () => {
         <SwiperSlide key={item.text}>
           <div className={styles.partner}>
             <Image src={item.imgSrc} alt='Logo' className={styles.img} />
-            <span className={`${styles.name} ${ i === 2 ? styles.mvd : '' }`}>
+            <span className={`${styles.name} ${i === 2 ? styles.mvd : ''}`}>
               {item.text}
             </span>
           </div>
@@ -62,7 +72,8 @@ const Home = () => {
     <main className={styles.main}>
       <Swiper
         slidesPerView={1}
-        autoplay={{ delay: 3500 }}
+        spaceBetween={20}
+        // autoplay={{ delay: 3500 }}
         modules={[Autoplay, Pagination]}
         loop={true}
         onSlideChange={bannerSetCurrentIndex}
@@ -71,9 +82,7 @@ const Home = () => {
           type: 'bullets',
           clickable: true,
           renderBullet: (index, className) => {
-            return (
-              `<span class="${className}"><i></i><b></b></span>`
-            );
+            return `<span class="${className}"><i></i><b></b></span>`;
           },
         }}
       >
