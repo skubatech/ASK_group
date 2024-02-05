@@ -122,8 +122,8 @@
 
         .img {
           @include arrayProps((
-            width: auto,
-            height: 35px 55px null 65px 92px
+            height: 35px 55px null 65px 92px,
+            width: 150px 205px 203px 249px 370px,
           ));
         }
   
@@ -133,6 +133,18 @@
           @include text(24px, normal, 700, normal, #fff);
           @include arrayProps((
             font-size: 12px 14px 16px 22px 24px,
+          ));
+        }
+
+        #num600 {
+          @include arrayProps((
+            max-width: 127px 145px 168px 226px 243px,
+          ));
+        }
+
+        #num50 {
+          @include arrayProps((
+            max-width: 154px 178px 200px 294px,
           ));
         }
       }

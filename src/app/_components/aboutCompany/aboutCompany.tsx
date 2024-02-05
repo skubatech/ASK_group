@@ -52,7 +52,7 @@ export const AboutCompany = () => {
         </div>
         <div className={styles.item}>
           <Image src={Number600} className={styles.img} alt='Number icon' />
-          <span className={styles.text}>Поставлено песка по СПБ и ЛО</span>
+          <span className={styles.text} id={styles.num600}>Поставлено песка по СПБ и ЛО</span>
         </div>
         <div className={styles.item}>
           <Image src={Number550} className={styles.img} alt='Number icon' />
@@ -60,7 +60,7 @@ export const AboutCompany = () => {
         </div>
         <div className={styles.item}>
           <Image src={Number50} className={styles.img} alt='Number icon' />
-          <span className={styles.text}>
+          <span className={styles.text} id={styles.num50}>
             Крупных строительных объектов реализовано
           </span>
         </div>
