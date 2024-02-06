@@ -1,3 +1,4 @@
+'use client';
 import styles from './footer.module.scss';
 import Image from 'next/image';
 
@@ -5,8 +6,25 @@ import Vk from '@/assets/icons/vk.svg?url';
 import Telegram from '@/assets/icons/telegram.svg?url';
 import Instagram from '@/assets/icons/instagram.svg?url';
 import Whatsapp from '@/assets/icons/wa.svg?url';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export const Footer = () => {
+  const router = useRouter();
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    if(window.location.pathname !== '/') {
+      router.push(`/${e.currentTarget.hash}`, { scroll: false });
+    }
+
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <footer className={`${styles.footer} container`}>
       <div className={styles.content}>
@@ -60,11 +78,10 @@ export const Footer = () => {
         </div>
 
         <div className={styles.rightContent}>
-          <span className={styles.link}>О компании</span>
-          <span className={styles.link}>Наши услуги</span>
-          <span className={styles.link}>Карта карьеров</span>
-          <span className={styles.link}>О компании</span>
-          <span className={styles.link}>Контакты</span>
+          <Link className={styles.link} href={'/#services'} onClick={handleScroll}>Наши услуги</Link>
+          <Link className={styles.link} href={'/#about'} onClick={handleScroll}>О нас</Link>
+          <Link className={styles.link} href={'/#works'} onClick={handleScroll}>Наши работы</Link>
+          <Link className={styles.link} href={'/#contacts'} onClick={handleScroll}>Контакты</Link>
         </div>
       </div>
       <div className={styles.social}>

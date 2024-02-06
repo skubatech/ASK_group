@@ -6,20 +6,27 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 
 import './swipper-bullet.scss';
-
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import { AboutCompany } from './_components/aboutCompany';
-import { Footer } from './_components/footer';
 import { Contacts } from './_components/contacts';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Connection } from './_components/connection';
 import { Guarantees } from './_components/guarantees';
 import { bannerItems, clientItems } from './home.constants';
 import { ExportCards } from './_components/exportCards';
 
 const Home = () => {
+  useEffect(() => {
+    if (window.location.hash) {
+      const element = document.querySelector(window.location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
+  
   const [currentIndexBanner, setCurrentIndexBanner] = useState(0);
 
   const createSlideBanner = () => {
@@ -28,7 +35,7 @@ const Home = () => {
         <SwiperSlide key={item.title}>
           <section className={styles.slider}>
             <div className={styles.description}>
-              <h2 className={styles.title} id={i === 2 && styles.bannerTitle}>
+              <h2 className={styles.title} id={i === 2 ? styles.bannerTitle : undefined}>
                 {item.title}
               </h2>
               <span className={styles.text}>{item.text}</span>
@@ -113,7 +120,6 @@ const Home = () => {
       <Guarantees />
       <Connection />
       <ExportCards />
-      <Footer />
     </main>
   );
 };
