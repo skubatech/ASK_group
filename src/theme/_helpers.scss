@@ -161,7 +161,7 @@ $breakpointsNames: map.keys($breakpoints);
 
 // Возвращает имя css переменной с префиксом
 @function cssVarName($name) {
-  @return #{$cssVarPrefix}#{$name};
+  @return #{$name};
 }
 
 // Возвращает значение css пременной (добавляя префикс к переменной)
