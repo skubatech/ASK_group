@@ -15,7 +15,7 @@ import { Modal } from '../modal';
 export const Contacts = () => {
   const [open, setOpen] = useState(false);
   return (
-    <section className={`${styles.contacts} container`}>
+    <section className={`${styles.contacts} container`} id='contacts'>
       <h2 className={styles.title}>Контакты</h2>
       <div className={styles.wrapper}>
         <div className={styles.content}>

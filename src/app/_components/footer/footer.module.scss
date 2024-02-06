@@ -66,6 +66,7 @@
             ));
 
             .link {
+                text-decoration: none;
                 @include text(20px, normal, 400, 120%, #fff);
                 @include arrayProps((
                     font-size: 16px null 12px 20px,
