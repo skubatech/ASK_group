@@ -12,7 +12,7 @@ export const Cases = () => {
     const breakpoint = useBreakpointIndex();
     const isMobile = breakpoint === BREAKPOINTS_INDEXES.xs;
     return (
-        <section className={styles.main}>
+        <section className={styles.main} id='works'>
             <h1>Наши работы</h1>
             {!isMobile && <section className={styles.casesGrid}>
                 <div className={styles.a}>
