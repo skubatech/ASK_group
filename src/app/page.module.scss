@@ -3,6 +3,7 @@
 .slider {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
   @include arrayProps((
     flex-direction: 'column' 'row',
     padding-bottom: 40px null 40px 60px,

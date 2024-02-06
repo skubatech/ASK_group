@@ -9,11 +9,8 @@ import Phone from '@/assets/icons/whitePhone.svg?url';
 import Messenger from '@/assets/icons/messenger.svg?url';
 import WhatsAppWhite from '@/assets/icons/waWhite.svg?url';
 import TelegramWhite from '@/assets/icons/telegramWhite.svg?url';
-import { useState } from 'react';
-import { Modal } from '../modal';
 
 export const Contacts = () => {
-  const [open, setOpen] = useState(false);
   return (
     <section className={`${styles.contacts} container`} id='contacts'>
       <h2 className={styles.title}>Контакты</h2>
@@ -102,11 +99,9 @@ export const Contacts = () => {
               <span className={styles.text}>Оставить заяку на сайте</span>
               <Image src={Messenger} alt='Icon' className={styles.icon} />
             </a>
-            {/* <button onClick={() => setOpen(true)}>open Modal</button> */}
           </div>
         </div>
       </div>
-      {/* {open && <Modal setOpen={setOpen}>Modal open </Modal>} */}
     </section>
   );
 };

@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import styles from './guarantees.module.scss';
 import { ReactNode, useState } from 'react';
@@ -69,7 +71,7 @@ export const Guarantees = () => {
   }
 
   return (
-    <section className={`${styles.guarantees} container`}>
+    <section className={styles.guarantees}>
       <h2 className={styles.title}>
         ASK GROUP <span className={styles.accent}>гарантирует</span> высочайший сервис и качество в исполнении услуг:
       </h2>
