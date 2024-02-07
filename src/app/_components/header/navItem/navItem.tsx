@@ -6,8 +6,8 @@ import useClickOutSide from "@/utils/hooks/useClickOutSide";
 
 type Props = {
     item: TNavItem;
-    isActiveTab: boolean;
-    onActive: () => void;
+    isActiveTab?: boolean;
+    onActive?: () => void;
 }
 export const NavItem: FC<Props> = ({item, isActiveTab, onActive}) => {
     const ref = useRef(null);
@@ -19,7 +19,6 @@ export const NavItem: FC<Props> = ({item, isActiveTab, onActive}) => {
     }, [isActiveTab])
 
     const mouseEnter = () => {
-        onActive();
         setIsActive(true);
     }
 

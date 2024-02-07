@@ -1,3 +1,4 @@
+'use client';
 import {Swiper, SwiperSlide} from "swiper/react";
 import styles from "@/app/page.module.scss";
 import Image from "next/image";
@@ -5,20 +6,6 @@ import {clientItems} from "@/app/_components/ClientsBanner/ClientsBanner.constan
 import {Autoplay} from "swiper/modules";
 
 export const ClientsBanner = () => {
-    const createSlideClient = () => {
-        return clientItems.map((item, i) => {
-            return (
-                <SwiperSlide key={item.text}>
-                    <div className={styles.partner}>
-                        <Image src={item.imgSrc} alt='Logo' className={styles.img}/>
-                        <span className={`${styles.name} ${i === 2 ? styles.mvd : ''}`}>
-              {item.text}
-            </span>
-                    </div>
-                </SwiperSlide>
-            );
-        });
-    };
 
     return (
         <section className={`${styles.partners} container`}>
@@ -35,7 +22,18 @@ export const ClientsBanner = () => {
                     slidesPerView={'auto'}
                     modules={[Autoplay]}
                 >
-                    {createSlideClient()}
+                    {clientItems.map((item, i) => {
+                        return (
+                            <SwiperSlide key={item.text}>
+                                <div className={styles.partner}>
+                                    <Image src={item.imgSrc} alt='Logo' className={styles.img}/>
+                                    <span className={`${styles.name} ${i === 2 ? styles.mvd : ''}`}>
+              {item.text}
+            </span>
+                                </div>
+                            </SwiperSlide>
+                        );
+                    })}
                 </Swiper>
             </div>
         </section>

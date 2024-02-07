@@ -1,3 +1,4 @@
+'use client';
 import {products} from "@/app/_components/Products/Products.constants";
 import {ProductCard} from "@/app/_components/Products/ProductCard/ProductCard";
 import styles from './Products.module.scss'

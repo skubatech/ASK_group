@@ -36,8 +36,7 @@ export const Header = () => {
                         <NavItem
                             item={item}
                             key={item.title}
-                            isActiveTab={isActiveTab(item.title)}
-                            onActive={() => setActiveMenu(item.title)}/>
+                        />
                     )}
                 </nav>
             }

@@ -9,21 +9,21 @@ export const products: TProductType[] = [
     {
         title: 'Нерудные материалы',
         image: <Image {...NeRud} alt='Нерудные материалы'/>,
-        url: ''
+        url: '/materials'
     },
     {
         title: 'Вывоз и утилизация',
         image: <Image {...Utilization} alt='Вывоз и утилизация'/>,
-        url: ''
+        url: '/export'
     },
     {
         title: 'Аренда спецтехники',
         image: <Image {...Rent} alt='Аренда спецтехники'/>,
-        url: ''
+        url: '/rent'
     },
     {
         title: 'Строительные работы',
         image: <Image {...Develop} alt='Строительные работы'/>,
-        url: ''
+        url: '/delivery'
     },
 ]

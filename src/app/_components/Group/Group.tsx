@@ -1,3 +1,4 @@
+'use client';
 import styles from './group.module.scss'
 import {GroupCard} from "@/app/_components/Group/GroupCard/GroupCard";
 import {backCardsContent} from "@/app/_components/Group/Group.constants";

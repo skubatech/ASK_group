@@ -1,5 +1,6 @@
 import styles from './ProductCard.module.scss'
 import {FC, ReactNode} from "react";
+import Link from "next/link";
 
 type Props = {
     title: string;
@@ -11,7 +12,7 @@ export const ProductCard: FC<Props> = ({title, image, url}) => {
         <div className={styles.card}>
             <span>{image}</span>
             <span className={styles.title}>{title}</span>
-            <span className={styles.btn}>Заказать</span>
+            <Link href={url} className={styles.btn}>Заказать</Link>
         </div>
     )
 }
