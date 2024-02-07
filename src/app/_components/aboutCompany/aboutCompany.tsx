@@ -10,7 +10,7 @@ import Number50 from '@/assets/icons/50.svg?url';
 
 export const AboutCompany = () => {
     return (
-        <section className={`${styles.about} container`} id='about'>
+        <section className={`${styles.about} container`}>
             <div className={styles.wrapper}>
                 <div className={styles.description}>
                     <h2 className={styles.title}>О компании</h2>
