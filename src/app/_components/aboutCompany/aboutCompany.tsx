@@ -10,7 +10,7 @@ import Number50 from '@/assets/icons/50.svg?url';
 
 export const AboutCompany = () => {
   return (
-    <section className={`${styles.about} container`}>
+    <section className={`${styles.about} container`} id='about'>
       <div className={styles.wrapper}>
         <div className={styles.description}>
           <h2 className={styles.title}>О компании</h2>
@@ -52,7 +52,7 @@ export const AboutCompany = () => {
         </div>
         <div className={styles.item}>
           <Image src={Number600} className={styles.img} alt='Number icon' />
-          <span className={styles.text}>Поставлено песка по СПБ и ЛО</span>
+          <span className={styles.text} id={styles.num600}>Поставлено песка по СПБ и ЛО</span>
         </div>
         <div className={styles.item}>
           <Image src={Number550} className={styles.img} alt='Number icon' />
@@ -60,7 +60,7 @@ export const AboutCompany = () => {
         </div>
         <div className={styles.item}>
           <Image src={Number50} className={styles.img} alt='Number icon' />
-          <span className={styles.text}>
+          <span className={styles.text} id={styles.num50}>
             Крупных строительных объектов реализовано
           </span>
         </div>

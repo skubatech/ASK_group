@@ -35,8 +35,8 @@
   z-index: 1;
 
   @include arrayProps((
-          top: 36px 50px,
-          right: 24px 50px
+          top: 36px null 50px,
+          right: 24px null 50px
   ))
 }
 
@@ -75,7 +75,7 @@
   border-bottom-left-radius: 20px;
   @include arrayProps((
           width: 100% 500px,
-          margin-top: 80px 110px,
+          margin-top: 75px null 110px,
   ))
 }
 

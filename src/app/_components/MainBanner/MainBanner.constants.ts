@@ -7,6 +7,7 @@ interface SliderItemsType {
     imgSrc: StaticImageData;
     title: string;
     text: string;
+    path: string;
 }
 
 export const bannerItems: SliderItemsType[] = [
@@ -14,15 +15,18 @@ export const bannerItems: SliderItemsType[] = [
         imgSrc: exportSnow,
         title: 'Вывоз снега',
         text: 'от 300 руб/м',
+        path: '/export'
     },
     {
         imgSrc: sandSupply,
         title: 'Поставка песка',
         text: 'от 600 руб/м',
+        path: '/delivery'
     },
     {
         imgSrc: exportGround,
         title: 'Вывоз и утилизация грунта',
         text: 'от 300 руб/м',
+        path: '/export'
     },
 ];

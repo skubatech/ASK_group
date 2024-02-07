@@ -1,0 +1,54 @@
+@import 'src/theme/helpers';
+
+.cards {
+    display: flex;
+    justify-content: center;
+    @include arrayProps((
+        flex-direction: 'column' 'row',
+        gap: 12px null 24px,
+        margin: '0 0 30px 0' null '30px 0 60px 0'
+    ));
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #2B2B2B;
+        @include arrayProps((
+            padding: '10px 41px' null '24px 76px' '39px 114px',
+            width: '' '50%',
+            border-radius: 10px null null 20px,
+        ));
+    
+        .img {
+            object-fit: cover;
+            @include arrayProps((
+                width: 150px null 200px 350px,
+                height: 111px null 200px 350px,
+            ));
+        }
+    
+        .title {
+            @include text(36px, normal, 400, normal, #fff);
+            @include arrayProps((
+                font-size: 16px null 20px 36px,
+                margin-top: 15px null 0,
+            ));
+        }
+    
+        .btn {
+            background-color: #FF7A00;
+            cursor: pointer;
+            border: none;
+            @include text(24px, normal, 700, normal, #fff);
+            width: 100%;
+            @include arrayProps((
+                padding: '15px 18px' null '15px 20px' null '30px 40px',
+                margin-top: 15px null 30px,
+                border-radius: 10px null null 15px 20px,
+                font-size: 14px null 16px 24px,
+            ));
+        }
+    }
+}

@@ -19,7 +19,7 @@
         .title {
           @include text(48px, normal, 500, normal, #fff);
           @include arrayProps((
-            font-size: 36px 28px null 36px 48px
+            font-size: 36px null null 36px 48px
           ))
         }
 
@@ -35,23 +35,25 @@
           display: flex;
           flex-direction: column;
           @include arrayProps((
-            margin-top: 20px null 48px null 65px,
+            margin-top: 20px null 86px null 65px,
             gap: 30px 20px 16px 20px 40px,
           ));
 
           .title {
             @include text(48px, normal, 500, normal, #fff);
             @include arrayProps((
-              font-size: 36px 28px null 36px 48px
+              font-size: 36px 24px null 36px 48px
             ));
           }
   
           .principle {
             display: flex;
             justify-content: space-between;
+            cursor: pointer;
 
             &:hover {
                 filter: invert(48%) sepia(96%) saturate(2234%) hue-rotate(2deg) brightness(105%) contrast(106%);
+                transition: all .2s ease-in-out;
             }
 
             .item {
@@ -120,8 +122,8 @@
 
         .img {
           @include arrayProps((
-            width: auto,
-            height: 35px 55px null 65px 92px
+            height: 35px 55px null 65px 92px,
+            width: 150px 205px 203px 249px 370px,
           ));
         }
   
@@ -131,6 +133,18 @@
           @include text(24px, normal, 700, normal, #fff);
           @include arrayProps((
             font-size: 12px 14px 16px 22px 24px,
+          ));
+        }
+
+        #num600 {
+          @include arrayProps((
+            max-width: 127px 145px 168px 226px 243px,
+          ));
+        }
+
+        #num50 {
+          @include arrayProps((
+            max-width: 154px 178px 200px 294px,
           ));
         }
       }

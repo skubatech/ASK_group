@@ -12,7 +12,7 @@ import TelegramWhite from '@/assets/icons/telegramWhite.svg?url';
 
 export const Contacts = () => {
   return (
-    <section className={`${styles.contacts} container`}>
+    <section className={`${styles.contacts} container`} id='contacts'>
       <h2 className={styles.title}>Контакты</h2>
       <div className={styles.wrapper}>
         <div className={styles.content}>
@@ -24,6 +24,9 @@ export const Contacts = () => {
           </a>
           <a href='mailto:zakaz@askspb.ru' className={styles.link}>
             zakaz@askspb.ru
+          </a>
+          <a href='mailto:inform@askspb.ru' className={styles.link}>
+            inform@askspb.ru
           </a>
           <div className={styles.social}>
             <a
