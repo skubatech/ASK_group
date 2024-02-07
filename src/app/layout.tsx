@@ -1,9 +1,8 @@
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import "./globals.scss";
-import { Footer } from "./_components/footer";
+import {Footer} from "./_components/footer";
 import {Header} from "@/app/_components/header/header";
-import {Footer} from "@/app/_components/footer";
 import cn from "classnames";
 import styles from './page.module.scss'
 
@@ -14,11 +13,8 @@ export const metadata: Metadata = {
     description: "АСК",
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
+
     return (
         <html lang="en">
         <body className={cn(inter.className, styles.main)}>
