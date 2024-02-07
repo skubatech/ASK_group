@@ -14,19 +14,19 @@ export const bannerItems: SliderItemsType[] = [
     {
         imgSrc: exportSnow,
         title: 'Вывоз снега',
-        text: 'от 300 руб/м',
+        text: 'от 250 руб/м',
         path: '/export'
     },
     {
         imgSrc: sandSupply,
         title: 'Поставка песка',
-        text: 'от 600 руб/м',
+        text: 'от 300 руб/м',
         path: '/delivery'
     },
     {
         imgSrc: exportGround,
         title: 'Вывоз и утилизация грунта',
-        text: 'от 300 руб/м',
+        text: 'от 200 руб/м',
         path: '/export'
     },
 ];

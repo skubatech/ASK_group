@@ -2,7 +2,7 @@ import styles from './aboutCompany.module.scss';
 import Image from 'next/image';
 
 import principles from '@/assets/images/principles.png';
-import MouseSquare from '@/assets/icons/mouseSquare.svg';
+import MouseSquare from '@/assets/icons/mouseSquare.svg?url';
 import Number750 from '@/assets/icons/750.svg?url';
 import Number600 from '@/assets/icons/600.svg?url';
 import Number550 from '@/assets/icons/550.svg?url';
