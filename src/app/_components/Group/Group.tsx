@@ -5,7 +5,7 @@ import {backCardsContent} from "@/app/_components/Group/Group.constants";
 
 export const Group = () => {
     return (
-        <section className={styles.group}>
+        <section className={styles.group} id='about'>
             <h1 className={styles.title}>ASK GROUP это:</h1>
             <div className={styles.grid}>
                 <div className={styles.row}>
