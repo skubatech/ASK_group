@@ -1,14 +1,21 @@
 import styles from './aboutCompany.module.scss';
-import Image from 'next/image';
-
-import principles from '@/assets/images/principles.png';
+import Image, {StaticImageData} from 'next/image';
 import MouseSquare from '@/assets/icons/mouseSquare.svg?url';
 import Number750 from '@/assets/icons/750.svg?url';
 import Number600 from '@/assets/icons/600.svg?url';
 import Number550 from '@/assets/icons/550.svg?url';
 import Number50 from '@/assets/icons/50.svg?url';
+import {useState} from "react";
+import postavki from '@/assets/images/postavki.png'
+import personal from '@/assets/images/personal.png'
+import documents from '@/assets/images/documents.png'
 
 export const AboutCompany = () => {
+    const [currImage, setCurrImage] = useState(postavki);
+    const changeImage = (img: StaticImageData) => {
+        setCurrImage(img);
+        console.log(img)
+    }
     return (
         <section className={`${styles.about} container`}>
             <div className={styles.wrapper}>
@@ -25,24 +32,22 @@ export const AboutCompany = () => {
           </span>
                     <div className={styles.principles}>
                         <h3 className={styles.title}>Наши принципы</h3>
-                        <div className={styles.principle}>
+                        <div className={styles.principle} onMouseEnter={() => changeImage(postavki)}>
                             <span className={styles.item}>Четкие сроки поставки</span>
                             <Image src={MouseSquare} className={styles.img} alt='Icon'/>
                         </div>
-                        <div className={styles.principle}>
+                        <div className={styles.principle} onMouseEnter={() => changeImage(personal)}>
                             <span className={styles.item}>Квалифицированный персонал</span>
                             <Image src={MouseSquare} className={styles.img} alt='Icon'/>
                         </div>
-                        <div className={styles.principle}>
-              <span className={styles.item}>
-                Полная документальная отчётность
-              </span>
+                        <div className={styles.principle} onMouseEnter={() => changeImage(documents)}>
+                            <span className={styles.item}>Полная документальная отчётность</span>
                             <Image src={MouseSquare} className={styles.img} alt='Icon'/>
                         </div>
                     </div>
                 </div>
                 <div className={styles.imgWrap}>
-                    <Image src={principles} alt='principles' className={styles.img}/>
+                    <Image {...currImage} alt='principles' className={styles.img}/>
                 </div>
             </div>
             <div className={styles.statistics}>
