@@ -1,10 +1,10 @@
 import styles from './aboutCompany.module.scss';
 import Image, {StaticImageData} from 'next/image';
-import MouseSquare from '@/assets/icons/mouseSquare.svg?url';
-import Number750 from '@/assets/icons/750.svg?url';
-import Number600 from '@/assets/icons/600.svg?url';
-import Number550 from '@/assets/icons/550.svg?url';
-import Number50 from '@/assets/icons/50.svg?url';
+import MouseSquare from '@/assets/icons/mouseSquare.svg';
+import Number750 from '@/assets/icons/750.svg';
+import Number600 from '@/assets/icons/600.svg';
+import Number550 from '@/assets/icons/550.svg';
+import Number50 from '@/assets/icons/50.svg';
 import {useState} from "react";
 import postavki from '@/assets/images/postavki.png'
 import personal from '@/assets/images/personal.png'
