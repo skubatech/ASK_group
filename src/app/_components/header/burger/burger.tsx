@@ -12,7 +12,8 @@ export const Burger = () => {
             </label>
 
             <ul className={styles.menu__box}>
-                {headerMenu.map((item) => <li><a className={styles.menu__item} href={item.url}>{item.title}</a></li>)}
+                {headerMenu.map((item) => <li key={item.title}><a className={styles.menu__item}
+                                                                  href={item.url}>{item.title}</a></li>)}
                 <li className={cn(styles.phone, styles.menu__item)}><PhoneSvg/> +7 (981) 727-29-09</li>
                 <li className={cn(styles.location, styles.menu__item)}>Санкт-Петербург, Пулковское шоссе 30/4, офис
                     101Д
