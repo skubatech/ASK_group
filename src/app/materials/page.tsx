@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "Нерудные материалы - ASK GROUP",
     description: "Нерудные матералы | ASK GROUP",
 };
-const Materials = () => {
+export default function Materials() {
     return (
         <section className={`${styles.wrapper} container`}>
             <h2 className={styles.title}>Нерудные материалы</h2>
@@ -18,5 +18,3 @@ const Materials = () => {
         </section>
     )
 }
-
-export default Materials;

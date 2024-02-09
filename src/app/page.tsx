@@ -14,7 +14,7 @@ import {ClientsBanner} from "@/app/_components/ClientsBanner/ClientsBanner";
 import {MainBanner} from "@/app/_components/MainBanner/MainBanner";
 import {useEffect} from "react";
 
-const Home = () => {
+export default function Home() {
 
     useEffect(() => {
         if (window.location.hash) {
@@ -37,5 +37,3 @@ const Home = () => {
         </main>
     );
 };
-
-export default Home;
