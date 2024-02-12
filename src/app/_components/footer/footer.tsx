@@ -8,6 +8,7 @@ import Instagram from '@/assets/icons/instagram.svg';
 import Whatsapp from '@/assets/icons/wa.svg';
 import Link from 'next/link';
 import {useRouter} from 'next/navigation';
+import { pageLinks } from './footer.constants';
 
 export const Footer = () => {
     const router = useRouter();
@@ -78,10 +79,18 @@ export const Footer = () => {
                 </div>
 
                 <div className={styles.rightContent}>
-                    <Link className={styles.link} href={'/#services'} onClick={handleScroll}>Наши услуги</Link>
-                    <Link className={styles.link} href={'/#about'} onClick={handleScroll}>О нас</Link>
-                    <Link className={styles.link} href={'/#works'} onClick={handleScroll}>Наши работы</Link>
-                    <Link className={styles.link} href={'/#contacts'} onClick={handleScroll}>Контакты</Link>
+                    {
+                        pageLinks.map((item) => (
+                            <Link 
+                                className={styles.link} 
+                                href={item.path} 
+                                onClick={handleScroll}
+                                key={item.text}
+                            >
+                                {item.text}
+                            </Link>
+                        ))
+                    }
                 </div>
             </div>
             <div className={styles.social}>

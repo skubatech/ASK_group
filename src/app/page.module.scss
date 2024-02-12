@@ -19,12 +19,13 @@
     @include arrayProps((
       margin-top: 30px null 46px 87px,
       padding-left: 24px null 48px 120px,
+      height: 224px null '100%',
     ));
 
     .title {
       @include text(72px, normal, 700, normal, #fff);
       @include arrayProps((
-        font-size: 36px null null 61px 96px,
+        font-size: 36px null null 61px 72px,
       ));
     }
 
@@ -33,15 +34,14 @@
       @include arrayProps((
         font-size: 24px null null 36px 48px,
       ));
+    }
 
-      &::after {
-        content: '3';
-        @include text(32px, normal, 400, normal, #fff);
+    .textIndex {
+      @include text(32px, normal, 400, normal, #fff);
         @include arrayProps((
                 font-size: 16px null null 22px 32px,
         ));
         position: absolute;
-      }
     }
 
     .btn {
@@ -89,7 +89,7 @@
     clip-path: polygon(100% 100%, 100% 0%, 7% 0%, 1% 100%);
     width: 789px;
     @include arrayProps((
-            clip-path: 'polygon(100% 100%, 100% 8%, 0% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 9% 0%, 1% 100%)' 'polygon(100% 100%, 100% 0%, 9% 0%, 1% 100%)' 'polygon(100% 100%, 100% 0%, 7% 0%, 1% 100%)',
+            clip-path: 'polygon(100% 100%, 100% 6%, 0% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 9% 0%, 1% 100%)' 'polygon(100% 100%, 100% 0%, 9% 0%, 1% 100%)' 'polygon(100% 100%, 100% 0%, 7% 0%, 1% 100%)',
     ));
   }
 
@@ -97,8 +97,48 @@
     clip-path: polygon(100% 100%, 100% 0%, 8% 0%, 0% 100%);
     width: 767px;
     @include arrayProps((
-            clip-path: 'polygon(100% 100%, 100% 4%, 0% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 6% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 4% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 4% 0%, 0% 100%)',
+            clip-path: 'polygon(100% 100%, 100% 11%, 0% 4%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 6% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 4% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 4% 0%, 0% 100%)',
             margin-bottom: 40px 0,
+            max-height: 240px null '100%',
+            width: 459px null null 767px,
+    ));
+  }
+
+  .banner5 {
+    clip-path: polygon(100% 100%, 100% 0%, 8% 0%, 0% 100%);
+    width: 750px;
+    @include arrayProps((
+            clip-path: 'polygon(100% 100%, 100% 17%, 0% 4%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 6% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 4% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 10% 0%, 0% 100%)',
+    ));
+  }
+
+  .banner6 {
+    clip-path: polygon(100% 100%, 100% 0%, 8% 0%, 0% 100%);
+    width: 680px;
+    @include arrayProps((
+            clip-path: 'polygon(100% 100%, 100% 24%, 0% 16%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 6% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 10% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 8% 0%, 0% 100%)',
+            margin-bottom: 40px 0,
+            width: '' 320px 365px 565px 600px,
+            max-height: 240px null '100%',
+    ));
+  }
+
+  .banner8 {
+    clip-path: polygon(100% 100%, 100% 0%, 7% 0%, 1% 100%);
+    width: 730px;
+    @include arrayProps((
+            clip-path: 'polygon(100% 100%, 100% 8%, 0% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 9% 0%, 1% 100%)' 'polygon(100% 100%, 100% 0%, 9% 0%, 1% 100%)' 'polygon(100% 100%, 100% 0%, 7% 0%, 1% 100%)',
+    ));
+  }
+
+  .banner9 {
+    clip-path: polygon(100% 100%, 100% 0%, 8% 0%, 0% 100%);
+    width: 767px;
+    @include arrayProps((
+            clip-path: 'polygon(100% 100%, 100% 15%, 0% 5%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 6% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 7% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 6% 0%, 0% 100%)',
+            margin-bottom: 40px 0,
+            width: '' null 428px 579px 709px,
+            max-height: 240px null '100%',
     ));
   }
 }
@@ -155,8 +195,8 @@
   margin: auto;
 }
 
-#bannerTitle {
-  @include arrayProps((
-    font-size: 24px 28px 36px 54px 67px,
-  ));
-}
+// #bannerTitle {
+//   @include arrayProps((
+//     font-size: 36px 28px 36px 54px 67px,
+//   ));
+// }
