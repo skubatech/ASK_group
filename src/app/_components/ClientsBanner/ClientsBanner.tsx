@@ -1,7 +1,6 @@
 'use client';
 import {Swiper, SwiperSlide} from "swiper/react";
 import styles from "@/app/page.module.scss";
-import Image from "next/image";
 import {clientItems} from "@/app/_components/ClientsBanner/ClientsBanner.constants";
 import {Autoplay} from "swiper/modules";
 import {Advent_Pro} from "next/font/google";
@@ -29,7 +28,7 @@ export const ClientsBanner = () => {
                         return (
                             <SwiperSlide key={item.text}>
                                 <div className={styles.partner}>
-                                    <Image src={item.imgSrc} alt='Logo' className={styles.img}/>
+                                    <img {...item.imgSrc} alt='Logo' className={styles.img}/>
                                     <span className={`${styles.name} ${i === 2 ? styles.mvd : ''}`}>
               {item.text}
             </span>

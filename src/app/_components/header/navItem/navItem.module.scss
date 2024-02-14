@@ -47,6 +47,8 @@
 .title {
   display: flex;
   gap: 5px;
+  text-decoration: none;
+  color: white;
   align-items: center;
   @include arrayProps((
           font-size: null null 14px 18px

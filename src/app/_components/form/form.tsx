@@ -1,9 +1,10 @@
-import {ChangeEvent, MouseEvent, useState} from 'react';
+import React, {ChangeEvent, MouseEvent, useState} from 'react';
 import styles from './form.module.scss';
 import cn from 'classnames';
 
 import Arrow from '@/assets/icons/arrow.svg';
 import axios from "axios";
+import {Bounce, toast} from "react-toastify";
 
 interface FormInterface {
     phone: string;
@@ -65,8 +66,35 @@ const Form = ({onClick}: FormProps) => {
 
     const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        const data = await axios.post('https://asklogspb.ru/wp-content/themes/ask/mail.php')
-        console.log(data);
+        try {
+            await axios.post('https://asklogspb.ru/wp-content/themes/ask/mail.php', {
+                ...form
+            })
+            toast.success('Форма успешно отправлена!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            });
+        } catch (e) {
+            toast.error('Ошибка отправки', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+            });
+        }
+
         setForm({
             phone: '',
             phoneText: '',
@@ -75,37 +103,40 @@ const Form = ({onClick}: FormProps) => {
     };
 
     return (
-        <form className={styles.form}>
-            <button className={styles.arrow} onClick={onClick}>
-                <span className={styles.icon}><Arrow/></span>
-            </button>
-            <label hidden htmlFor='phone'>
-                Ваш телефон:
-            </label>
-            <input
-                type='phone'
-                id='phone'
-                name='phone'
-                value={form.phone}
-                onChange={onChange}
-                className={styles.input}
-                placeholder='Ваш телефон:'
-            />
-            <label hidden htmlFor='message'>
-                Текст сообщения:
-            </label>
-            <textarea
-                id='message'
-                name='message'
-                value={form.message}
-                onChange={onChange}
-                className={cn(styles.input, styles.text)}
-                placeholder='Текст сообщения:'
-            />
-            <button type='submit' onClick={handleSubmit} className={styles.btn}>
-                Отправить
-            </button>
-        </form>
+        <>
+            <form className={styles.form}>
+                <button className={styles.arrow} onClick={onClick}>
+                    <span className={styles.icon}><Arrow/></span>
+                </button>
+                <label hidden htmlFor='phone'>
+                    Ваш телефон:
+                </label>
+                <input
+                    type='phone'
+                    id='phone'
+                    name='phone'
+                    value={form.phone}
+                    onChange={onChange}
+                    className={styles.input}
+                    placeholder='Ваш телефон:'
+                />
+                <label hidden htmlFor='message'>
+                    Текст сообщения:
+                </label>
+                <textarea
+                    id='message'
+                    name='message'
+                    value={form.message}
+                    onChange={onChange}
+                    className={cn(styles.input, styles.text)}
+                    placeholder='Текст сообщения:'
+                />
+                <button type='submit' onClick={handleSubmit} className={styles.btn}>
+                    Отправить
+                </button>
+            </form>
+        </>
+
     );
 };
 

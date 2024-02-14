@@ -72,23 +72,23 @@
   flex-direction: column;
 
   @include arrayProps((
-          gap: 20px 30px,
+          gap: 10px 30px,
   ))
 }
 
 .img {
+  justify-content: center;
   @include arrayProps((
-          order: 1 2
+          order: 1 2,
+          display: flex block
   ));
 
   img {
     width: 100%;
-
-
     @include arrayProps((
             border-radius: 5px 20px,
-            max-width: 100% null 540px null 900px,
-            height: 240px null 380px null 700px
+            max-width: 200px null 540px null 900px,
+            height: 180px null 380px null 700px
     ))
   }
 }

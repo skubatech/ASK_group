@@ -1,7 +1,7 @@
 'use client';
 import {materialsTabs} from "@/app/materials/materials.constants";
 import styles from './materilasSwicher.module.scss'
-import {useEffect, useState} from "react";
+import {Suspense, useEffect, useState} from "react";
 import {ProductCard} from "@/app/_components/productCard/productCard";
 import {useSearchParams} from "next/navigation";
 import Link from "next/link";
@@ -24,27 +24,28 @@ export const MaterialsSwitcher = () => {
     }, [params])
 
     useEffect(() => {
-        setMaxItems(isMobile ? 4 : 16);
+        setMaxItems(isMobile ? 4 : 12);
     }, [isMobile]);
 
     return (
-        <section className={styles.wrapper}>
-            <section className={styles.switcher}>
-                {materialsTabs.map((tab) => (
-                    <Link key={tab.title} className={cn(styles.tab, {[styles.active]: product.url === tab.url})}
-                          href={{pathname: '/materials', query: {product: tab.url}}}>{tab.title}</Link>
-                ))}
-            </section>
-            <section className={styles.catalog}>
-                {product?.products.slice(0, maxItems).map((product) =>
-                    <ProductCard key={product.title} product={product}/>)}
-            </section>
-            {product.products.length > maxItems &&
-                <section className={styles.more}>
+        <Suspense>
+            <section className={styles.wrapper}>
+                <section className={styles.switcher}>
+                    {materialsTabs.map((tab) => (
+                        <Link key={tab.title} className={cn(styles.tab, {[styles.active]: product.url === tab.url})}
+                              href={{pathname: '/materials', query: {product: tab.url}}}>{tab.title}</Link>
+                    ))}
+                </section>
+                <section className={styles.catalog}>
+                    {product?.products.slice(0, maxItems).map((product) =>
+                        <ProductCard key={product.title} product={product}/>)}
+                </section>
+                {product.products.length > maxItems &&
+                    <section className={styles.more}>
                     <span className={styles.moreBtn}
                           onClick={() => setMaxItems(product.products.length)}>Показать еще</span>
-                </section>}
-        </section>
-
+                    </section>}
+            </section>
+        </Suspense>
     )
 }

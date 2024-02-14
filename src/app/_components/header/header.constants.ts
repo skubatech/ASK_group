@@ -6,15 +6,15 @@ export const headerMenu: TNavItem[] = [
         url: '/materials',
         child: [
             {
-                title: 'Песок',
-                url: '/materials?product=pesok'
-            },
-            {
                 title: 'Шебень',
                 url: '/materials/?product=sheben'
             },
             {
-                title: 'Керамзит',
+                title: 'Песок',
+                url: '/materials?product=pesok'
+            },
+            {
+                title: 'Гравий',
                 url: '/materials/?product=gravi'
             },
             {
@@ -28,7 +28,7 @@ export const headerMenu: TNavItem[] = [
         url: '/export'
     },
     {
-        title: 'Аренда спецтехники', url: 'rent', child: [
+        title: 'Аренда спецтехники', url: '/rent', child: [
             {
                 title: 'Самосвалы', url: '',
             },

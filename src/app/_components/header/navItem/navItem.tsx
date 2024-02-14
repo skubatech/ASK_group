@@ -30,10 +30,10 @@ export const NavItem: FC<Props> = ({item, isActiveTab, onActive}) => {
     return (
         <div className={styles.navItem}
              ref={ref}>
-            <span className={styles.title} onMouseOver={mouseEnter}>
+            <Link href={item.url} className={styles.title} onMouseOver={mouseEnter}>
                 <span>{item.title}</span>
                 {item.child && <ArrowDown/>}
-            </span>
+            </Link>
             {
                 item.child &&
                 <ul className={cn(styles.childList, {[styles.active]: isActive})} ref={ref2}>

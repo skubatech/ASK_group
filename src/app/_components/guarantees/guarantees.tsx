@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import styles from './guarantees.module.scss';
 import {ReactNode, useState} from 'react';
 
@@ -97,7 +96,7 @@ export const Guarantees = () => {
                         );
                     })}
                 </div>
-                <Image src={mainImage} alt='Guarantees' className={imgStyles}/>
+                <img {...mainImage} alt='Guarantees' className={imgStyles}/>
                 <div className={styles.items}>
                     {contentItems.slice(2, 4).map((item) => {
                         return (

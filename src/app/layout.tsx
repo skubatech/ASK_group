@@ -5,6 +5,9 @@ import {Footer} from "./_components/footer";
 import {Header} from "@/app/_components/header/header";
 import cn from "classnames";
 import styles from './page.module.scss'
+import {Bounce, ToastContainer} from "react-toastify";
+import React from "react";
+import 'react-toastify/dist/ReactToastify.css';
 
 const montserrat = Montserrat({subsets: ["latin"]});
 
@@ -27,6 +30,18 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
         </main>
         <Footer/>
         </body>
+        <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+            transition={Bounce}/>
         </html>
     );
 }

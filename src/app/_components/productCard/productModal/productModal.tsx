@@ -17,6 +17,13 @@ export const ProductModal: FC<Props> = ({product, closeModal}) => {
         closeModal();
     }
 
+    const Description = () => {
+        return (
+            product.description.map((d: string) => (
+                <span key={d} className={styles.row}>{d}</span>))
+        )
+    }
+
     return (
         <section>
             <section className={styles.main}>
@@ -26,9 +33,14 @@ export const ProductModal: FC<Props> = ({product, closeModal}) => {
                         <span className={styles.title}>{product.title}</span>
                         <span className={styles.price}>от {product.price}.00 ₽</span>
                         <span className={styles.description}>
-                          <span className={styles.des_title}>Описание</span>
-                            {product.description.map((d: string) => (<span key={d} className={styles.row}>{d}</span>))}
-                    </span>
+                            {product.description && (
+                                <>
+                                    <span className={styles.des_title}>Описание</span>
+                                    <Description/>
+                                </>
+                            )}
+                        </span>
+
                     </section>
                     <span onClick={onClick}>
                         <span className={styles.btn}>Заказать сейчас</span>
