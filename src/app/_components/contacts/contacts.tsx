@@ -1,9 +1,6 @@
 import styles from './contacts.module.scss';
-
-import Vk from '@/assets/icons/vk.svg';
 import Telegram from '@/assets/icons/telegram.svg';
 import Whatsapp from '@/assets/icons/wa.svg';
-import Instagram from '@/assets/icons/instagram.svg';
 import Phone from '@/assets/icons/whitePhone.svg';
 import Messenger from '@/assets/icons/messenger.svg';
 import WhatsAppWhite from '@/assets/icons/waWhite.svg';
@@ -37,7 +34,7 @@ export const Contacts = () => {
                     </a>
                     <div className={styles.social}>
                         <a
-                            href='https://telegram.org/'
+                            href='https://t.me/+79817272909'
                             target='_blank'
                             rel='noopener noreferrer'
                             className={styles.link}
@@ -45,28 +42,12 @@ export const Contacts = () => {
                             <Telegram/>
                         </a>
                         <a
-                            href='https://web.whatsapp.com/'
+                            href='https://wa.me/79817272909'
                             target='_blank'
                             rel='noopener noreferrer'
                             className={styles.link}
                         >
                             <Whatsapp/>
-                        </a>
-                        <a
-                            href='https://vk.com/'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            className={styles.link}
-                        >
-                            <Vk/>
-                        </a>
-                        <a
-                            href='https://instagram.com/'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            className={styles.link}
-                        >
-                            <Instagram/>
                         </a>
                     </div>
                 </div>
@@ -84,7 +65,7 @@ export const Contacts = () => {
                                 <div className={styles.itemWrap}>
                                     <a
                                         className={`${styles.item} ${styles.itemRow}`}
-                                        href='https://web.whatsapp.com/'
+                                        href='https://wa.me/79817272909'
                                         target='_blank'
                                         rel='noopener noreferrer'
                                     >
@@ -93,7 +74,7 @@ export const Contacts = () => {
                                     </a>
                                     <a
                                         className={`${styles.item} ${styles.itemRow}`}
-                                        href='https://telegram.org/'
+                                        href='https://t.me/+79817272909'
                                         target='_blank'
                                         rel='noopener noreferrer'
                                     >
@@ -104,8 +85,6 @@ export const Contacts = () => {
                                 <div className={styles.item} onClick={visibleForm}>
                                     <span className={styles.text}>Оставить заяку на сайте</span>
                                     <span className={styles.icon}><Messenger/></span>
-
-
                                 </div>
                             </div>
                         </>

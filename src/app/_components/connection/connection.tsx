@@ -29,7 +29,7 @@ export const Connection = () => {
                         <div className={styles.rowWrap}>
                             <a
                                 className={`${styles.item} ${styles.itemRow}`}
-                                href='https://web.whatsapp.com/'
+                                href='https://wa.me/79817272909'
                                 target='_blank'
                                 rel='noopener noreferrer'
                             >
@@ -38,7 +38,7 @@ export const Connection = () => {
                             </a>
                             <a
                                 className={`${styles.item} ${styles.itemRow}`}
-                                href='https://telegram.org/'
+                                href='https://t.me/+79817272909'
                                 target='_blank'
                                 rel='noopener noreferrer'
                             >

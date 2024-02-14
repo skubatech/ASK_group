@@ -5,9 +5,10 @@
   justify-content: space-between;
   cursor: pointer;
   @include arrayProps((
-    flex-direction: 'column' 'row',
-    padding-bottom: 40px null 40px 60px,
-    height: 495px 243px 310px 420px 512px,
+          gap: 40px 20px 0,
+          flex-direction: 'column' 'row',
+          padding-bottom: 40px null 40px 60px,
+          height: null 243px 310px 420px 512px,
   ));
 
   .description {
@@ -17,31 +18,31 @@
     margin-top: 67px;
 
     @include arrayProps((
-      margin-top: 30px null 46px 87px,
-      padding-left: 24px null 48px 120px,
-      height: 224px null '100%',
+            margin-top: 30px null 46px 87px,
+            padding-left: 24px null 48px 120px,
+            height: 224px null '100%',
     ));
 
     .title {
       @include text(72px, normal, 700, normal, #fff);
       @include arrayProps((
-        font-size: 36px null null 61px 72px,
+              font-size: 36px null null 61px 72px,
       ));
     }
 
     .text {
       @include text(48px, normal, 400, normal, #fff);
       @include arrayProps((
-        font-size: 24px null null 36px 48px,
+              font-size: 24px null null 36px 48px,
       ));
     }
 
     .textIndex {
       @include text(32px, normal, 400, normal, #fff);
-        @include arrayProps((
-                font-size: 16px null null 22px 32px,
-        ));
-        position: absolute;
+      @include arrayProps((
+              font-size: 16px null null 22px 32px,
+      ));
+      position: absolute;
     }
 
     .btn {
@@ -50,30 +51,29 @@
       border: none;
       border-radius: 20px;
       cursor: pointer;
-      margin-top: 60px;
       max-width: fit-content;
       box-sizing: border-box;
       @include arrayProps((
-        margin-top: 15px null 30px 40px 60px,
-        margin-bottom: 15px 0,
-        font-size: 20px 18px 16px 24px,
-        padding: '25px 35px' '20px 30px' '16px 21px' '30px 40px',
-        border-radius: 20px null 10px 20px,
+              margin-top: 15px null 30px 40px 60px,
+              margin-bottom: 15px 0,
+              font-size: 20px 18px 16px 24px,
+              padding: '25px 35px' '20px 30px' '16px 21px' '30px 40px',
+              border-radius: 20px null 10px 20px,
       ))
     }
   }
 
   .imgWrap {
     @include arrayProps((
-      height: 270px 243px 310px 420px 512px,
+            height: 270px 243px 310px 420px 512px,
     ));
 
     .img {
       height: 100%;
       object-fit: cover;
       @include arrayProps((
-        max-width: '100%' 369px 483px 650px 875px,
-        min-height: 240px 243px 260px 420px 512px,
+              width: 100vw 369px 483px 650px 875px,
+              height: 280px 243px 300px 420px 512px,
       ));
     }
   }
@@ -99,7 +99,7 @@
     @include arrayProps((
             clip-path: 'polygon(100% 100%, 100% 11%, 0% 4%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 6% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 4% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 4% 0%, 0% 100%)',
             margin-bottom: 40px 0,
-            max-height: 240px null '100%',
+            max-height: 280px null '100%',
             width: 459px null null 767px,
     ));
   }
@@ -119,7 +119,7 @@
             clip-path: 'polygon(100% 100%, 100% 24%, 0% 16%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 6% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 10% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 8% 0%, 0% 100%)',
             margin-bottom: 40px 0,
             width: '' 320px 365px 565px 600px,
-            max-height: 240px null '100%',
+            max-height: 280px null '100%',
     ));
   }
 
@@ -138,7 +138,7 @@
             clip-path: 'polygon(100% 100%, 100% 15%, 0% 5%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 6% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 7% 0%, 0% 100%)' 'polygon(100% 100%, 100% 0%, 6% 0%, 0% 100%)',
             margin-bottom: 40px 0,
             width: '' null 428px 579px 709px,
-            max-height: 240px null '100%',
+            max-height: 280px null '100%',
     ));
   }
 }

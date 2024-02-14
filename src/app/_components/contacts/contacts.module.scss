@@ -42,10 +42,8 @@
 
       .social {
         display: flex;
-        gap: 35px;
         @include arrayProps((
-                justify-content: 'space-between' 'normal' null,
-                gap: '' 35px 20px 35px,
+                gap: 35px null 20px 35px,
         ));
 
         .link {

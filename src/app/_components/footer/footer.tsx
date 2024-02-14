@@ -1,13 +1,10 @@
 'use client';
 import styles from './footer.module.scss';
-
-import Vk from '@/assets/icons/vk.svg';
 import Telegram from '@/assets/icons/telegram.svg';
-import Instagram from '@/assets/icons/instagram.svg';
 import Whatsapp from '@/assets/icons/wa.svg';
 import Link from 'next/link';
 import {useRouter} from 'next/navigation';
-import { pageLinks } from './footer.constants';
+import {pageLinks} from './footer.constants';
 
 export const Footer = () => {
     const router = useRouter();
@@ -43,7 +40,7 @@ export const Footer = () => {
                     </a>
                     <div className={styles.social}>
                         <a
-                            href='https://telegram.org/'
+                            href='https://t.me/+79817272909'
                             target='_blank'
                             rel='noopener noreferrer'
                             className={styles.link}
@@ -51,28 +48,12 @@ export const Footer = () => {
                             <Telegram/>
                         </a>
                         <a
-                            href='https://web.whatsapp.com/'
+                            href='https://wa.me/79817272909'
                             target='_blank'
                             rel='noopener noreferrer'
                             className={styles.link}
                         >
-                            <Telegram/>
-                        </a>
-                        <a
-                            href='https://vk.com/'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            className={styles.link}
-                        >
-                            <Vk/>
-                        </a>
-                        <a
-                            href='https://instagram.com/'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            className={styles.link}
-                        >
-                            <Instagram/>
+                            <Whatsapp/>
                         </a>
                     </div>
                 </div>
@@ -80,9 +61,9 @@ export const Footer = () => {
                 <div className={styles.rightContent}>
                     {
                         pageLinks.map((item) => (
-                            <Link 
-                                className={styles.link} 
-                                href={item.path} 
+                            <Link
+                                className={styles.link}
+                                href={item.path}
                                 onClick={handleScroll}
                                 key={item.text}
                             >
@@ -94,7 +75,7 @@ export const Footer = () => {
             </div>
             <div className={styles.social}>
                 <a
-                    href='https://telegram.org/'
+                    href='https://t.me/+79817272909'
                     target='_blank'
                     rel='noopener noreferrer'
                     className={styles.link}
@@ -102,28 +83,12 @@ export const Footer = () => {
                     <Telegram/>
                 </a>
                 <a
-                    href='https://web.whatsapp.com/'
+                    href='https://wa.me/79817272909'
                     target='_blank'
                     rel='noopener noreferrer'
                     className={styles.link}
                 >
                     <Whatsapp/>
-                </a>
-                <a
-                    href='https://vk.com/'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className={styles.link}
-                >
-                    <Vk/>
-                </a>
-                <a
-                    href='https://instagram.com/'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className={styles.link}
-                >
-                    <Instagram/>
                 </a>
             </div>
             <span className={styles.text}>Все права защищены. ASK Group 2024</span>
