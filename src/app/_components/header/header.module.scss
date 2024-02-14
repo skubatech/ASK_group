@@ -7,7 +7,8 @@
   z-index: 100;
   background: #1A1A1A;
   @include arrayProps((
-          position: sticky null relative
+          position: sticky null relative,
+          border-radius: 0 null 40px
   ))
 }
 
@@ -18,6 +19,7 @@
   position: relative;
   @include arrayProps((
           padding: '24px 20px' null '30px 48px' '40px 120px',
+          font-size: null null 16px 20px,
   ));
 }
 
@@ -44,6 +46,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
 }
 
 .location {

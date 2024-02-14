@@ -4,12 +4,15 @@ import styles from "@/app/page.module.scss";
 import Image from "next/image";
 import {clientItems} from "@/app/_components/ClientsBanner/ClientsBanner.constants";
 import {Autoplay} from "swiper/modules";
+import {Advent_Pro} from "next/font/google";
+import cn from "classnames";
 
+const adventPro = Advent_Pro({subsets: ["cyrillic"], weight: '400'});
 export const ClientsBanner = () => {
 
     return (
         <section className={`${styles.partners} container`}>
-            <h2 className={styles.title}>Наши партнеры</h2>
+            <h2 className={cn(styles.title, adventPro.className)}>Наши партнеры</h2>
             <div className='swiperPartner'>
                 <Swiper
                     spaceBetween={40}

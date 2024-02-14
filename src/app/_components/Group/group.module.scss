@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   @include arrayProps((
-          gap: 20px,
+          gap: 20px 30px,
           padding: '20px 24px' null null null '60px 120px',
   ));
 }
@@ -12,7 +12,7 @@
 .title {
   color: #FFF;
   font-size: 48px;
-  font-weight: 500;
+  letter-spacing: 4px;
 }
 
 .grid {
@@ -42,7 +42,7 @@
 .title1 {
   display: block;
   @include arrayProps((
-          max-width: null null 300px 500px,
+          max-width: null null 298px 500px,
   ))
 }
 
@@ -54,7 +54,13 @@
 .card3 {
   width: 45%;
   background: #FF7A00;
-  color: white;
+}
+
+.title3 {
+  display: block;
+  @include arrayProps((
+          max-width: null null 300px 500px,
+  ))
 }
 
 .card4 {
@@ -174,7 +180,7 @@
   color: white;
 
   @include arrayProps((
-          font-size: 18px 27px 24px 36px
+          font-size: 16px 27px 24px 36px
   ))
 }
 

@@ -3,32 +3,32 @@ import {TNavItem} from "@/app/_components/header/navItem/navItem.types";
 export const headerMenu: TNavItem[] = [
     {
         title: 'Нерудные материалы',
-        url: '',
+        url: '/materials',
         child: [
             {
                 title: 'Песок',
-                url: ''
+                url: '/materials?product=pesok'
             },
             {
                 title: 'Шебень',
-                url: ''
+                url: '/materials/?product=sheben'
             },
             {
                 title: 'Керамзит',
-                url: ''
+                url: '/materials/?product=gravi'
             },
             {
                 title: 'Грунт',
-                url: ''
+                url: '/materials/?product=grunt'
             },
         ]
     },
     {
         title: 'Вывоз и утилизация',
-        url: ''
+        url: '/export'
     },
     {
-        title: 'Аренда спецтехники', url: '', child: [
+        title: 'Аренда спецтехники', url: 'rent', child: [
             {
                 title: 'Самосвалы', url: '',
             },

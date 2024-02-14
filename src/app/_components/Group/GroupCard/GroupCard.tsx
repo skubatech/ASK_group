@@ -25,7 +25,7 @@ export const GroupCard: FC<Props> = ({className, spinnerClassName, title, backCo
             onClick={clickToCard}
         >
             <div className={styles.cardFront}>
-                <span className={cn(styles.title, titleClassName)}>{title}</span>
+                <h1 className={cn(styles.title, titleClassName)}>{title}</h1>
                 {spinnerClassName && <GroupCardSpinner className={spinnerClassName} isActive={isActive}/>}
             </div>
             <div className={styles.cardBack}>

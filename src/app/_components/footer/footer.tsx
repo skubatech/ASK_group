@@ -1,6 +1,5 @@
 'use client';
 import styles from './footer.module.scss';
-import Image from 'next/image';
 
 import Vk from '@/assets/icons/vk.svg';
 import Telegram from '@/assets/icons/telegram.svg';
@@ -48,7 +47,7 @@ export const Footer = () => {
                             rel='noopener noreferrer'
                             className={styles.link}
                         >
-                            <Image src={Telegram} alt='Icon' className={styles.icon}/>
+                            <Telegram/>
                         </a>
                         <a
                             href='https://web.whatsapp.com/'
@@ -56,7 +55,7 @@ export const Footer = () => {
                             rel='noopener noreferrer'
                             className={styles.link}
                         >
-                            <Image src={Whatsapp} alt='Icon' className={styles.icon}/>
+                            <Telegram/>
                         </a>
                         <a
                             href='https://vk.com/'
@@ -64,7 +63,7 @@ export const Footer = () => {
                             rel='noopener noreferrer'
                             className={styles.link}
                         >
-                            <Image src={Vk} alt='Icon' className={styles.icon}/>
+                            <Vk/>
                         </a>
                         <a
                             href='https://instagram.com/'
@@ -72,7 +71,7 @@ export const Footer = () => {
                             rel='noopener noreferrer'
                             className={styles.link}
                         >
-                            <Image src={Instagram} alt='Icon' className={styles.icon}/>
+                            <Instagram/>
                         </a>
                     </div>
                 </div>
@@ -91,7 +90,7 @@ export const Footer = () => {
                     rel='noopener noreferrer'
                     className={styles.link}
                 >
-                    <Image src={Telegram} alt='Icon' className={styles.icon}/>
+                    <Telegram/>
                 </a>
                 <a
                     href='https://web.whatsapp.com/'
@@ -99,7 +98,7 @@ export const Footer = () => {
                     rel='noopener noreferrer'
                     className={styles.link}
                 >
-                    <Image src={Whatsapp} alt='Icon' className={styles.icon}/>
+                    <Whatsapp/>
                 </a>
                 <a
                     href='https://vk.com/'
@@ -107,7 +106,7 @@ export const Footer = () => {
                     rel='noopener noreferrer'
                     className={styles.link}
                 >
-                    <Image src={Vk} alt='Icon' className={styles.icon}/>
+                    <Vk/>
                 </a>
                 <a
                     href='https://instagram.com/'
@@ -115,7 +114,7 @@ export const Footer = () => {
                     rel='noopener noreferrer'
                     className={styles.link}
                 >
-                    <Image src={Instagram} alt='Icon' className={styles.icon}/>
+                    <Instagram/>
                 </a>
             </div>
             <span className={styles.text}>Все права защищены. ASK Group 2024</span>

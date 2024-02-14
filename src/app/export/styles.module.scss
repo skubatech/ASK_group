@@ -2,10 +2,11 @@
 
 .wrapper {
   .title {
-    @include text(248px, normal, 500, normal, #fff);
+    color: white;
+    letter-spacing: 2px;
     @include arrayProps((
-        font-size: 36px null null 48px,
-        padding: '30px 0' null null '60px 0 0 0'
+            font-size: 36px null null 48px,
+            padding: '30px 0' null null '60px 0 0 0'
     ));
   }
 }

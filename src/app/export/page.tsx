@@ -1,10 +1,14 @@
-'use client';
-
 import {Connection} from "../_components/connection";
 import {ExportCards} from "../_components/exportCards";
 import {Guarantees} from "../_components/guarantees";
 
 import styles from './styles.module.scss';
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Вывоз и утилизация - ASK GROUP",
+    description: "Нерудные матералы | ASK GROUP",
+};
 
 export default function Export() {
     return (

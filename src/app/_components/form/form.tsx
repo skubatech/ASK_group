@@ -1,14 +1,14 @@
 import {ChangeEvent, MouseEvent, useState} from 'react';
 import styles from './form.module.scss';
 import cn from 'classnames';
-import Image from 'next/image';
 
 import Arrow from '@/assets/icons/arrow.svg';
+import axios from "axios";
 
 interface FormInterface {
     phone: string;
     phoneText: string;
-    text: string;
+    message: string;
 }
 
 interface FormProps {
@@ -19,7 +19,7 @@ const Form = ({onClick}: FormProps) => {
     const [form, setForm] = useState<FormInterface>({
         phone: '',
         phoneText: '',
-        text: '',
+        message: '',
     });
 
     const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -63,22 +63,21 @@ const Form = ({onClick}: FormProps) => {
         }
     };
 
-    const handleSubmit = (e: MouseEvent<HTMLButtonElement>) => {
+    const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-
-        console.log({phone: form.phoneText, text: form.text});
-
+        const data = await axios.post('https://asklogspb.ru/wp-content/themes/ask/mail.php')
+        console.log(data);
         setForm({
             phone: '',
             phoneText: '',
-            text: '',
+            message: '',
         });
     };
 
     return (
         <form className={styles.form}>
             <button className={styles.arrow} onClick={onClick}>
-                <Image src={Arrow} alt='Icon' className={styles.icon}/>
+                <span className={styles.icon}><Arrow/></span>
             </button>
             <label hidden htmlFor='phone'>
                 Ваш телефон:
@@ -92,13 +91,13 @@ const Form = ({onClick}: FormProps) => {
                 className={styles.input}
                 placeholder='Ваш телефон:'
             />
-            <label hidden htmlFor='text'>
+            <label hidden htmlFor='message'>
                 Текст сообщения:
             </label>
             <textarea
-                id='text'
-                name='text'
-                value={form.text}
+                id='message'
+                name='message'
+                value={form.message}
                 onChange={onChange}
                 className={cn(styles.input, styles.text)}
                 placeholder='Текст сообщения:'

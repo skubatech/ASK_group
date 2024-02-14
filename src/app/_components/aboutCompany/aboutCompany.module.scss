@@ -63,7 +63,7 @@
             ));
           }
 
-          .img {
+          svg {
             @include arrayProps((
                     width: 24px null 20px 30px 36px,
                     height: 24px null 20px 30px 36px,
@@ -115,7 +115,7 @@
               padding: '30px 0' null null null '45px 0'
       ));
 
-      .img {
+      svg {
         @include arrayProps((
                 height: 35px 55px null 65px 92px,
                 width: 150px 205px 203px 249px 370px,
@@ -131,13 +131,13 @@
         ));
       }
 
-      #num600 {
+      .num600 {
         @include arrayProps((
                 max-width: 127px 145px 168px 226px 243px,
         ));
       }
 
-      #num50 {
+      .num50 {
         @include arrayProps((
                 max-width: 154px 178px 200px 294px,
         ));

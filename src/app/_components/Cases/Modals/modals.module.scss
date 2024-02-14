@@ -1,0 +1,43 @@
+@import 'src/theme/helpers';
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  @include arrayProps((
+          flex-direction: column-reverse null null null row,
+          gap: 15px
+  ));
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title {
+  color: white;
+  @include arrayProps((
+          font-size: 24px null 36px null 48px
+  ))
+}
+
+.decription {
+  color: white;
+
+  @include arrayProps((
+          font-size: 16px null 20px null 24px,
+          display: none null null null block
+  ))
+}
+
+.img img {
+
+  object-fit: cover;
+
+  @include arrayProps((
+          height: 280px null 100%,
+          border-radius: 5px null 20px,
+          max-width: 100% null null null 800px
+  ));
+}

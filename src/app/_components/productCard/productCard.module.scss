@@ -1,0 +1,52 @@
+@import 'src/theme/helpers';
+
+.card {
+  background: #2A2A2A;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all .2s ease;
+
+  @include arrayProps((
+          border-radius: 10px 20px,
+  ));
+
+  &:hover {
+    scale: 1.01;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+
+    @include arrayProps((
+            gap: 10px 15px,
+            padding: '15px 10px' null '28px 15px'
+    ))
+  }
+
+  .img {
+    object-fit: cover;
+    height: 320px;
+    @include arrayProps((
+            height: 150px null 214px null 320px
+    ))
+  }
+
+  .title {
+    color: white;
+    @include arrayProps((
+            font-size: 12px null 16px null 24px,
+    ))
+  }
+
+  .price {
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+    @include arrayProps((
+            font-size: 20px null 24px null 36px,
+    ))
+  }
+}

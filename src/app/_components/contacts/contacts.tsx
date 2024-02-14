@@ -1,5 +1,4 @@
 import styles from './contacts.module.scss';
-import Image from 'next/image';
 
 import Vk from '@/assets/icons/vk.svg';
 import Telegram from '@/assets/icons/telegram.svg';
@@ -43,7 +42,7 @@ export const Contacts = () => {
                             rel='noopener noreferrer'
                             className={styles.link}
                         >
-                            <Image src={Telegram} alt='Icon' className={styles.icon}/>
+                            <Telegram/>
                         </a>
                         <a
                             href='https://web.whatsapp.com/'
@@ -51,7 +50,7 @@ export const Contacts = () => {
                             rel='noopener noreferrer'
                             className={styles.link}
                         >
-                            <Image src={Whatsapp} alt='Icon' className={styles.icon}/>
+                            <Whatsapp/>
                         </a>
                         <a
                             href='https://vk.com/'
@@ -59,7 +58,7 @@ export const Contacts = () => {
                             rel='noopener noreferrer'
                             className={styles.link}
                         >
-                            <Image src={Vk} alt='Icon' className={styles.icon}/>
+                            <Vk/>
                         </a>
                         <a
                             href='https://instagram.com/'
@@ -67,7 +66,7 @@ export const Contacts = () => {
                             rel='noopener noreferrer'
                             className={styles.link}
                         >
-                            <Image src={Instagram} alt='Icon' className={styles.icon}/>
+                            <Instagram/>
                         </a>
                     </div>
                 </div>
@@ -80,7 +79,7 @@ export const Contacts = () => {
                             <div className={styles.links}>
                                 <a className={styles.item} href='tel:+79817272909'>
                                     <span className={styles.text}>Позвонить</span>
-                                    <Image src={Phone} alt='Icon' className={styles.icon}/>
+                                    <span className={styles.icon}><Phone/></span>
                                 </a>
                                 <div className={styles.itemWrap}>
                                     <a
@@ -90,11 +89,7 @@ export const Contacts = () => {
                                         rel='noopener noreferrer'
                                     >
                                         <span className={styles.text}>WhatsApp</span>
-                                        <Image
-                                            src={WhatsAppWhite}
-                                            alt='Icon'
-                                            className={styles.icon}
-                                        />
+                                        <span className={styles.icon}><WhatsAppWhite/></span>
                                     </a>
                                     <a
                                         className={`${styles.item} ${styles.itemRow}`}
@@ -103,18 +98,14 @@ export const Contacts = () => {
                                         rel='noopener noreferrer'
                                     >
                                         <span className={styles.text}>Telegram</span>
-                                        <Image
-                                            src={TelegramWhite}
-                                            alt='Icon'
-                                            className={styles.icon}
-                                        />
+                                        <span className={styles.icon}><TelegramWhite/></span>
                                     </a>
                                 </div>
                                 <div className={styles.item} onClick={visibleForm}>
-                <span className={styles.text}>
-                    Оставить заяку на сайте
-                  </span>
-                                    <Image src={Messenger} alt='Icon' className={styles.icon}/>
+                                    <span className={styles.text}>Оставить заяку на сайте</span>
+                                    <span className={styles.icon}><Messenger/></span>
+
+
                                 </div>
                             </div>
                         </>

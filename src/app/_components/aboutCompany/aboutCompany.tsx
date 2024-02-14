@@ -1,5 +1,5 @@
 import styles from './aboutCompany.module.scss';
-import Image, {StaticImageData} from 'next/image';
+import {StaticImageData} from 'next/image';
 import MouseSquare from '@/assets/icons/mouseSquare.svg';
 import Number750 from '@/assets/icons/750.svg';
 import Number600 from '@/assets/icons/600.svg';
@@ -9,18 +9,21 @@ import {useState} from "react";
 import postavki from '@/assets/images/postavki.png'
 import personal from '@/assets/images/personal.png'
 import documents from '@/assets/images/documents.png'
+import cn from "classnames";
+import {Advent_Pro} from "next/font/google";
 
+const adventPro = Advent_Pro({subsets: ["cyrillic"], weight: '400'});
 export const AboutCompany = () => {
     const [currImage, setCurrImage] = useState(postavki);
     const changeImage = (img: StaticImageData) => {
         setCurrImage(img);
-        console.log(img)
     }
+
     return (
         <section className={`${styles.about} container`}>
             <div className={styles.wrapper}>
                 <div className={styles.description}>
-                    <h2 className={styles.title}>О компании</h2>
+                    <h2 className={cn(styles.title, adventPro.className)}>О компании</h2>
                     <span className={styles.text}>
             ASK GROUP — ваш надежный партнер по доставке нерудных материалов,
             аренды современной спецтехники и выполнении строительных работ! Наш
@@ -31,42 +34,45 @@ export const AboutCompany = () => {
             каждого этапа работы.
           </span>
                     <div className={styles.principles}>
-                        <h3 className={styles.title}>Наши принципы</h3>
+                        <h3 className={cn(styles.title, adventPro.className)}>Наши принципы</h3>
                         <div className={styles.principle} onMouseEnter={() => changeImage(postavki)}>
                             <span className={styles.item}>Четкие сроки поставки</span>
-                            <Image src={MouseSquare} className={styles.img} alt='Icon'/>
+                            <MouseSquare/>
                         </div>
                         <div className={styles.principle} onMouseEnter={() => changeImage(personal)}>
                             <span className={styles.item}>Квалифицированный персонал</span>
-                            <Image src={MouseSquare} className={styles.img} alt='Icon'/>
+                            <MouseSquare/>
                         </div>
                         <div className={styles.principle} onMouseEnter={() => changeImage(documents)}>
                             <span className={styles.item}>Полная документальная отчётность</span>
-                            <Image src={MouseSquare} className={styles.img} alt='Icon'/>
+                            <MouseSquare/>
                         </div>
                     </div>
                 </div>
                 <div className={styles.imgWrap}>
-                    <Image {...currImage} alt='principles' className={styles.img}/>
+                    <img {...currImage} alt='principles' className={styles.img}/>
                 </div>
             </div>
             <div className={styles.statistics}>
                 <div className={styles.item}>
-                    <Image src={Number750} className={styles.img} alt='Number icon'/>
+                    <Number750/>
                     <span className={styles.text}>Грунта вывезено и утилизировано</span>
                 </div>
                 <div className={styles.item}>
-                    <Image src={Number600} className={styles.img} alt='Number icon'/>
-                    <span className={styles.text} id={styles.num600}>Поставлено песка по СПБ и ЛО</span>
+
+                    <Number600/>
+                    <span className={cn(styles.text, styles.num600)}>Поставлено песка по СПБ и ЛО</span>
                 </div>
                 <div className={styles.item}>
-                    <Image src={Number550} className={styles.img} alt='Number icon'/>
+                    <Number550/>
                     <span className={styles.text}>Поставлено щебня</span>
                 </div>
                 <div className={styles.item}>
-                    <Image src={Number50} className={styles.img} alt='Number icon'/>
+                    <span id={styles.num50}>
+                           <Number50/>
+                    </span>
                     <span className={styles.text} id={styles.num50}>
-            Крупных строительных объектов реализовано
+                    Крупных строительных объектов реализовано
           </span>
                 </div>
             </div>

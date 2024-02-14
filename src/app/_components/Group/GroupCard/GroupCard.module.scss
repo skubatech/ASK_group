@@ -10,13 +10,14 @@
   transition: transform .6s;
   color: #1E1E1E;
   font-weight: 500;
-  min-height: 150px;
+
 
   &:hover {
     transform: scale(1.01) rotateY(0);
   }
 
   @include arrayProps((
+          min-height: 110px 150px,
           height: null null 160px 260px,
           min-width: 80% null auto,
           padding: 20px null 36px
@@ -24,8 +25,9 @@
 }
 
 .title {
+  letter-spacing: 2px;
   @include arrayProps((
-          font-size: 36px null 24px 48px
+          font-size: 30px null 24px 48px
   ))
 }
 

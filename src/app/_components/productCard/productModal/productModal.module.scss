@@ -1,0 +1,125 @@
+@import 'src/theme/helpers';
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  @include arrayProps((
+          gap: 20px 0,
+          flex-direction: column row
+  ))
+}
+
+.breadcrumbs {
+  color: white;
+  @include arrayProps((
+          font-size: null null 12px null 20px,
+          display: none block
+  ))
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  @include arrayProps((
+          margin-top: 0 null null null 30px
+  ))
+}
+
+.title {
+  color: white;
+  @include arrayProps((
+          font-size: 24px null null null 48px
+  ))
+}
+
+.price {
+  color: white;
+  @include arrayProps((
+          font-size: 24px null null null 48px
+  ))
+}
+
+.des_title {
+  color: white;
+  font-weight: bold;
+  @include arrayProps((
+          font-size: 20px null 16px null 24px
+  ))
+}
+
+.row {
+  color: white;
+  @include arrayProps((
+          font-size:16px null null null 24px,
+  ))
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include arrayProps((
+          gap: 20px null 15px null 0,
+          order: 2 1,
+          max-width: 300px null 400px 500px,
+  ))
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+
+  @include arrayProps((
+          gap: 20px 30px,
+  ))
+}
+
+.img {
+  @include arrayProps((
+          order: 1 2
+  ));
+
+  img {
+    width: 100%;
+
+
+    @include arrayProps((
+            border-radius: 5px 20px,
+            max-width: 100% null 540px null 900px,
+            height: 240px null 380px null 700px
+    ))
+  }
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FF7A00;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all .1s;
+  box-shadow: 0 11px 23px 0 rgba(0, 0, 0, 0.10),
+  0 42px 42px 0 rgba(0, 0, 0, 0.09),
+  0 95px 57px 0 rgba(0, 0, 0, 0.05),
+  0 168px 67px 0 rgba(0, 0, 0, 0.01),
+  0 263px 74px 0 rgba(0, 0, 0, 0.00);
+
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  @include arrayProps((
+          padding: '30px 0' '20px' null null '30px 0',
+          font-size: 20px null null 24px,
+          max-width: null 200px 300px null 400px,
+          border-radius: 10px null null null 20px,
+  ))
+}

@@ -8,11 +8,11 @@
   background-color: rgba(0, 0, 0, 0.4);
   width: 100vw;
   height: 100vh;
-  z-index: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
+  z-index: 102;
 }
 
 .centered {
@@ -20,13 +20,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 105;
 }
 
 .modal {
   background-color: #2f2f2f;
   @include arrayProps((
-    padding: 24px null null 48px, 
-    width: 285px 625px 928px 1034px 1680px,
-    border-radius: 20px null 40px,
+          padding: 24px null null 48px,
+          width: 285px 625px 928px 1034px 1680px,
+          border-radius: 20px,
   ));
 }
