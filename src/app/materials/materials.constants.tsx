@@ -15,6 +15,7 @@ import Sheben1 from '@/assets/images/shenen/sh_image1.webp'
 import Sheben2 from '@/assets/images/shenen/sh_image2.webp'
 import Sheben3 from '@/assets/images/shenen/sh_image3.webp'
 import Sheben4 from '@/assets/images/shenen/sh_image4.webp'
+import Sheben5 from '@/assets/images/shenen/sh_image5.webp'
 
 import Grunt4 from '@/assets/images/grunt/pesok_image4.webp'
 import Shi1 from '@/assets/images/any/sheb-izcest-5-20.webp'
@@ -175,9 +176,9 @@ export const materialsTabs = [
                 touse: 'производство бетона и цемента, выравнивания рельефа строительной площадки, отсыпки оснований под закладку, закладки фундамента, благоустройства территорий, засыпки траншей, канав и котлованов.'
             },
             {
-                title: 'Щебень гранитный отсев (розовый)',
+                title: 'Гранитный отсев (розовый)',
                 price: '900',
-                image: Grav6,
+                image: Sheben5,
                 description: [
                     'Лещадность – II группа',
                     'Прочность – М800',
@@ -186,7 +187,7 @@ export const materialsTabs = [
                 touse: 'Изготовление бордюрного камня, железобетона, тротуарной плитки, используется в декоративных целях в ландшафтном дизайне.'
             },
             {
-                title: 'Щебень гранитный отсев (серый)',
+                title: 'Гранитный отсев (серый)',
                 price: '900',
                 image: Grav7,
                 description: [

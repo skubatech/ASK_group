@@ -9,10 +9,10 @@ type Props = {
 }
 export const ProductCard: FC<Props> = ({title, image, url}) => {
     return (
-        <div className={styles.card}>
+        <Link href={url} className={styles.card}>
             <span>{image}</span>
             <span className={styles.title}>{title}</span>
-            <Link href={url} className={styles.btn}>Заказать</Link>
-        </div>
+            <span className={styles.btn}>Заказать</span>
+        </Link>
     )
 }

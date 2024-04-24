@@ -18,26 +18,42 @@ export const MapCarrier = () => {
         setState({center: coords, zoom: 16});
     };
 
-    useEffect(() => {
-        console.log(state?.zoom, state?.center)
-    }, [state?.zoom, state?.center]);
-    const [polygons, setPoly] = useState(
-        polygon.map((i) => ({
-            id: i.id,
-            data: {content: i.title},
-            options: {selectOnClick: false},
-            coords: i.coords
-        }))
-    );
-
-    const [carrier, setCarr] = useState(
-        carriers.map((i) => ({
+    const [mapType, setMapType] = useState({
+        poly: polygon.map((i) => ({
             id: i.id,
             data: {content: i.title},
             options: {selectOnClick: false},
             coords: i.coords
         })),
-    );
+        carrier: carriers.map((i) => ({
+            id: i.id,
+            data: {content: i.title},
+            options: {selectOnClick: false},
+            coords: i.coords
+        })),
+    });
+    const [type, setType] = useState<'poly' | 'carrier'>('carrier');
+
+    useEffect(() => {
+        console.log(state?.zoom, state?.center)
+    }, [state?.zoom, state?.center]);
+    // const [polygons, setPoly] = useState(
+    //     polygon.map((i) => ({
+    //         id: i.id,
+    //         data: {content: i.title},
+    //         options: {selectOnClick: false},
+    //         coords: i.coords
+    //     }))
+    // );
+
+    // const [carrier, setCarr] = useState(
+    //     carriers.map((i) => ({
+    //         id: i.id,
+    //         data: {content: i.title},
+    //         options: {selectOnClick: false},
+    //         coords: i.coords
+    //     })),
+    // );
 
     const getPointData = (index: string) => {
         return {
@@ -72,7 +88,7 @@ export const MapCarrier = () => {
             <h2 className={styles.title}>Карта карьеров и полигонов</h2>
             <div className={styles.wrapper}>
                 <div className={styles.item}>
-                    <ListCarriers itemClicked={onBalloonClick}/>
+                    <ListCarriers type={type} setType={(type) => setType(type)} itemClicked={onBalloonClick}/>
                 </div>
                 <div className={styles.item}>
                     {isBalloonOpen && <div className={styles.balloon} ref={ref}>
@@ -106,16 +122,16 @@ export const MapCarrier = () => {
                         <YMaps>
                             <Map state={state} defaultState={mapState} width={'100%'} height={'100%'}
                                  className={styles.map}>
-                                {polygons.map((items) => (
+                                {mapType[type].map((items) => (
                                     <Placemark
                                         key={items.id}
                                         geometry={items.coords}
                                         properties={getPointData(items.id)}
-                                        options={{preset: "islands#yellowCircleDotIcon", openBalloonOnClick: true}}
+                                        options={{preset: type === 'poly' ? "islands#yellowCircleDotIcon" : "islands#blueMountainCircleIcon", openBalloonOnClick: true}}
                                         onClick={() => onBalloonClick(items.id)}
                                     />
                                 ))}
-                                {carrier.map((items) => (
+                                {/* {carrier.map((items) => (
                                     <Placemark
                                         key={items.id}
                                         geometry={items.coords}
@@ -123,7 +139,7 @@ export const MapCarrier = () => {
                                         options={{preset: "islands#blueMountainCircleIcon"}}
                                         onClick={() => onBalloonClick(items.id)}
                                     />
-                                ))}
+                                ))} */}
                             </Map>
                         </YMaps>
                     </div>

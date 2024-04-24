@@ -326,7 +326,7 @@ export const RentData: RentDataItem[] = [
     {
         title: 'JCB 4CX',
         img: JCB4CX,
-        price: '3000',
+        price: '2750',
         mainCategory: 'ecscovator-pogruz',
         category: 'ecscovator-pogruz_4cx',
         minTime: 'Миним. рабочее время 8 ч. (7+1)',
@@ -340,7 +340,7 @@ export const RentData: RentDataItem[] = [
     {
         title: 'JCB 5CX ECO',
         img: JCB5CXECO,
-        price: '2900',
+        price: '3000',
         mainCategory: 'ecscovator-pogruz',
         category: 'ecscovator-pogruz_5cx',
         minTime: 'Миним. рабочее время 8 ч. (7+1)',

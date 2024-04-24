@@ -5,10 +5,13 @@ import cn from "classnames";
 import {MapListItem} from "@/app/_components/Map/MapListItem/MapListItem";
 
 type Props = {
+    type: 'poly' | 'carrier',
+    setType: (type: 'poly' | 'carrier') => void,
     itemClicked: (id: any) => void
 }
-export const ListCarriers: FC<Props> = ({itemClicked}) => {
-    const [type, setType] = useState<'poly' | 'carrier'>('carrier');
+export const ListCarriers: FC<Props> = ({itemClicked, type, setType}) => {
+
+    // const [type, setType] = useState<'poly' | 'carrier'>('carrier');
     return (
         <div className={styles.root}>
             <div className={styles.tabs}>

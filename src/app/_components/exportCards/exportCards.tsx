@@ -31,12 +31,12 @@ export const ExportCards = () => {
             {/*    <span className={styles.title}>Вывоз снега</span>*/}
             {/*    <button className={styles.btn} onClick={handleClick1}>Заказать</button>*/}
             {/*</div>*/}
-            <div className={styles.card}>
+            <div className={styles.card} onClick={handleClick2}>
                 <img {...ground} alt='Image' className={styles.img}/>
                 <span className={styles.title}>Вывоз грунта</span>
                 <button className={styles.btn} onClick={handleClick2}>Заказать</button>
             </div>
-            <div className={styles.card}>
+            <div className={styles.card} onClick={handleClick3}>
                 <img {...musor} alt='Image' className={styles.img}/>
                 <span className={styles.title}>Вывоз мусора</span>
                 <button className={styles.btn} onClick={handleClick3}>Заказать</button>

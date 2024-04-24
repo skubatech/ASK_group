@@ -35,7 +35,7 @@ export default function Home() {
             <AboutCompany/>
             <ClientsBanner/>
             <Cases/>
-            <MapCarrier/>
+            <MapCarrier />
             <Contacts/>
         </main>
     );

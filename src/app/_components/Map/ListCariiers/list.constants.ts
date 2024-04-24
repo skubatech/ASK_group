@@ -16,7 +16,7 @@ export const carriers: MapObject[] = [
         title: 'Новосоратовское-1 (мяглово)',
         address: 'ЛО, Всеволожский район,Свердловское',
         coords: [59.832140, 30.705056],
-        doc: '/wp-content/themes/default/novosaratov.pdf',
+        // doc: '/wp-content/themes/default/novosaratov.pdf',
         products: [
             {
                 title: 'Песок карьерный',
@@ -29,7 +29,7 @@ export const carriers: MapObject[] = [
         title: '«33-й км»',
         address: 'Ленинградская область, Всеволожский р-н, карьер 33 км',
         coords: [59.911877, 30.860084],
-        doc: '/wp-content/themes/default/33km.pnf',
+        doc: '/wp-content/themes/default/33kilom.pdf',
         products: [
             {
                 title: 'Песок карьерный',
@@ -42,7 +42,7 @@ export const carriers: MapObject[] = [
         title: 'Манушкино',
         address: 'Ленинградская область, Всеволожский р-н, карьер Манушкино',
         coords: [59.867394, 30.785251],
-        doc: '/wp-content/themes/default/manushkino.pdf',
+        doc: '/wp-content/themes/default/manuskino.pdf',
         products: [
             {
                 title: 'Песок карьерный',
@@ -59,7 +59,7 @@ export const carriers: MapObject[] = [
         title: 'Залесье, участок 3',
         address: 'ЛО, Всеволожский район,Свердловское',
         coords: [59.934639, 29.235370],
-        doc: '/wp-content/themes/default/zales.pdf',
+        doc: '/wp-content/themes/default/zalese.pdf',
         products: [
             {
                 title: 'Песок обогащенный ',
@@ -72,7 +72,7 @@ export const carriers: MapObject[] = [
         title: 'Степаново',
         address: 'ЛО, Ломоносовский район',
         coords: [59.895731, 29.455043],
-        doc: '/wp-content/themes/default/stepanovo.pdf',
+        doc: '/wp-content/themes/default/stepanovo1.pdf',
         products: [
             {
                 title: 'Песок намывной',
@@ -93,7 +93,7 @@ export const carriers: MapObject[] = [
         title: 'Краснофлотское - 2',
         address: 'ЛО, Ломоносовский район',
         coords: [59.956305, 29.303193],
-        doc: '/wp-content/themes/default/krasnoflot.pdf',
+        doc: '/wp-content/themes/default/krasnoflotskoe.pdf',
         products: [
             {
                 title: 'Песок карьерный',
@@ -110,7 +110,7 @@ export const carriers: MapObject[] = [
         title: 'Таменгонт-1 (пульмановский)',
         address: 'ЛО, Ломоносовский район',
         coords: [59.884866, 29.521488],
-        doc: '/wp-content/themes/default/tamengont.webp',
+        doc: '/wp-content/themes/default/tamengont.pdf',
         products: [
             {
                 title: 'Намывной песок высшего сорта',
@@ -127,7 +127,7 @@ export const carriers: MapObject[] = [
         title: 'Малукса',
         address: 'ЛО, Кировский район',
         coords: [59.725364, 31.317403],
-        doc: '/wp-content/themes/default/maluksa.pdf',
+        doc: '/wp-content/themes/default/Maluksa1.pdf',
         products: [
             {
                 title: 'Песок намывной',
@@ -136,7 +136,27 @@ export const carriers: MapObject[] = [
             {
                 title: 'ПГС, Гравий, ЩПС',
                 add: ['Мк = 0-80']
-            }
+            },
+            {
+                title: 'СТР3',
+                add: ['Мк = 0,1-0,7']
+            },
+            {
+                title: 'СТР2',
+                add: ['Мк = 0,7-1,4']
+            },
+            {
+                title: 'СТР',
+                add: ['Мк = 0,7-2,0']
+            },
+            {
+                title: 'К1',
+                add: ['Мк = 1,0-1,5']
+            },
+            {
+                title: 'К3',
+                add: ['Мк = 2,0-2,4']
+            },
         ]
     },
     {
@@ -144,7 +164,7 @@ export const carriers: MapObject[] = [
         title: 'Путилово',
         address: 'ЛО, Кировский район',
         coords: [59.862818, 31.410401],
-        doc: '/wp-content/themes/default/putilova.pdf',
+        doc: '/wp-content/themes/default/putilovo.pdf',
         products: [
             {
                 title: 'Отсев дробления фр 0-20  ',
@@ -185,7 +205,7 @@ export const carriers: MapObject[] = [
         title: 'Горное Елохово',
         address: 'Волховский район, Потанинское с/п',
         coords: [60.275926, 32.699361],
-        doc: '/wp-content/themes/default/nadino.pdf',
+        doc: '/wp-content/themes/default/el.pdf',
         products: [
             {
                 title: 'Песок намывной',
@@ -202,7 +222,7 @@ export const carriers: MapObject[] = [
         title: 'Александровка',
         address: 'Ленинградская область, Тосненский район, Любанское городское поселение',
         coords: [59.265380, 31.245822],
-        doc: '/wp-content/themes/default/aleksandrowka.docx',
+        doc: '/wp-content/themes/default/aleksandrowka.pdf',
         products: [
             {
                 title: 'Песок намывной',
@@ -219,7 +239,7 @@ export const carriers: MapObject[] = [
         title: 'Надино',
         address: 'ЛО, п. Шапки ,Тосненский район',
         coords: [59.619016, 31.211578],
-        doc: '/wp-content/themes/default/nadino.pdf',
+        doc: '/wp-content/themes/default/nadino1.pdf',
         products: [
             {
                 title: 'Песок сеяный 1,2 сорт',
@@ -237,10 +257,10 @@ export const carriers: MapObject[] = [
     },
     {
         id: '10',
-        title: 'Полигон Уролище',
+        title: 'Полигон Урочище',
         address: 'ЛО, Первомайское сельское поселение, Выборгский район',
         coords: [60.396434, 29.920330],
-        doc: '/wp-content/themes/default/nadino.pdf',
+        doc: '/wp-content/themes/default/urochich.pdf',
         products: [
             {
                 title: 'Песок сеяный',
@@ -266,7 +286,7 @@ export const carriers: MapObject[] = [
         title: 'Кудлей',
         address: 'ЛО, Первомайское сельское поселение, Выборгский район',
         coords: [60.308449, 29.730743],
-        doc: '/wp-content/themes/default/kudley.webp',
+        doc: '/wp-content/themes/default/kudley.pdf',
         products: [
             {
                 title: 'Песок карьерный 1 сорта',
@@ -283,7 +303,7 @@ export const carriers: MapObject[] = [
         title: 'Майский',
         address: 'Первомайское сельское поселение, Выборгский район, Ленинградская область',
         coords: [60.378468, 29.898921],
-        doc: '/wp-content/themes/default/mayski.xlsx',
+        doc: '/wp-content/themes/default/mayski.pdf',
         products: [
             {
                 title: 'Песок  мелкозенистый',
@@ -296,6 +316,18 @@ export const carriers: MapObject[] = [
             {
                 title: 'Песок сеяный',
                 add: ['Мк =  2,2 - 2,5', 'Кф > 2 м/сут']
+            },
+            {
+                title: 'ПГС природный',
+                add: []
+            },
+            {
+                title: 'ПГС обогащенный',
+                add: []
+            },
+            {
+                title: 'Гравий',
+                add: []
             },
         ]
     }
@@ -337,7 +369,7 @@ export const polygon: MapObject[] = [
         title: 'Манушкино',
         address: 'Ленинградская область, Всеволожский р-н',
         coords: [59.867394, 30.785251],
-        doc: '/wp-content/themes/default/manushkino.pdf'
+        // doc: '/wp-content/themes/default/manushkino.pdf'
     },
     {
         id: '22',

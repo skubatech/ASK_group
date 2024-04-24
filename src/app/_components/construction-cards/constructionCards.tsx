@@ -13,24 +13,24 @@ export const ConstructionCards = () => {
 
     return (
         <section className={styles.cards}>
-            <div className={styles.card}>
+            <div className={styles.card} onClick={handleClick}>
                 <img {...otsapka} alt='Image' className={styles.img}/>
                 <span className={styles.title}>Отсыпка<br/>участков</span>
                 <button className={styles.btn} onClick={handleClick}>Рассчитать</button>
             </div>
-            <div className={styles.card}>
+            <div className={styles.card} onClick={handleClick}>
                 <img {...razrabotka} alt='Image' className={styles.img}/>
                 <span className={styles.title}>Разработка<br/>котлованов</span>
                 <button className={styles.btn} onClick={handleClick}>Рассчитать</button>
             </div>
-            <div className={styles.card}>
+            <div className={styles.card} onClick={handleClick}>
                 <img {...stroitelstvo} alt='Image' className={styles.img}/>
                 <span className={styles.title}>Строительство<br/>дорог&nbsp;и площадок</span>
                 <button className={styles.btn} onClick={handleClick}>Рассчитать</button>
             </div>
-            <div className={styles.card}>
+            <div className={styles.card} onClick={handleClick}>
                 <img {...ukladka} alt='Image' className={styles.img}/>
-                <span className={styles.title}>Укладка<br/>дорожных плит</span>
+                <span className={styles.title}>Строительство<br/>ангаров</span>
                 <button className={styles.btn} onClick={handleClick}>Рассчитать</button>
             </div>
         </section>

@@ -10,7 +10,7 @@ import {Modal} from "@/app/_components/modal";
 import {Shtraf} from "@/app/_components/Cases/Modals/shtraf/shtraf";
 import {Belart} from "@/app/_components/Cases/Modals/belart/belart";
 import {Astrid} from "@/app/_components/Cases/Modals/astrid/astrid";
-import {Itmo} from "@/app/_components/Cases/Modals/itmo /itmo";
+import {Itmo} from "@/app/_components/Cases/Modals/itmo";
 import {useState} from "react";
 
 export const CasesSlider = () => {

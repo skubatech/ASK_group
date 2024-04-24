@@ -15,7 +15,7 @@ import {useState} from "react";
 import {Astrid} from "@/app/_components/Cases/Modals/astrid/astrid";
 import {Belart} from "@/app/_components/Cases/Modals/belart/belart";
 import {Shtraf} from "@/app/_components/Cases/Modals/shtraf/shtraf";
-import {Itmo} from "@/app/_components/Cases/Modals/itmo /itmo";
+import {Itmo} from "@/app/_components/Cases/Modals/itmo";
 
 const adventPro = Advent_Pro({subsets: ["cyrillic"], weight: '400'});
 export const Cases = () => {
