@@ -12,7 +12,7 @@ export const backCardsContent = [
     },
     {
         title: 'Срочная поставка материалов за 1 день',
-        backContent: <span className={styles.backCardContent}>В нашем автопарке более 50 машин, что позволяет выполнять любой заказ в нужные сроки. В том числе и срочные поставки материалов за 24 часа!
+        backContent: <span className={styles.backCardContent}>В нашем автопарке более 50 единиц техники, что позволяет выполнять любой заказ в нужные сроки. В том числе и срочные поставки материалов за 24 часа!
 </span>
     },
     {
@@ -26,7 +26,7 @@ export const backCardsContent = [
 </span>
     },
     {
-        title: 'Собственный парк техники более 50 машин',
-        backContent: <span className={styles.backCardContent}>В нашем парке более 50 новейших авто, которые уже ждут вашего заказа!</span>
+        title: 'Собственный парк более 50 единиц техники',
+        backContent: <span className={styles.backCardContent}>В нашем парке более 50 новейших единиц техники, которые уже ждут вашего заказа!</span>
     },
 ]

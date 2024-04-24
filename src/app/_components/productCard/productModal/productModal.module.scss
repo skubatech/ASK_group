@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   @include arrayProps((
-          gap: 20px 0,
+          gap: 20px 10px 5px,
           flex-direction: column row
   ))
 }
@@ -12,7 +12,7 @@
 .breadcrumbs {
   color: white;
   @include arrayProps((
-          font-size: null null 12px null 20px,
+          font-size: null 12px null null 20px,
           display: none block
   ))
 }
@@ -20,38 +20,39 @@
 .description {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+
   @include arrayProps((
-          margin-top: 0 null null null 30px
+          margin-top: 0 null null null 20px,
+          gap: 2px null 10px,
   ))
 }
 
 .title {
   color: white;
   @include arrayProps((
-          font-size: 24px null null null 48px
+          font-size: 24px 20px null null 48px
   ))
 }
 
 .price {
   color: white;
   @include arrayProps((
-          font-size: 24px null null null 48px
+          font-size: 24px 20px null null 48px
   ))
 }
 
 .des_title {
   color: white;
-  font-weight: bold;
   @include arrayProps((
-          font-size: 20px null 16px null 24px
+          font-size: 22px 16px null null 24px,
+          font-weight: 500 null bold,
   ))
 }
 
 .row {
   color: white;
   @include arrayProps((
-          font-size:16px null null null 24px,
+          font-size: 16px 12px null null 24px,
   ))
 }
 
@@ -61,34 +62,56 @@
   justify-content: space-between;
 
   @include arrayProps((
-          gap: 20px null 15px null 0,
+          gap: 20px null 15px null 25px,
           order: 2 1,
-          max-width: 300px null 400px 500px 600px,
-  ))
+          max-width: 300px null 400px null 600px,
+  ));
+
+
 }
 
 .info {
   display: flex;
   flex-direction: column;
+  padding-right: 15px;
+
 
   @include arrayProps((
-          gap: 20px 30px,
-  ))
+          gap: 10px 15px 30px,
+          max-height: 250px null min-content,
+          overflow-y: scroll null inherit,
+  ));
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb { /* плашка-бегунок */
+    background: #FF7A00;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track { /* фон */
+    background: transparent;
+  }
 }
 
 .img {
+  display: flex;
+  align-items: center;
   @include arrayProps((
           order: 1 2
   ));
 
   img {
     width: 100%;
-
-
+    object-fit: cover;
     @include arrayProps((
             border-radius: 5px 20px,
-            max-width: 100% null 540px null 900px,
-            height: 240px null 380px null 700px
+            max-width: '100%' null 540px null 900px,
+            height: 240px null 380px null 700px,
+            width: 300px null 540px null 900px
     ))
   }
 }
@@ -101,8 +124,8 @@
   background: #FF7A00;
   color: #FFF;
   text-decoration: none;
-  font-weight: 700;
   cursor: pointer;
+  font-weight: 700;
   transform: scale(1);
   transition: all .1s;
   box-shadow: 0 11px 23px 0 rgba(0, 0, 0, 0.10),
@@ -117,8 +140,8 @@
   }
 
   @include arrayProps((
-          padding: '30px 0' '20px' null null '30px 0',
-          font-size: 20px null null 24px,
+          padding: '20px 0' '15px 10px' null null '30px 0',
+          font-size: 20px 16px null 24px,
           max-width: null 200px 300px null 400px,
           border-radius: 10px null null null 20px,
   ))

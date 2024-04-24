@@ -11,8 +11,11 @@
 
 .title {
   color: #FFF;
-  font-size: 48px;
-  letter-spacing: 4px;
+  font-weight: 400;
+  @include arrayProps((
+          font-size: 20px 24px null 36px 48px,
+          padding-left: 0 null 20px 40px
+  ));
 }
 
 .grid {

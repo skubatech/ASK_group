@@ -22,17 +22,17 @@ export const MainBanner = () => {
                         <div className={styles.description}>
                             <h2
                                 className={styles.title}
-                                id={i === 2 || i===5 || i===8 ? styles.bannerTitle : undefined}
+                                id={i === 2 || i === 5 || i === 8 ? styles.bannerTitle : undefined}
                             >
                                 {item.title}
                             </h2>
                             {
-                                item.text && 
-                                    <span className={styles.text}>{item.text} 
-                                        {
-                                            item.text.includes('/м') && <span className={styles.textIndex}>3</span> 
-                                        }
-                                    </span> 
+                                item.text &&
+                                <span className={styles.text}>{item.text}
+                                    {
+                                        item.text.includes('/м') && <span className={styles.textIndex}>3</span>
+                                    }
+                                    </span>
                             }
                             <button className={styles.btn}>Заказать сейчас</button>
                         </div>
@@ -41,15 +41,15 @@ export const MainBanner = () => {
                                 {...item.imgSrc}
                                 alt='Banner'
                                 className={cn(
-                                    styles.img, 
+                                    styles.img,
                                     {
-                                        [styles.banner1]: i===0,
-                                        [styles.banner2]: i===1 || i===3 || i===6,
-                                        [styles.banner3]: i===2,
-                                        [styles.banner5]: i===4,
-                                        [styles.banner6]: i===5,
-                                        [styles.banner8]: i===7,
-                                        [styles.banner9]: i===8,
+                                        [styles.banner1]: i === 0,
+                                        [styles.banner2]: i === 1 || i === 3 || i === 6,
+                                        [styles.banner3]: i === 2,
+                                        [styles.banner5]: i === 4,
+                                        [styles.banner6]: i === 5,
+                                        [styles.banner8]: i === 7,
+                                        [styles.banner9]: i === 8,
                                     }
                                 )}
                             />
@@ -63,7 +63,7 @@ export const MainBanner = () => {
     return (
         <Swiper
             slidesPerView={1}
-            autoplay={{delay: 3500}}
+            autoplay={{delay: 7000}}
             modules={[Autoplay, Pagination]}
             loop={true}
             spaceBetween={30}

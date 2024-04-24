@@ -1,7 +1,7 @@
-import NeRud from '@/assets/images/nerud.png'
-import Develop from '@/assets/images/develop.png'
-import Utilization from '@/assets/images/utilization.png'
-import Rent from '@/assets/images/rent.png'
+import NeRud from '@/assets/images/nerud.webp'
+import Develop from '@/assets/images/develop.webp'
+import Utilization from '@/assets/images/utilization.webp'
+import Rent from '@/assets/images/rent.webp'
 import {TProductType} from "@/app/_components/Products/ProductCard/ProductCard.types";
 
 export const products: TProductType[] = [
@@ -23,6 +23,6 @@ export const products: TProductType[] = [
     {
         title: 'Строительные работы',
         image: <img {...Develop} alt='Строительные работы'/>,
-        url: '/delivery'
+        url: '/construction-works'
     },
 ]

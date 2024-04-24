@@ -1,10 +1,10 @@
 'use client';
 
 import styles from './cases.module.scss'
-import ParkingImg from '@/assets/images/parking.jpeg'
-import IMG1 from '@/assets/images/image 16.png'
-import IMG2 from '@/assets/images/image 17.png'
-import IMG3 from '@/assets/images/image 18.png'
+import ParkingImg from '@/assets/images/parking.webp'
+import IMG1 from '@/assets/images/image 16.webp'
+import IMG2 from '@/assets/images/image 17.webp'
+import IMG3 from '@/assets/images/image 18.webp'
 import {useBreakpointIndex} from "@/utils/hooks/useBreakpointIndex";
 import {BREAKPOINTS_INDEXES} from "@theme/constants/breakpoints";
 import {CasesSlider} from "@/app/_components/Cases/CasesSlider/CasesSlider";
@@ -27,7 +27,7 @@ export const Cases = () => {
     const [open4, setOpen4] = useState(false);
     return (
         <section className={cn('container', styles.main)} id='works'>
-            <h1 className={adventPro.className}>Наши работы</h1>
+            <h2 className={styles.h_title}>Наши работы</h2>
             {!isMobile && <section className={styles.casesGrid}>
                 <div className={styles.a} onClick={() => setOpen1(true)}>
                     <img {...ParkingImg} alt='Парковка'/>
@@ -38,11 +38,11 @@ export const Cases = () => {
                     <span className={styles.title}>Вывоз грунта при строительстве ЖК «БелАрт»</span>
                 </div>
                 <div className={styles.c} onClick={() => setOpen3(true)}>
-                    <img {...IMG2} alt='Парковка'/>
+                    <img {...IMG3} alt='Парковка'/>
                     <span className={styles.title}>Самовывоз грунта и долгосрочное сотрудничество с ЖК «Астрид»</span>
                 </div>
                 <div className={styles.d} onClick={() => setOpen4(true)}>
-                    <img {...IMG3} alt='Парковка'/>
+                    <img {...IMG2} alt='Парковка'/>
                     <span className={styles.title}>Вывоз грунта и долгосрочное сотрудничество при строительстве «ИТМО Хай Парк»</span>
                 </div>
             </section>

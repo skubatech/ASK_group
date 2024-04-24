@@ -7,10 +7,10 @@ import Technique from '@/assets/icons/technique.svg';
 import Materials from '@/assets/icons/materials.svg';
 import Staff from '@/assets/icons/staff.svg';
 import Docs from '@/assets/icons/docs.svg';
-import technique from '@/assets/images/technique.png';
-import materials from '@/assets/images/materials.png';
-import staff from '@/assets/images/staff.png';
-import time from '@/assets/images/clocks.png';
+import technique from '@/assets/images/technique.webp';
+import materials from '@/assets/images/materials.webp';
+import staff from '@/assets/images/staff.webp';
+import time from '@/assets/images/clocks.webp';
 
 interface ContentItem {
     imgSrc: ReactNode;
@@ -30,13 +30,13 @@ export const Guarantees = () => {
         {
             imgSrc: <span className={styles.icon}><Materials/></span>,
             title: 'материалы',
-            text: 'ASK GROUP - ваш надежный поставщик нерудных материалов, предоставляемых по самым лучшим и низким ценам',
+            text: 'ASK GROUP - ваш надежный поставщик нерудных материалов, который предоставляет самые выгодные цены',
         },
         {
 
             imgSrc: <span className={styles.icon}><Staff/></span>,
             title: 'квалифицированный персонал',
-            text: 'ASK GROUP - это команда экспертов своего дела, которые помогают клиентам быстро и качественно растить бизнес',
+            text: 'ASK GROUP - это команда экспертов своего дела, которые помогают клиентам оперативно решать поставленные задачи',
         },
         {
             imgSrc: <span className={styles.icon}><Docs/></span>,

@@ -1,25 +1,26 @@
 @import 'src/theme/helpers';
 
 .contacts {
-  padding-top: 60px;
-  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   gap: 50px;
   @include arrayProps((
           gap: 30px null 25px 50px,
+          padding-top: 30px null 60px,
+          padding-bottom: 30px null 60px,
   ));
 
   .title {
     @include text(48px, normal, 500, normal, #fff);
     @include arrayProps((
-            font-size: 36px null null 48px,
+            font-size: 20px null null 48px,
     ));
   }
 
   .wrapper {
     display: flex;
     gap: 30px;
+    justify-content: space-between;
     @include arrayProps((
             flex-direction: 'column' null 'row',
     ));
@@ -27,23 +28,22 @@
     .content {
       display: flex;
       flex-direction: column;
-      gap: 90px;
       @include arrayProps((
-              gap: 40px null 27px 40px 57px,
+              gap: 20px null 27px 30px 57px,
       ));
 
       .link {
         @include text(36px, normal, 400, normal, #fff);
         text-decoration: none;
         @include arrayProps((
-                font-size: 24px null null 36px
+                font-size: 12px null 18px 30px 36px
         ));
       }
 
       .social {
         display: flex;
         @include arrayProps((
-                gap: 35px null 20px 35px,
+                gap: 35px null 20px null 35px,
         ));
 
         .link {

@@ -1,0 +1,44 @@
+@import 'src/theme/helpers';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+  background: #2A2A2A;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all .2s ease;
+  max-height: 450px;
+
+  &:hover {
+    scale: 1.01;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 15px;
+  gap: 15px;
+}
+
+.animation {
+  opacity: 0.9;
+}
+
+.title {
+  font-size: 22px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.img {
+  width: auto;
+  height: 300px;
+  object-fit: cover;
+}

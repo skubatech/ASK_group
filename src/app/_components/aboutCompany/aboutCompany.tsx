@@ -6,9 +6,9 @@ import Number600 from '@/assets/icons/600.svg';
 import Number550 from '@/assets/icons/550.svg';
 import Number50 from '@/assets/icons/50.svg';
 import {useState} from "react";
-import postavki from '@/assets/images/postavki.png'
-import personal from '@/assets/images/personal.png'
-import documents from '@/assets/images/documents.png'
+import postavki from '@/assets/images/postavki.webp'
+import personal from '@/assets/images/personal.webp'
+import documents from '@/assets/images/documents.webp'
 import cn from "classnames";
 import {Advent_Pro} from "next/font/google";
 
@@ -23,18 +23,18 @@ export const AboutCompany = () => {
         <section className={`${styles.about} container`}>
             <div className={styles.wrapper}>
                 <div className={styles.description}>
-                    <h2 className={cn(styles.title, adventPro.className)}>О компании</h2>
+                    <h2 className={cn(styles.title)}>О компании</h2>
                     <span className={styles.text}>
             ASK GROUP — ваш надежный партнер по доставке нерудных материалов,
             аренды современной спецтехники и выполнении строительных работ! Наш
-            автопарк состоит более, чем из 50 новейших машин, которые
+            автопарк состоит более, чем из 50 новейших единиц, которые
             обеспечивают эффективность и надежность в каждом проекте. Благодаря
-            применению современной техники и профессионализму наших работников
+            применению современной техники и профессионализму наших сотрудников
             мы гарантируем высокое качество услуг и оперативность в выполнении
             каждого этапа работы.
           </span>
                     <div className={styles.principles}>
-                        <h3 className={cn(styles.title, adventPro.className)}>Наши принципы</h3>
+                        <h3 className={cn(styles.title)}>Наши принципы</h3>
                         <div className={styles.principle} onMouseEnter={() => changeImage(postavki)}>
                             <span className={styles.item}>Четкие сроки поставки</span>
                             <MouseSquare/>

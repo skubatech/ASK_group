@@ -20,7 +20,6 @@
 }
 
 .tab {
-  border-radius: 20px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -31,6 +30,7 @@
   font-weight: 700;
   cursor: pointer;
   transform: scale(1);
+  text-align: center;
   transition: all .1s;
   box-shadow: 0 11px 23px 0 rgba(0, 0, 0, 0.10),
   0 42px 42px 0 rgba(0, 0, 0, 0.09),
@@ -47,8 +47,9 @@
   }
 
   @include arrayProps((
-          padding: '16px 0' null '22px 0' '30px 0',
-          font-size: 20px null null 24px,
+          padding: '16px 2px' null '22px 2px' '25px 2px' '30px 2px',
+          font-size: 12px null 20px 24px,
+          border-radius: 10px null null 20px,
   ))
 }
 
@@ -72,7 +73,6 @@
 }
 
 .moreBtn {
-  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,6 +96,7 @@
   @include arrayProps((
           margin-top: '10px' '20px',
           padding: '16px 30px' null '22px 40px' '30px 80px',
-          font-size: 20px null null 24px,
+          font-size: 12px null null 24px,
+          border-radius: 10px null null 20px,
   ))
 }

@@ -1,10 +1,8 @@
-import rusal from "@/assets/images/rusalLogo.png";
-import itmo from "@/assets/images/itmoLogo.png";
-import mvd from "@/assets/images/mvdLogo.png";
-import almas from "@/assets/images/almasLogo.png";
-import fosagro from "@/assets/images/fosagroLogo.png";
-import lsr from "@/assets/images/lsrLogo.png";
-import rr from "@/assets/images/rrLogo.png";
+import rusal from "@/assets/images/rusalLogo.webp";
+import itmo from "@/assets/images/itmoLogo.webp";
+import fosagro from "@/assets/images/fosagroLogo.webp";
+import lsr from "@/assets/images/lsrLogo.webp";
+import rr from "@/assets/images/rrLogo.webp";
 import {StaticImageData} from "next/image";
 
 interface clientItemsType {
@@ -20,14 +18,6 @@ export const clientItems: clientItemsType[] = [
     {
         imgSrc: itmo,
         text: 'АО «ИТМО ХАЙПАРК»',
-    },
-    {
-        imgSrc: mvd,
-        text: 'Главное управление МВД России по СПб и Лен. области',
-    },
-    {
-        imgSrc: almas,
-        text: 'КОНЦЕРН ВКО «АЛМАЗ-АНТЕЙ»',
     },
     {
         imgSrc: fosagro,

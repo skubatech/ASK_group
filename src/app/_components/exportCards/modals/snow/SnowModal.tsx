@@ -1,6 +1,6 @@
 import styles from "../export.module.scss";
 import {FC} from "react";
-import snow from "@/assets/images/snow.png";
+import snow from "@/assets/images/snow.webp";
 
 type Props = {
     closeModal: () => void
@@ -8,7 +8,7 @@ type Props = {
 export const SnowModal: FC<Props> = ({closeModal}) => {
     const onClick = () => {
         const element = document.getElementById('#form')
-        element?.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+        element?.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
         closeModal();
     }
 
@@ -18,7 +18,7 @@ export const SnowModal: FC<Props> = ({closeModal}) => {
                 <div className={styles.content}>
                     <section className={styles.info}>
                         <span className={styles.title}>Вывоз снега</span>
-                        <span className={styles.price}>от 450.00 ₽</span>
+                        <span className={styles.price}>от 450 ₽/м³</span>
                         <span className={styles.description}>
                                     <span className={styles.des_title}>Описание</span>
                                     <span className={styles.row}>Наша команда специалистов готова выполнять работы по вывозу снега различных объемов с различных территорий. Мы эффективно и безопасно осуществляем вывоз снега с дорог, парковок, дворов и других объектов.</span>

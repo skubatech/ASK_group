@@ -25,7 +25,7 @@ export const ProductCard: FC<Props> = ({product}) => {
                     {product.title}
                 </span>
                 <span className={styles.price}>
-                    от {product.price}{!isMobile && '.00'} ₽
+                    от {product.price} ₽/м³
                 </span>
             </span>
             </div>

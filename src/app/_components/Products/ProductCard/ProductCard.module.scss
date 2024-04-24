@@ -18,7 +18,7 @@
 
   @include arrayProps((
           padding: '16px' '16px 24px' '16px 24px' '40px 24px',
-          width: auto null '100%'
+          width: auto null null '100%',
   ));
 
   &:hover {
@@ -30,25 +30,23 @@
     width: 100%;
 
     @include arrayProps((
-            min-width: 140px null null 200px 250px,
+            min-width: 140px null null 280px 250px,
     ))
   }
 }
 
 .title {
   text-align: center;
-  font-size: 36px;
   width: min-content;
   white-space: pre-wrap;
 
 
   @include arrayProps((
-          font-size: 16px 26px 20px 40px 36px,
+          font-size: 16px 26px 20px 36px,
   ))
 }
 
 .btn {
-  border-radius: 20px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -73,6 +71,7 @@
 
   @include arrayProps((
           padding: '16px 0' null '22px 0' '30px 0',
-          font-size: 20px null null 24px,
+          font-size: 12px null 20px 24px,
+          border-radius: 10px null null 20px,
   ))
 }

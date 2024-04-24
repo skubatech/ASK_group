@@ -14,12 +14,12 @@ export const headerMenu: TNavItem[] = [
                 url: '/materials?product=pesok'
             },
             {
-                title: 'Гравий',
-                url: '/materials/?product=gravi'
-            },
-            {
                 title: 'Грунт',
                 url: '/materials/?product=grunt'
+            },
+            {
+                title: 'Вторичные материалы',
+                url: '/materials/?product=secondary'
             },
         ]
     },
@@ -30,49 +30,49 @@ export const headerMenu: TNavItem[] = [
     {
         title: 'Аренда спецтехники', url: '/rent', child: [
             {
-                title: 'Самосвалы', url: '',
+                title: 'Самосвалы и полуприцепы', url: '/rent/?mainParam=samosval',
             },
             {
-                title: 'Эксковаторы-погрузчики', url: '',
+                title: 'Мини погрузчики', url: '/rent/?mainParam=mini-pogruz',
             },
             {
-                title: 'Колесные эксковаторы', url: '',
+                title: 'Экскаваторы-погрузчики', url: '/rent/?mainParam=ecscovator-pogruz',
             },
             {
-                title: 'Гусеничные', url: '',
+                title: 'Гусеничные экскаваторы', url: '/rent/?mainParam=gusenich-ecscovator',
             },
             {
-                title: 'Мини погрузчики', url: '',
+                title: 'Колесные экскаваторы', url: '/rent/?mainParam=kolesn-ecscovator',
             },
             {
-                title: 'Краны манипуляторы', url: '',
+                title: 'Фронтальные погрузчики', url: '/rent/?mainParam=frontalnye-pogruz',
             },
             {
-                title: 'Автокраны', url: '',
+                title: 'Автокраны', url: '/rent/?mainParam=avtokran',
             },
             {
-                title: 'Бульдозеры', url: '',
+                title: 'Краны манипуляторы', url: '/rent/?mainParam=kran-manipulator',
             },
             {
-                title: 'Асфаольтоукладчики', url: '',
+                title: 'Автовышки', url: '/rent/?mainParam=avtovashki',
             },
         ]
     },
     {
         title: 'Строительные работы',
-        url: '',
+        url: '/construction-works',
     },
     {
         title: 'О компании',
-        url: '',
+        url: 'https://asklogspb.ru/#about',
     },
     {
         title: 'Наши работы',
-        url: '',
+        url: 'https://asklogspb.ru/#works',
     },
     {
         title: 'Контакты',
-        url: '',
+        url: 'https://asklogspb.ru/#contacts',
     },
 
 

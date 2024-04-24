@@ -1,0 +1,8 @@
+.root {
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    color: #FF7A00;
+  }
+}

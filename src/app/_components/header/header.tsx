@@ -8,7 +8,7 @@ import PhoneSvg from '@/assets/icons/phone.svg'
 import {useBreakpointIndex} from "@/utils/hooks/useBreakpointIndex";
 import {BREAKPOINTS_INDEXES} from "@theme/constants/breakpoints";
 import {Burger} from "@/app/_components/header/burger/burger";
-import Link from "next/link";
+import cn from "classnames";
 
 export const Header = () => {
     const [activeMenu, setActiveMenu] = useState<string>();
@@ -22,17 +22,17 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <span className={styles.mainRow}>
-                <Link href='/' className={styles.logo}><LogoSvg/></Link>
-                {!isMobile && <>
+                <a href='https://asklogspb.ru/' className={styles.logo}><LogoSvg/></a>
+                {!isMobile && <span className={styles.desc}>
                     <span className={styles.location}>Санкт-Петербург, Пулковское шоссе 30/4, офис 101Д</span>
                     <a href="tel:+79817272909" className={styles.phone}> <PhoneSvg/> +7 (981) 727-29-09</a>
-                </>
+                </span>
                 }
                 {isMobile && <Burger/>}
 
             </span>
             {!isMobile &&
-                <nav className={styles.navigation}>
+                <nav className={cn(styles.navigation, styles.sdesc)}>
                     {headerMenu.map((item) =>
                         <NavItem
                             item={item}

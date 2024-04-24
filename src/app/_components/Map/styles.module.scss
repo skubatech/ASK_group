@@ -1,0 +1,109 @@
+@import 'src/theme/helpers';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  @include arrayProps((
+          gap: 30px null 25px 50px,
+          padding-top: 30px null 60px,
+          padding-bottom: 30px null 60px,
+  ));
+
+  .title {
+    @include text(48px, normal, 500, normal, #fff);
+    @include arrayProps((
+            font-size: 20px null null 48px,
+    ));
+  }
+}
+
+.wrapper {
+  display: flex;
+  gap: 30px;
+  @include arrayProps((
+          flex-direction: 'column' null 'row'
+  ))
+}
+
+.item {
+  position: relative;
+  width: 50%;
+  @include arrayProps((
+          width: '100%' null '50%',
+  ));
+
+}
+
+.balloon {
+  position: absolute;
+
+  height: max-content;
+  z-index: 1000;
+  background: #2A2A2A;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+  box-shadow: 0 12px 27px 0 rgba(0, 0, 0, 0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @include arrayProps((
+          top: 55% null null 50% 10px,
+          left: 10% null null 55%,
+          width: 70% null 38%,
+  ))
+}
+
+.name {
+  color: #FF7A00;
+  font-weight: bold;
+  text-align: center;
+}
+
+.product {
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+.pr_wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  gap: 5px;
+
+  @include arrayProps((
+          font-size: 12px null null 14px 16px,
+  ))
+}
+
+.productItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.productItem2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.map {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+
+  @include arrayProps((
+          min-height: 400px null null 500px,
+  ))
+}

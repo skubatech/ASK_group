@@ -4,11 +4,23 @@ import PhoneSvg from "@/assets/icons/phone.svg";
 import cn from "classnames";
 import Link from "next/link";
 import {useRef} from "react";
+import {useRouter} from "next/navigation";
 
 export const Burger = () => {
     const burger = useRef<HTMLInputElement>(null);
+    const router = useRouter();
+    const clickBtn = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        if (e.currentTarget.href.includes('#')) {
+            e.preventDefault();
+        }
+        if (window.location.pathname !== '/') router.push(`/${e.currentTarget.hash}`, {scroll: true});
+        const href = e.currentTarget.href;
+        const elem = document.getElementById(href.split('#')[1]);
 
-    const clickBtn = () => {
+        elem?.scrollIntoView({
+            behavior: "smooth",
+            block: 'start',
+        });
         if (burger.current) burger.current.click();
     }
 

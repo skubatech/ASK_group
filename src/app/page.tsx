@@ -13,6 +13,7 @@ import {Products} from "@/app/_components/Products/Products";
 import {ClientsBanner} from "@/app/_components/ClientsBanner/ClientsBanner";
 import {MainBanner} from "@/app/_components/MainBanner/MainBanner";
 import {useEffect} from "react";
+import {MapCarrier} from "@/app/_components/Map/MapCarrier";
 
 export default function Home() {
 
@@ -30,9 +31,11 @@ export default function Home() {
             <MainBanner/>
             <Products/>
             <Group/>
+            <div className={styles.about} id='about'></div>
             <AboutCompany/>
             <ClientsBanner/>
             <Cases/>
+            <MapCarrier/>
             <Contacts/>
         </main>
     );

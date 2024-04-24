@@ -1,0 +1,39 @@
+@import 'src/theme/helpers';
+
+.root {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  cursor: pointer;
+  @include arrayProps((
+          padding: '10px 0' null null '20px 0',
+  ));
+  transition: all .2s ease;
+
+  &:hover {
+    transform: scale(0.99);
+  }
+}
+
+.title {
+  font-weight: bold;
+  @include arrayProps((
+          font-size: 16px 20px null 24px,
+  ))
+}
+
+.addres {
+  @include arrayProps((
+          font-size: 14px 16px null 20px,
+  ))
+}
+
+.link {
+  color: #FF7A00;
+  @include arrayProps((
+          font-size: 14px 16px null 20px,
+  ))
+}

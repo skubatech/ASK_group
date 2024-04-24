@@ -1,5 +1,5 @@
 import styles from "@/app/_components/Cases/Modals/modals.module.scss";
-import IMG3 from "@/assets/images/image 18.png";
+import IMG3 from "@/assets/images/image 17.webp";
 
 export const Itmo = () => {
     return (

@@ -1,7 +1,7 @@
 export const mapRoutes: { [k: string]: string } = {
     'sheben': 'Шебень',
     'pesok': 'Песок',
-    'gravi': 'Гравий',
+    'secondary': 'Вторичные материалы',
     'grunt': 'Грунт',
 }
 export const useProductBreadcrumbs = () => {

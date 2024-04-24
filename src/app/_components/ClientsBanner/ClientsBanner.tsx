@@ -11,10 +11,10 @@ export const ClientsBanner = () => {
 
     return (
         <section className={`${styles.partners} container`}>
-            <h2 className={cn(styles.title, adventPro.className)}>Наши партнеры</h2>
+            <h2 className={cn(styles.title)}>Наши партнеры</h2>
             <div className='swiperPartner'>
                 <Swiper
-                    spaceBetween={40}
+                    spaceBetween={30}
                     speed={5000}
                     loop={true}
                     autoplay={{

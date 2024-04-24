@@ -25,9 +25,9 @@
 }
 
 .title {
-  letter-spacing: 2px;
+  font-weight: 400;
   @include arrayProps((
-          font-size: 30px null 24px 48px
+          font-size: 20px 24px null 36px 48px
   ))
 }
 
@@ -46,8 +46,10 @@
   right: 0;
   transform: rotateY(-180deg);
   opacity: 0;
-  padding: 24px;
   transition: all .6s;
+  @include arrayProps((
+          padding: 10px null 24px,
+  ))
 }
 
 .rotate {

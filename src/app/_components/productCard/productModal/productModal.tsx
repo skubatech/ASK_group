@@ -13,7 +13,7 @@ export const ProductModal: FC<Props> = ({product, closeModal}) => {
 
     const onClick = () => {
         const element = document.getElementById('#form')
-        element?.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+        element?.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
         closeModal();
     }
 
@@ -31,7 +31,7 @@ export const ProductModal: FC<Props> = ({product, closeModal}) => {
                     <span className={styles.breadcrumbs}>{parent} {'>'} {product.title} </span>
                     <section className={styles.info}>
                         <span className={styles.title}>{product.title}</span>
-                        <span className={styles.price}>от {product.price}.00 ₽</span>
+                        <span className={styles.price}>от {product.price} ₽/м³</span>
                         <span className={styles.description}>
                             {product.description && (
                                 <>
@@ -40,6 +40,12 @@ export const ProductModal: FC<Props> = ({product, closeModal}) => {
                                 </>
                             )}
                         </span>
+                        {product.touse && <span className={styles.description}>
+                                <>
+                                    <span className={styles.des_title}>Применение</span>
+                                    <span className={styles.row}>{product.touse}</span>
+                                </>
+                        </span>}
 
                     </section>
                     <span onClick={onClick}>

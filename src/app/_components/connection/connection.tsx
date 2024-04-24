@@ -15,7 +15,7 @@ export const Connection = () => {
         setOpenForm((prev) => !prev);
     };
     return (
-        <section className={styles.connection}>
+        <section className={styles.connection} id='#form'>
       <span className={styles.text}>
         Оставляйте заявку прямо сейчас и получите скидку 5% на любую услугу!
       </span>
@@ -29,7 +29,7 @@ export const Connection = () => {
                         <div className={styles.rowWrap}>
                             <a
                                 className={`${styles.item} ${styles.itemRow}`}
-                                href='https://wa.me/79817272909'
+                                href='https://web.whatsapp.com/79817272909'
                                 target='_blank'
                                 rel='noopener noreferrer'
                             >
@@ -46,7 +46,7 @@ export const Connection = () => {
                                 <span className={styles.icon}><TelegramWhite/></span>
                             </a>
                         </div>
-                        <div className={styles.item} onClick={visibleForm} id='#form'>
+                        <div className={styles.item} onClick={visibleForm}>
                             Оставить заяку на сайте
                             <span className={styles.icon}><Messenger/></span>
                         </div>

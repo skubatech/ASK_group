@@ -28,16 +28,18 @@
 
   .img {
     object-fit: cover;
-    height: 320px;
+    width: auto;
     @include arrayProps((
-            height: 150px null 214px null 320px
+            height: 150px null 214px null 320px,
     ))
   }
 
   .title {
     color: white;
+
     @include arrayProps((
             font-size: 12px null 16px null 24px,
+            min-height: 24px null 32px null 57px,
     ))
   }
 
@@ -45,6 +47,8 @@
     color: white;
     font-weight: bold;
     font-size: 36px;
+    display: flex;
+    align-items: center;
     @include arrayProps((
             font-size: 20px null 24px null 36px,
     ))

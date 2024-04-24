@@ -1,0 +1,62 @@
+@import 'src/theme/helpers';
+
+.root_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px 0;
+  font-weight: bold;
+  @include arrayProps((
+          font-size: 18px null 16px 18px 20px
+  ))
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: hidden;
+  height: 0;
+  transition: all 2s ease;
+}
+
+.active {
+  span {
+    color: #FF7A00;
+  }
+}
+
+.activeRoot svg {
+  animation: rotateIcon .2s ease forwards;
+}
+
+.activeItems {
+  animation: activeItems .2s linear forwards;
+  transition: all .2s ease;
+}
+
+.disabled {
+  animation: activeItems .2s linear reverse;
+}
+
+@keyframes activeItems {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 150px;
+  }
+  100% {
+    height: auto;
+  }
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}

@@ -11,7 +11,15 @@ body {
 
 .container {
   @include arrayProps((
-    padding-left: 24px null 48px 120px,
-    padding-right: 24px null 48px 120px,
+          padding-left: 24px null 48px 80px 120px,
+          padding-right: 24px null 48px 80px 120px,
   ));
+}
+
+.ymaps-2-1-79-map {
+  filter: invert(100%);
+  -ms-filter: invert(100%);
+  -webkit-filter: invert(100%);
+  -moz-filter: invert(100%);
+  -o-filter: invert(100%);
 }

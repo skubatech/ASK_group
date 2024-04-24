@@ -3,9 +3,8 @@
 .wrapper {
   .title {
     color: white;
-    letter-spacing: 2px;
     @include arrayProps((
-            font-size: 36px null null 48px,
+            font-size: 24px null null 48px,
             padding: '20px 0 0 0 ' null null '60px 0 0 0'
     ));
   }

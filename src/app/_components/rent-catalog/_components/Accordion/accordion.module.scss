@@ -1,0 +1,9 @@
+@import 'src/theme/helpers';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  min-height: 800px;
+  overflow: hidden;
+}

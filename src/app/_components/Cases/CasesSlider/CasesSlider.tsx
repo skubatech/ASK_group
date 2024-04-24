@@ -2,10 +2,10 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination} from "swiper/modules";
 import styles from "@/app/_components/Cases/cases.module.scss";
-import ParkingImg from "@/assets/images/parking.jpeg";
-import IMG1 from "@/assets/images/image 16.png";
-import IMG2 from "@/assets/images/image 17.png";
-import IMG3 from "@/assets/images/image 18.png";
+import ParkingImg from "@/assets/images/parking.webp";
+import IMG1 from "@/assets/images/image 16.webp";
+import IMG2 from "@/assets/images/image 17.webp";
+import IMG3 from "@/assets/images/image 18.webp";
 import {Modal} from "@/app/_components/modal";
 import {Shtraf} from "@/app/_components/Cases/Modals/shtraf/shtraf";
 import {Belart} from "@/app/_components/Cases/Modals/belart/belart";
@@ -31,7 +31,7 @@ export const CasesSlider = () => {
                     clickable: true,
                     renderBullet: (index, className) => {
                         return (
-                            `<span class="${className}"><i></i><b></b></span>`
+                            `<span class="${className} ${styles.bullet}"><i></i><b></b></span>`
                         );
                     },
                 }}
@@ -50,14 +50,14 @@ export const CasesSlider = () => {
                 </SwiperSlide>
                 <SwiperSlide className={styles.slider} onClick={() => setOpen3(true)}>
                     <div className={styles.c}>
-                        <img {...IMG2} alt='Парковка'/>
+                        <img {...IMG3} alt='Парковка'/>
                         <span
-                            className={styles.title}>Самовывоз грунта и долгосрочное сотрудничество с ЖК «Астрид»</span>
+                            className={styles.title}>Самовывоз грунта и долгосрочное сотрудничество с&nbsp;ЖК «Астрид»</span>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={styles.slider} onClick={() => setOpen4(true)}>
                     <div className={styles.d}>
-                        <img {...IMG3} alt='Парковка'/>
+                        <img {...IMG2} alt='Парковка'/>
                         <span className={styles.title}>Вывоз грунта идолгосрочное сотрудничество при строительстве «ИТМО Хай Парк»</span>
                     </div>
                 </SwiperSlide>

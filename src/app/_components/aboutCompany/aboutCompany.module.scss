@@ -19,7 +19,7 @@
       .title {
         @include text(48px, normal, 500, normal, #fff);
         @include arrayProps((
-                font-size: 36px null null 36px 48px
+                font-size: 20px null null 36px 48px
         ))
       }
 
@@ -27,7 +27,7 @@
         margin-top: 15px;
         @include text(24px, normal, 400, 120%, #fff);
         @include arrayProps((
-                font-size: 16px 14px null 18px 24px
+                font-size: 12px 14px null 22px 24px
         ));
       }
 
@@ -36,13 +36,13 @@
         flex-direction: column;
         @include arrayProps((
                 margin-top: 20px null 86px null 65px,
-                gap: 30px 20px 16px 20px 40px,
+                gap: 10px 20px 16px 20px 40px,
         ));
 
         .title {
           @include text(48px, normal, 500, normal, #fff);
           @include arrayProps((
-                  font-size: 36px 24px null 36px 48px
+                  font-size: 20px 24px null 36px 48px
           ));
         }
 
@@ -59,14 +59,14 @@
           .item {
             @include text(36px, normal, 700, 120%, #fff);
             @include arrayProps((
-                    font-size: 20px 18px null 24px 36px,
+                    font-size: 12px 18px null 24px 36px,
             ));
           }
 
           svg {
             @include arrayProps((
-                    width: 24px null 20px 30px 36px,
-                    height: 24px null 20px 30px 36px,
+                    width: 12px 20px null 30px 36px,
+                    height: 12px 20px null 30px 36px,
             ));
           }
         }
@@ -75,21 +75,32 @@
 
     .imgWrap {
       display: flex;
-      border-radius: 40px;
+
       @include arrayProps((
-              min-width: 320px 440px 440px 440px 829px,
+              min-width: 320px 440px 440px 510px 829px,
               margin-top: 30px null 0,
+              border-radius: 20px null 40px,
       ));
 
       .img {
         object-fit: cover;
-        height: 100%;
+        height: auto;
         width: 100%;
-        border-radius: 40px;
+        animation: img 1.2s;
         @include arrayProps((
-                max-height: 420px 440px 440px 440px 700px,
+                max-height: 420px 440px 440px 600px 700px,
+                border-radius: 20px null 40px,
         ));
       }
+    }
+  }
+
+  @keyframes img {
+    0% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 1;
     }
   }
 

@@ -1,6 +1,6 @@
 import styles from "../export.module.scss";
 import {FC} from "react";
-import ground from "@/assets/images/ground.png";
+import ground from "@/assets/images/ground.webp";
 
 type Props = {
     closeModal: () => void
@@ -8,7 +8,7 @@ type Props = {
 export const GruntModal: FC<Props> = ({closeModal}) => {
     const onClick = () => {
         const element = document.getElementById('#form')
-        element?.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+        element?.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
         closeModal();
     }
 
@@ -17,8 +17,8 @@ export const GruntModal: FC<Props> = ({closeModal}) => {
             <section className={styles.main}>
                 <div className={styles.content}>
                     <section className={styles.info}>
-                        <span className={styles.title}>Вывоз и утилизация грунта с погрузкой</span>
-                        <span className={styles.price}>от 450.00 ₽</span>
+                        <span className={styles.title}>Вывоз и утилизация</span>
+                        <span className={styles.price}>от 200 ₽/м³</span>
                         <span className={styles.description}>
                                     <span className={styles.des_title}>Описание</span>
                                     <span className={styles.row}>Наши специалисты обладают опытом работы с грунтом и знают все нюансы его утилизации. Мы используем современное оборудование и технологии, чтобы эффективно и безопасно осуществлять вывоз и утилизацию грунта.</span>

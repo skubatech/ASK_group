@@ -1,6 +1,4 @@
 import styles from './contacts.module.scss';
-import Telegram from '@/assets/icons/telegram.svg';
-import Whatsapp from '@/assets/icons/wa.svg';
 import Phone from '@/assets/icons/whitePhone.svg';
 import Messenger from '@/assets/icons/messenger.svg';
 import WhatsAppWhite from '@/assets/icons/waWhite.svg';
@@ -32,24 +30,6 @@ export const Contacts = () => {
                     <a href='mailto:inform@askspb.ru' className={styles.link}>
                         inform@askspb.ru
                     </a>
-                    <div className={styles.social}>
-                        <a
-                            href='https://t.me/+79817272909'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            className={styles.link}
-                        >
-                            <Telegram/>
-                        </a>
-                        <a
-                            href='https://wa.me/79817272909'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            className={styles.link}
-                        >
-                            <Whatsapp/>
-                        </a>
-                    </div>
                 </div>
                 <div className={styles.card}>
                     {!openForm ? (

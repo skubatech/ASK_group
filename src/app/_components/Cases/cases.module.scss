@@ -5,13 +5,16 @@
   flex-direction: column;
   gap: 30px;
 
+  .swiper-pagination-bullet {
+    width: 70px !important;
+  }
+
   h1 {
     color: #FFF;
-    letter-spacing: 2px;
 
     @include arrayProps((
-            font-size: 36px null null 48px,
-    ))
+            font-size: 20px 24px null 36px 48px
+    ));
   }
 
   --swiper-pagination-bottom: 10px
@@ -38,7 +41,7 @@
 
   img {
     @include arrayProps((
-            height: 480px 322px 430px 610px,
+            height: 380px 322px 430px 610px,
     ))
   }
 }
@@ -49,7 +52,7 @@
   img {
 
     @include arrayProps((
-            height: 480px 150px 207px 290px,
+            height: 380px 150px 207px 290px,
     ))
   }
 }
@@ -59,7 +62,7 @@
 
   img {
     @include arrayProps((
-            height: 480px 150px 207px 290px,
+            height: 380px 150px 207px 290px,
     ))
   }
 }
@@ -69,7 +72,7 @@
 
   img {
     @include arrayProps((
-            height: 480px 150px 207px 290px,
+            height: 380px 150px 207px 290px,
     ))
   }
 }
@@ -109,6 +112,17 @@
   padding-bottom: 50px;
 }
 
+.bullet {
+  width: 60px !important;
+}
+
+.h_title {
+  color: white;
+  font-weight: 400;
+  @include arrayProps((
+          font-size: 20px 24px 36px 48px,
+  ))
+}
 
 .title {
   z-index: 20;
@@ -118,9 +132,9 @@
   transition: opacity .2s linear;
 
   @include arrayProps((
-          font-size: 36px 19px 26px 36px,
-          top: 20px 20px 30px 44px,
-          left: 20px 10px 15px 30px,
+          font-size: 20px 19px 26px 28px 36px,
+          top: 20px 20px 30px null 44px,
+          left: 20px 10px 15px null 30px,
           padding-right: null null 20px 30px,
   ))
 }

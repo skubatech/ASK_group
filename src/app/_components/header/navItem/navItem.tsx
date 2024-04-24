@@ -6,6 +6,7 @@ import useClickOutSide from "@/utils/hooks/useClickOutSide";
 import cn from "classnames";
 import useOnOverOutside from "@/utils/hooks/useOverOutside";
 import Link from "next/link";
+import {useRouter} from "next/navigation";
 
 type Props = {
     item: TNavItem;
@@ -15,6 +16,7 @@ type Props = {
 export const NavItem: FC<Props> = ({item, isActiveTab, onActive}) => {
     const ref = useRef(null);
     const ref2 = useRef(null);
+    const router = useRouter();
     const [isActive, setIsActive] = useState(false);
     useClickOutSide(ref2, () => setIsActive(false));
     useOnOverOutside(ref, () => setIsActive(false))
@@ -27,10 +29,25 @@ export const NavItem: FC<Props> = ({item, isActiveTab, onActive}) => {
         setIsActive(true);
     }
 
+    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        if (e.currentTarget.href.includes('#')) {
+            e.preventDefault();
+        }
+        if (window.location.pathname !== '/') router.push(`/${e.currentTarget.hash}`, {scroll: true});
+        const href = e.currentTarget.href;
+        const elem = document.getElementById(href.split('#')[1]);
+
+        elem?.scrollIntoView({
+            behavior: "smooth",
+            block: 'center',
+        });
+    };
+
+
     return (
         <div className={styles.navItem}
              ref={ref}>
-            <Link href={item.url} className={styles.title} onMouseOver={mouseEnter}>
+            <Link href={item.url} className={styles.title} onMouseOver={mouseEnter} onClick={handleScroll}>
                 <span>{item.title}</span>
                 {item.child && <ArrowDown/>}
             </Link>

@@ -1,5 +1,5 @@
 import styles from "@/app/_components/Cases/Modals/modals.module.scss";
-import ParkingImg from "@/assets/images/parking.jpeg";
+import ParkingImg from "@/assets/images/parking.webp";
 
 export const Shtraf = () => {
     return (
