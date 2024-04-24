@@ -1,0 +1,11 @@
+@import 'src/theme/helpers';
+
+.wrapper {
+  .title {
+    color: white;
+    @include arrayProps((
+            font-size: 24px null null 48px,
+            padding: '20px 0 ' null null '60px 0 0 0'
+    ));
+  }
+}
