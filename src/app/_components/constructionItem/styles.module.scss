@@ -4,17 +4,21 @@
   display: flex;
   justify-content: space-between;
   @include arrayProps(
-    (
-      flex-direction: column-reverse null null row,
-      gap: 15px,
-    )
+                  (
+                          flex-direction: column-reverse null null row,
+                          gap: 15px,
+                  )
   );
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+
+
+  @include arrayProps((
+          gap: 15px null null 30px,
+  ));
 }
 
 .btn {
@@ -40,6 +44,7 @@
   &:active {
     transform: scale(0.97);
   }
+
   &:hover {
     transform: scale(1.01);
   }
@@ -48,10 +53,10 @@
 .title {
   color: white;
   @include arrayProps(
-    (
-      font-size: 16px null 30px null 48px,
-      text-align: 'center' null null 'start',
-    )
+                  (
+                          font-size: 16px null 30px null 48px,
+                          text-align: 'center' null null 'start',
+                  )
   );
 }
 
@@ -60,11 +65,11 @@
   max-height: 400px;
 
   @include arrayProps(
-    (
-      height: 280px null 100%,
-      border-radius: 5px null 20px,
-      width: 100% null null null 800px,
-    )
+                  (
+                          height: 280px null 100%,
+                          border-radius: 5px null 20px,
+                          width: 100% null null null 800px,
+                  )
   );
 }
 
@@ -76,17 +81,17 @@
   color: #fff;
 
   @include arrayProps((
-    gap: 4px null 8px,
+          gap: 4px null 8px,
   ));
 
   .decription {
     color: white;
-  
+
     @include arrayProps(
-      (
-        font-size: 16px null 20px null 24px,
-      )
+                    (
+                            font-size: 16px null 20px null 24px,
+                    )
     );
   }
-  
+
 }
