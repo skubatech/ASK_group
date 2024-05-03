@@ -1,0 +1,92 @@
+@import '../../../theme/helpers';
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  @include arrayProps(
+    (
+      flex-direction: column-reverse null null row,
+      gap: 15px,
+    )
+  );
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.btn {
+  background-color: #FF7A00;
+  cursor: pointer;
+  border: none;
+  @include text(24px, normal, 700, normal, #fff);
+  width: 100%;
+  box-shadow: 0 11px 23px 0 rgba(0, 0, 0, 0.10),
+  0 42px 42px 0 rgba(0, 0, 0, 0.09),
+  0 95px 57px 0 rgba(0, 0, 0, 0.05),
+  0 168px 67px 0 rgba(0, 0, 0, 0.01),
+  0 263px 74px 0 rgba(0, 0, 0, 0.00);
+  transform: scale(1);
+  transition: transform .1s;
+  @include arrayProps((
+          padding: '15px 18px' null '20px 30px' null '30px 40px',
+          margin-top: 15px null 15px 30px,
+          border-radius: 10px null null 15px 20px,
+          font-size: 14px null 16px null 20px,
+  ));
+
+  &:active {
+    transform: scale(0.97);
+  }
+  &:hover {
+    transform: scale(1.01);
+  }
+}
+
+.title {
+  color: white;
+  @include arrayProps(
+    (
+      font-size: 16px null 30px null 48px,
+      text-align: 'center' null null 'start',
+    )
+  );
+}
+
+.img img {
+  object-fit: contain;
+  max-height: 400px;
+
+  @include arrayProps(
+    (
+      height: 280px null 100%,
+      border-radius: 5px null 20px,
+      width: 100% null null null 800px,
+    )
+  );
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0 12px 40px;
+  color: #fff;
+
+  @include arrayProps((
+    gap: 4px null 8px,
+  ));
+
+  .decription {
+    color: white;
+  
+    @include arrayProps(
+      (
+        font-size: 16px null 20px null 24px,
+      )
+    );
+  }
+  
+}

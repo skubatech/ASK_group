@@ -94,7 +94,7 @@ export const MapCarrier = () => {
                     {isBalloonOpen && <div className={styles.balloon} ref={ref}>
                         <span className={styles.name}>{balloonContent?.title}</span>
                         {balloonContent?.products && <div className={styles.pr_wrapper}>
-                            <span className={styles.product}>Продукция</span>
+                            <span className={styles.product}>{ type === 'carrier' ? 'Продукция' : 'Принимают' }</span>
                             {balloonContent?.products?.map((pr) => (
                                 <>
                                     {pr.add && pr.add.length > 0 &&

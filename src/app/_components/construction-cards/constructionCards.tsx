@@ -1,38 +1,51 @@
 'use client';
 import styles from './constructionCards.module.scss';
-import otsapka from '@/assets/images/construction/otsapka.webp';
-import razrabotka from '@/assets/images/construction/razrabotka.webp';
-import stroitelstvo from '@/assets/images/construction/stroitelstvo.webp';
-import ukladka from '@/assets/images/construction/ukladka.webp';
+
+import { Modal } from '../modal';
+import { useState } from 'react';
+import { tableItems } from '../table/constants';
+import { ConstructionItem } from '../constructionItem/constructionItem';
+import { ConstructionCardsItems, constructionCardsItems } from '@/app/_components/construction-cards/constants';
+
+interface ShowModal {
+    isOpen: boolean;
+    item: ConstructionCardsItems | null;
+};
 
 export const ConstructionCards = () => {
-    const handleClick = () => {
-        const element = document.getElementById('#form')
-        element?.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
-    }
+  const [showModal, setShowModal] = useState<ShowModal>({
+    isOpen: false,
+    item: null
+  });
 
-    return (
-        <section className={styles.cards}>
-            <div className={styles.card} onClick={handleClick}>
-                <img {...otsapka} alt='Image' className={styles.img}/>
-                <span className={styles.title}>Отсыпка<br/>участков</span>
-                <button className={styles.btn} onClick={handleClick}>Рассчитать</button>
-            </div>
-            <div className={styles.card} onClick={handleClick}>
-                <img {...razrabotka} alt='Image' className={styles.img}/>
-                <span className={styles.title}>Разработка<br/>котлованов</span>
-                <button className={styles.btn} onClick={handleClick}>Рассчитать</button>
-            </div>
-            <div className={styles.card} onClick={handleClick}>
-                <img {...stroitelstvo} alt='Image' className={styles.img}/>
-                <span className={styles.title}>Строительство<br/>дорог&nbsp;и площадок</span>
-                <button className={styles.btn} onClick={handleClick}>Рассчитать</button>
-            </div>
-            <div className={styles.card} onClick={handleClick}>
-                <img {...ukladka} alt='Image' className={styles.img}/>
-                <span className={styles.title}>Строительство<br/>ангаров</span>
-                <button className={styles.btn} onClick={handleClick}>Рассчитать</button>
-            </div>
-        </section>
-    );
+  const handleClick = (item: ConstructionCardsItems) => {
+    setShowModal({
+        isOpen: true,
+        item
+    });
+  };
+
+  return (
+    <section className={styles.cards}>
+      {constructionCardsItems.map((item) => (
+        <div className={styles.card} onClick={() => handleClick(item)} key={item.id}>
+          <img {...item.imgSrc} alt='Image' className={styles.img} />
+          <span className={styles.title}>{item.title}</span>
+          <button className={styles.btn} onClick={() => handleClick(item)}>
+            Рассчитать
+          </button>
+        </div>
+      ))}
+      {showModal.isOpen && (
+        <Modal setOpen={() => setShowModal(prev => ({...prev, isOpen: !prev.isOpen}))}>
+          <ConstructionItem
+            title={showModal.item?.title ?? ''}
+            img={showModal.item?.imgSrc ?? {}}
+            items={tableItems[showModal.item?.id ?? 0].items}
+            setOpen={() => setShowModal(prev => ({...prev, isOpen: !prev.isOpen}))}
+          />
+        </Modal>
+      )}
+    </section>
+  );
 };
