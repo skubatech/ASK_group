@@ -36,7 +36,7 @@ export const AboutCompany = () => {
                     <div className={styles.principles}>
                         <h3 className={cn(styles.title)}>Наши принципы</h3>
                         <div className={styles.principle} onMouseEnter={() => changeImage(postavki)}>
-                            <span className={styles.item}>Четкие сроки поставки</span>
+                            <span className={styles.item}>Точные и своевременные сроки поставки</span>
                             <MouseSquare/>
                         </div>
                         <div className={styles.principle} onMouseEnter={() => changeImage(personal)}>

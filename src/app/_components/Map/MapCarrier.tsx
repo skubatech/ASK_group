@@ -88,7 +88,10 @@ export const MapCarrier = () => {
             <h2 className={styles.title}>Карта карьеров и полигонов</h2>
             <div className={styles.wrapper}>
                 <div className={styles.item}>
-                    <ListCarriers type={type} setType={(type) => setType(type)} itemClicked={onBalloonClick}/>
+                    <ListCarriers type={type} setType={(type) => {
+                        setType(type);
+                        setState({center: [59.9386, 30.3141], zoom: 9, controls: []});
+                    }} itemClicked={onBalloonClick}/>
                 </div>
                 <div className={styles.item}>
                     {isBalloonOpen && <div className={styles.balloon} ref={ref}>

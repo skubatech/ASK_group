@@ -11,7 +11,6 @@ type Props = {
 }
 export const ListCarriers: FC<Props> = ({itemClicked, type, setType}) => {
 
-    // const [type, setType] = useState<'poly' | 'carrier'>('carrier');
     return (
         <div className={styles.root}>
             <div className={styles.tabs}>

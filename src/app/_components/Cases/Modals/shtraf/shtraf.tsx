@@ -6,7 +6,7 @@ export const Shtraf = () => {
         <section className={styles.main}>
             <div className={styles.info}>
                 <span className={styles.title}>Штраф-стоянка</span>
-                <span className={styles.decription}>Выполение уборочно погрузочных работ</span>
+                <span className={styles.decription}>Строительство штраф-стоянки площадью 38 000 м2</span>
             </div>
             <div className={styles.img}>
                 <img {...ParkingImg} alt='Парковка'/>

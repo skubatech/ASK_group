@@ -3,16 +3,15 @@ import styles from './group.module.scss'
 export const backCardsContent = [
     {
         title: 'Оптовые цены и объектные скидки',
-        backContent: <span className={styles.backCardContent}>Мы предлагаем самые низкие цены на рынке с гарантией лучших нерудных материалов!</span>
+        backContent: <span className={styles.backCardContent}>Мы предлагаем самые выгодные цены со всех карьеров Лен. области по оптовым ценам без посредников!</span>
     },
     {
         title: 'Полная документальная отчетность',
-        backContent: <span className={styles.backCardContent}>Ко всем нашим услугам мы прилагаем полную документальную отчётность - от договоров и счетов, до паспортов поставляемых товаров!
-</span>
+        backContent: <span className={styles.backCardContent}>Ко всем нашим услугам мы прилагаем все необходимые закрывающие документы и сертификаты точно в срок!</span>
     },
     {
         title: 'Срочная поставка материалов за 1 день',
-        backContent: <span className={styles.backCardContent}>В нашем автопарке более 50 единиц техники, что позволяет выполнять любой заказ в нужные сроки. В том числе и срочные поставки материалов за 24 часа!
+        backContent: <span className={styles.backCardContent}>В нашем автопарке более 50 единиц техники, что позволяет выполнять любой заказ в нужные сроки. В том числе и срочные поставки материалов за 2 часа!
 </span>
     },
     {
