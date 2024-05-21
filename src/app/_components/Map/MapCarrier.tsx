@@ -97,7 +97,7 @@ export const MapCarrier = () => {
                     {isBalloonOpen && <div className={styles.balloon} ref={ref}>
                         <span className={styles.name}>{balloonContent?.title}</span>
                         {balloonContent?.products && <div className={styles.pr_wrapper}>
-                            <span className={styles.product}>{ type === 'carrier' ? 'Продукция' : 'Принимают' }</span>
+                            <span className={styles.product}>{type === 'carrier' ? 'Продукция' : 'Принимают'}</span>
                             {balloonContent?.products?.map((pr) => (
                                 <>
                                     {pr.add && pr.add.length > 0 &&
@@ -121,7 +121,7 @@ export const MapCarrier = () => {
                         </div>}
                     </div>
                     }
-                    <div id='map'>
+                    <div id='map' style={{minHeight: '400px'}}>
                         <YMaps>
                             <Map state={state} defaultState={mapState} width={'100%'} height={'100%'}
                                  className={styles.map}>
@@ -130,19 +130,13 @@ export const MapCarrier = () => {
                                         key={items.id}
                                         geometry={items.coords}
                                         properties={getPointData(items.id)}
-                                        options={{preset: type === 'poly' ? "islands#yellowCircleDotIcon" : "islands#blueMountainCircleIcon", openBalloonOnClick: true}}
+                                        options={{
+                                            preset: type === 'poly' ? "islands#yellowCircleDotIcon" : "islands#blueMountainCircleIcon",
+                                            openBalloonOnClick: true
+                                        }}
                                         onClick={() => onBalloonClick(items.id)}
                                     />
                                 ))}
-                                {/* {carrier.map((items) => (
-                                    <Placemark
-                                        key={items.id}
-                                        geometry={items.coords}
-                                        properties={getPointData(items.id)}
-                                        options={{preset: "islands#blueMountainCircleIcon"}}
-                                        onClick={() => onBalloonClick(items.id)}
-                                    />
-                                ))} */}
                             </Map>
                         </YMaps>
                     </div>

@@ -3,6 +3,7 @@
 .about {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   .wrapper {
     display: flex;
@@ -10,6 +11,7 @@
             flex-direction: 'column' 'row',
             margin-top: 30px null null 60px,
             gap: '' 40px 60px,
+            scroll-margin-top: 'calc(800px - 100vh)' 0,
     ));
 
     .description {
@@ -78,7 +80,7 @@
 
       @include arrayProps((
               min-width: 320px 440px 440px 510px 829px,
-              margin-top: 30px null 0,
+              margin-top: 20px null 0,
               border-radius: 20px null 40px,
       ));
 
@@ -88,7 +90,7 @@
         width: 100%;
         animation: img 1.2s;
         @include arrayProps((
-                max-height: 420px 440px 440px 600px 700px,
+                max-height: 260px 440px 440px 600px 700px,
                 border-radius: 20px null 40px,
         ));
       }

@@ -3,76 +3,83 @@ import {TNavItem} from "@/app/_components/header/navItem/navItem.types";
 export const headerMenu: TNavItem[] = [
     {
         title: 'Нерудные материалы',
-        url: '/materials',
+        url: 'https://asklogspb.ru/wp-content/themes/default/materials',
         child: [
             {
                 title: 'Шебень',
-                url: '/materials/?product=sheben'
+                url: 'https://asklogspb.ru/wp-content/themes/default/materials/?product=sheben'
             },
             {
                 title: 'Песок',
-                url: '/materials?product=pesok'
+                url: 'https://asklogspb.ru/wp-content/themes/default/materials?product=pesok'
             },
             {
                 title: 'Грунт',
-                url: '/materials/?product=grunt'
+                url: 'https://asklogspb.ru/wp-content/themes/default/materials/?product=grunt'
             },
             {
                 title: 'Вторичные материалы',
-                url: '/materials/?product=secondary'
+                url: 'https://asklogspb.ru/wp-content/themes/default/materials/?product=secondary'
             },
         ]
     },
     {
         title: 'Вывоз и утилизация',
-        url: '/export'
+        url: 'https://asklogspb.ru/wp-content/themes/default/export'
     },
     {
-        title: 'Аренда спецтехники', url: '/rent', child: [
+        title: 'Аренда спецтехники', url: 'https://asklogspb.ru/wp-content/themes/default/rent', child: [
             {
-                title: 'Самосвалы и полуприцепы', url: '/rent/?mainParam=samosval',
+                title: 'Самосвалы и полуприцепы',
+                url: 'https://asklogspb.ru/wp-content/themes/default/rent/?mainParam=samosval',
             },
             {
-                title: 'Мини погрузчики', url: '/rent/?mainParam=mini-pogruz',
+                title: 'Мини погрузчики',
+                url: 'https://asklogspb.ru/wp-content/themes/default/rent/?mainParam=mini-pogruz',
             },
             {
-                title: 'Экскаваторы-погрузчики', url: '/rent/?mainParam=ecscovator-pogruz',
+                title: 'Экскаваторы-погрузчики',
+                url: 'https://asklogspb.ru/wp-content/themes/default/rent/?mainParam=ecscovator-pogruz',
             },
             {
-                title: 'Гусеничные экскаваторы', url: '/rent/?mainParam=gusenich-ecscovator',
+                title: 'Гусеничные экскаваторы',
+                url: 'https://asklogspb.ru/wp-content/themes/default/rent/?mainParam=gusenich-ecscovator',
             },
             {
-                title: 'Колесные экскаваторы', url: '/rent/?mainParam=kolesn-ecscovator',
+                title: 'Колесные экскаваторы',
+                url: 'https://asklogspb.ru/wp-content/themes/default/rent/?mainParam=kolesn-ecscovator',
             },
             {
-                title: 'Фронтальные погрузчики', url: '/rent/?mainParam=frontalnye-pogruz',
+                title: 'Фронтальные погрузчики',
+                url: 'https://asklogspb.ru/wp-content/themes/default/rent/?mainParam=frontalnye-pogruz',
             },
             {
-                title: 'Автокраны', url: '/rent/?mainParam=avtokran',
+                title: 'Автокраны', url: 'https://asklogspb.ru/wp-content/themes/default/rent/?mainParam=avtokran',
             },
             {
-                title: 'Краны манипуляторы', url: '/rent/?mainParam=kran-manipulator',
+                title: 'Краны манипуляторы',
+                url: 'https://asklogspb.ru/wp-content/themes/default/rent/?mainParam=kran-manipulator',
             },
             {
-                title: 'Автовышки', url: '/rent/?mainParam=avtovashki',
+                title: 'Автовышки', url: 'https://asklogspb.ru/wp-content/themes/default/rent/?mainParam=avtovashki',
             },
         ]
     },
     {
         title: 'Строительные работы',
-        url: '/construction-works',
+        url: 'https://asklogspb.ru/wp-content/themes/default/construction-works',
     },
     {
         title: 'О компании',
-        url: 'https://asklogspb.ru/#about',
+        url: 'https://asklogspb.ru/wp-content/themes/default/#about',
     },
     {
         title: 'Наши работы',
-        url: 'https://asklogspb.ru/#works',
+        url: 'https://asklogspb.ru/wp-content/themes/default/#works',
     },
     {
         title: 'Контакты',
-        url: 'https://asklogspb.ru/#contacts',
+        url: 'https://asklogspb.ru/wp-content/themes/default/#contacts',
     },
 
 

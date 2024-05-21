@@ -10,17 +10,21 @@ export const Footer = () => {
     const router = useRouter();
 
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        e.preventDefault();
-        if (window.location.pathname !== '/') {
-            router.push(`/${e.currentTarget.hash}`, {scroll: false});
+        if (e.currentTarget.href.includes('#')) {
+            e.preventDefault();
         }
-
+        if (window.location.pathname !== '/' &&
+            !(window.location.pathname === '/wp-content/themes/default/' || window.location.pathname.includes('/wp-content/themes/default/#'))
+        ) window.location.href = `https://asklogspb.ru/${e.currentTarget.hash}`;
         const href = e.currentTarget.href;
-        const targetId = href.replace(/.*\#/, "");
-        const elem = document.getElementById(targetId);
+        const elem = document.getElementById(href.split('#')[1]);
+
         elem?.scrollIntoView({
             behavior: "smooth",
+            block: 'center',
         });
+
+
     };
     return (
         <footer className={`${styles.footer} container`}>

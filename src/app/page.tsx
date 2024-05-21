@@ -21,7 +21,7 @@ export default function Home() {
         if (window.location.hash) {
             const element = document.querySelector(window.location.hash);
             if (element) {
-                element.scrollIntoView({behavior: 'smooth'});
+                setTimeout(() => element.scrollIntoView({behavior: 'smooth', block: 'center'}));
             }
         }
     }, []);
@@ -31,11 +31,10 @@ export default function Home() {
             <MainBanner/>
             <Products/>
             <Group/>
-            <div className={styles.about} id='about'></div>
             <AboutCompany/>
             <ClientsBanner/>
             <Cases/>
-            <MapCarrier />
+            <MapCarrier/>
             <Contacts/>
         </main>
     );

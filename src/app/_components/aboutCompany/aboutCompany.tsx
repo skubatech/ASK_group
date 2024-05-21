@@ -21,7 +21,7 @@ export const AboutCompany = () => {
 
     return (
         <section className={`${styles.about} container`}>
-            <div className={styles.wrapper}>
+            <div className={styles.wrapper} id='about'>
                 <div className={styles.description}>
                     <h2 className={cn(styles.title)}>О компании</h2>
                     <span className={styles.text}>

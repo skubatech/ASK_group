@@ -5,6 +5,7 @@ import excavator from "@/assets/images/excavator.webp";
 import backhoeLoader from "@/assets/images/backhoeLoader.webp";
 import crane from "@/assets/images/crane.webp";
 import excavation from "@/assets/images/excavation.webp";
+import angar from "@/assets/images/angar.webp"
 import soilUtilization from "@/assets/images/soilUtilization.webp";
 import {StaticImageData} from "next/image";
 
@@ -70,5 +71,11 @@ export const bannerItems: SliderItemsType[] = [
         title: 'Аренда автокрана',
         text: 'от 2300 руб',
         path: '/rent/?mainParam=avtokran'
+    },
+    {
+        imgSrc: angar,
+        title: 'Строительство ангаров под ключ',
+        text: '',
+        path: '/construction-works'
     },
 ];

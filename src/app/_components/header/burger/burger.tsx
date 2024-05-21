@@ -13,13 +13,15 @@ export const Burger = () => {
         if (e.currentTarget.href.includes('#')) {
             e.preventDefault();
         }
-        if (window.location.pathname !== '/') router.push(`/${e.currentTarget.hash}`, {scroll: true});
+        if (window.location.pathname !== '/' &&
+            !(window.location.pathname === '/wp-content/themes/default/' || window.location.pathname.includes('/wp-content/themes/default/#'))
+        ) window.location.href = `https://asklogspb.ru/${e.currentTarget.hash}`;
         const href = e.currentTarget.href;
         const elem = document.getElementById(href.split('#')[1]);
 
         elem?.scrollIntoView({
             behavior: "smooth",
-            block: 'start',
+            block: 'center'
         });
         if (burger.current) burger.current.click();
     }

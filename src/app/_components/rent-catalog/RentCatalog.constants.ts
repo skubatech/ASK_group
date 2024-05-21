@@ -665,7 +665,7 @@ export const RentData: RentDataItem[] = [
         minTime: 'Миним. рабочее время 8 ч. (7+1)',
         description: [
             'Длина стрелы: 48,8 м',
-            'Грузоподъемность: 150 тонн',
+            'Грузоподъемность: 200 тонн',
             'С гуськом: 67,9 м'
         ]
     },
@@ -751,7 +751,7 @@ export const RentData: RentDataItem[] = [
         ]
     },
     {
-        title: 'Hansin HS 2750',
+        title: 'Hansin HS 3570',
         img: HansinHS2750,
         price: '2750',
         mainCategory: 'avtovashki',
